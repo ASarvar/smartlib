@@ -1,0 +1,26 @@
+{
+  "menu": {
+    "home": "Главная",
+    "products": "Продукты",
+    "productsCatalog": "Каталог продуктов",
+    "services": "Услуги",
+    "solutions": "Решения",
+    "resources": "Ресурсы",
+    "news": "Новости",
+    "brochures": "Брошюры",
+    "gallery": "Галерея",
+    "about": "О нас",
+    "contact": "Контакты"
+  },
+  "header": {
+    "getStarted": "Начать",
+    "phone": "Телефон",
+    "email": "Электронная почта"
+  },
+  "footer": {
+    "aboutUs": "О нас",
+    "quickLinks": "Быстрые ссылки",
+    "contactInfo": "Контактная информация",
+    "followUs": "Следите за нами"
+  }
+}

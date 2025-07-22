@@ -1,9 +1,11 @@
 'use client'
 import Link from "next/link";
 import { usePathname } from "next/navigation"
+import { useTranslation } from "react-i18next";
 
 export default function Menu() {
   const pathname = usePathname()
+  const { t } = useTranslation();
   
   // Helper function to check if a route is active
   const isActive = (path) => {
@@ -78,42 +80,42 @@ export default function Menu() {
             </ul> */}
       <ul className="navigation">
         <li className={`menu-item-has-children ${isActive('/') ? 'active' : ''}`}>
-          <Link href="/">Home</Link>
+          <Link href="/">{t('menu.home')}</Link>
         </li>
 
         <li className={`menu-item-has-children ${hasActiveSubmenu(['/service', '/catalog']) ? 'active' : ''}`}>
-          <Link href="#">Products</Link>
+          <Link href="#">{t('menu.products')}</Link>
           <ul className="sub-menu">
             <li>
-              <Link href="/catalog">Products Catalog</Link>
+              <Link href="/catalog">{t('menu.productsCatalog')}</Link>
             </li>
             <li>
-              <Link href="/service">Services</Link>
+              <Link href="/service">{t('menu.services')}</Link>
             </li>
           </ul>
         </li>
         <li className={isActive('/solutions') ? 'active' : ''}>
-          <Link href="/solutions">Solutions</Link>
+          <Link href="/solutions">{t('menu.solutions')}</Link>
         </li>
         <li className={`menu-item-has-children ${hasActiveSubmenu(['/blog', '/blog-sidebar', '/blog-details']) ? 'active' : ''}`}>
-          <Link href="#">Resources</Link>
+          <Link href="#">{t('menu.resources')}</Link>
           <ul className="sub-menu">
             <li>
-              <Link href="/blog">News</Link>
+              <Link href="/blog">{t('menu.news')}</Link>
             </li>
             <li>
-              <Link href="/brochures">Brochures</Link>
+              <Link href="/brochures">{t('menu.brochures')}</Link>
             </li>
             <li>
-              <Link href="/gallery">Gallery</Link>
+              <Link href="/gallery">{t('menu.gallery')}</Link>
             </li>
           </ul>
         </li>
         <li className={isActive('/about') ? 'active' : ''}>
-          <Link href="/about">About</Link>
+          <Link href="/about">{t('menu.about')}</Link>
         </li>
         <li className={isActive('/contact') ? 'active' : ''}>
-          <Link href="/contact">Contact</Link>
+          <Link href="/contact">{t('menu.contact')}</Link>
         </li>
       </ul>
     </>

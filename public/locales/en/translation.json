@@ -1,0 +1,26 @@
+{
+  "menu": {
+    "home": "Home",
+    "products": "Products",
+    "productsCatalog": "Products Catalog",
+    "services": "Services",
+    "solutions": "Solutions",
+    "resources": "Resources",
+    "news": "News",
+    "brochures": "Brochures",
+    "gallery": "Gallery",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "header": {
+    "getStarted": "Get Started",
+    "phone": "Phone",
+    "email": "Email"
+  },
+  "footer": {
+    "aboutUs": "About Us",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "followUs": "Follow Us"
+  }
+}

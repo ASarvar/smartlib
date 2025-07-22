@@ -1,0 +1,26 @@
+{
+  "menu": {
+    "home": "Bosh sahifa",
+    "products": "Mahsulotlar",
+    "productsCatalog": "Mahsulotlar katalogi",
+    "services": "Xizmatlar",
+    "solutions": "Yechimlar",
+    "resources": "Resurslar",
+    "news": "Yangiliklar",
+    "brochures": "Broshyuralar",
+    "gallery": "Galereya",
+    "about": "Biz haqimizda",
+    "contact": "Aloqa"
+  },
+  "header": {
+    "getStarted": "Boshlash",
+    "phone": "Telefon",
+    "email": "Elektron pochta"
+  },
+  "footer": {
+    "aboutUs": "Biz haqimizda",
+    "quickLinks": "Tezkor havolalar",
+    "contactInfo": "Aloqa ma'lumotlari",
+    "followUs": "Bizni kuzatib boring"
+  }
+}

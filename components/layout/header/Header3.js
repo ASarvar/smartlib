@@ -1,6 +1,10 @@
+"use client";
 import Link from "next/link";
 import Menu from "../Menu";
 import MobileMenu from "../MobileMenu";
+import LanguageSelector from "@/components/elements/LanguageSelector";
+import { useTranslation } from "react-i18next";
+
 export default function Header3({
   scroll,
   isMobileMenu,
@@ -9,6 +13,8 @@ export default function Header3({
   handlePopup,
   handleSidebar,
 }) {
+  const { t } = useTranslation();
+  
   return (
     <>
       {/* <header className="main-header header-style-three"> */}
@@ -46,9 +52,10 @@ export default function Header3({
                     </div>
 
                     <div className="main-header-one__right">
+                      <LanguageSelector />
                       <div className="btn-box">
                         <Link className="thm-btn" href="/contact">
-                          <span className="txt">Get Started</span>
+                          <span className="txt">{t('header.getStarted')}</span>
                         </Link>
                       </div>
                     </div>
