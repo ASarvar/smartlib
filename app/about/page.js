@@ -4,6 +4,7 @@ import TestimonialSlider4 from "@/components/slider/TestimonialSlider4";
 import BrandSlider2 from "@/components/slider/BrandSlider2";
 import Layout from "@/components/layout/Layout";
 import CounterUp from "@/components/elements/CounterUp";
+import TeamSlider2 from "@/components/slider/TeamSlider2";
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
                     <div className="experience-box">
                       <div className="counter-box">
                         <h2 className="count">
-                          <CounterUp end={24} />
+                          <CounterUp end={4} />
                         </h2>
                       </div>
                       <div className="text-box">
@@ -52,41 +53,39 @@ export default function Home() {
                   <div className="about-one__content">
                     <div className="sec-title">
                       <div className="sub-title">
-                        <h5>About Company</h5>
+                        <h5>About SmartLibrary</h5>
                       </div>
-                      <h2>
-                        Find Architect to Building <br />
-                        Your Vision & Passion
-                      </h2>
+                      <h2>Leading RFID Solutions for Modern Libraries</h2>
                     </div>
 
                     <div className="text-box">
                       <p>
-                        Arki features minimal and stylish design. The theme is
-                        well crafted for all the modern architect and interior
-                        design website. With Arki, it makes your website look
-                        even more attractive and impressive to
+                        SmartLibrary is at the forefront of RFID technology,
+                        delivering innovative solutions that redefine library
+                        management. Our systems are designed to enhance
+                        efficiency, streamline operations, and improve the user
+                        experience for libraries of all sizes.
                       </p>
                     </div>
 
                     <div className="about-one__content-progress">
                       <div className="about-one__content-progress-single">
                         <div className="title">
-                          <h4>Design</h4>
+                          <h4>RFID Solutions</h4>
                         </div>
                         <div className="bar">
                           <div
                             className="bar-inner1 count-bar"
-                            data-percent="80%"
+                            data-percent="95%"
                           >
-                            <div className="count-text">80%</div>
+                            <div className="count-text">95%</div>
                           </div>
                         </div>
                       </div>
 
                       <div className="about-one__content-progress-single mb0">
                         <div className="title">
-                          <h4>Architect</h4>
+                          <h4>Library Automation</h4>
                         </div>
                         <div className="bar">
                           <div
@@ -102,8 +101,8 @@ export default function Home() {
                     <div className="about-one__content-bottom">
                       <div className="about-one__content-bottom-author-box">
                         <div className="btn-box">
-                          <Link className="thm-btn" href="about">
-                            <span className="txt">Discover More</span>
+                          <Link className="thm-btn" href="/about">
+                            <span className="txt">More About Us</span>
                           </Link>
                         </div>
 
@@ -124,8 +123,10 @@ export default function Home() {
                       </div>
                       <div className="text">
                         <h4>
-                          Do you have any project on your mind? Call Us:{" "}
-                          <Link href="tel:123456789">+123 456789</Link>
+                          Need RFID solutions for your library? Call Us:{" "}
+                          <Link href="tel:+998712007009">
+                            +998 71 200 70 09
+                          </Link>
                         </h4>
                       </div>
                     </div>
@@ -155,8 +156,8 @@ export default function Home() {
                   <h5>OUR CLIENT TESTIMONIALS</h5>
                 </div>
                 <h2>
-                  Why Customers Love to <br />
-                  Working With Us
+                  Why Our Clients Trust <br />
+                  SmartLibrary
                 </h2>
               </div>
 
@@ -223,13 +224,13 @@ export default function Home() {
                       <li>
                         <div className="inner">
                           <div className="icon-box">
-                            <span className="icon-office-building"></span>
+                            <span className="icon-rfid-chip"></span>
                           </div>
                           <div className="content-box">
-                            <h2>Architecture Design</h2>
+                            <h2>Advanced RFID Technology</h2>
                             <p>
-                              Through a unique coN construction and design
-                              discipl nes expertise Concor and delivers{" "}
+                              We leverage state-of-the-art RFID technology to
+                              provide reliable and efficient library solutions.
                             </p>
                           </div>
                         </div>
@@ -238,13 +239,13 @@ export default function Home() {
                       <li>
                         <div className="inner">
                           <div className="icon-box">
-                            <span className="icon-bed"></span>
+                            <span className="icon-library-automation"></span>
                           </div>
                           <div className="content-box">
-                            <h2>The Joy of Best Living</h2>
+                            <h2>Seamless Library Automation</h2>
                             <p>
-                              Through a unique coN construction and design
-                              discipl nes expertise Concor and delivers{" "}
+                              Our systems automate key library processes, from
+                              check-in/out to inventory management.
                             </p>
                           </div>
                         </div>
@@ -253,13 +254,14 @@ export default function Home() {
                       <li>
                         <div className="inner">
                           <div className="icon-box">
-                            <span className="icon-targeted"></span>
+                            <span className="icon-expert-support"></span>
                           </div>
                           <div className="content-box">
-                            <h2>Professional Planning</h2>
+                            <h2>Expert Support & Planning</h2>
                             <p>
-                              Through a unique coN construction and design
-                              discipl nes expertise Concor and delivers{" "}
+                              We offer professional planning and dedicated
+                              support to ensure successful implementation and
+                              operation.
                             </p>
                           </div>
                         </div>
@@ -285,173 +287,38 @@ export default function Home() {
             <div className="container">
               <div className="call-to-action-one__inner">
                 <div className="call-to-action-one__content text-center">
-                  <h2>Have a Project in Your Mind</h2>
-                  <h3>Don’t Hesitate to Say Hello </h3>
+                  <h2>Ready to Upgrade Your Library?</h2>
+                  <h3>Contact Us for RFID Technology Solutions</h3>
                   <div className="btn-box">
-                    <a className="thm-btn" href="#">
-                      <span className="txt">LET’S TALK WITH US</span>
-                    </a>
+                    <Link className="thm-btn" href="/contact">
+                      <span className="txt">GET IN TOUCH</span>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
           </section>
           {/*End Call To Action One */}
-
-          {/*Start Team Two */}
-          <section className="team-two">
+          {/*Start Team One */}
+          <section className="team-one p100-top">
             <div className="container">
-              <div className="sec-title text-center">
-                <div className="sub-title">
-                  <h5>OUR TEAM MEMBER</h5>
+              <div className="team-one__top">
+                <div className="sec-title">
+                  <div className="sub-title">
+                    <h5>OUR TEAM MEMBERS</h5>
+                  </div>
+                  <h2>
+                    Expert Team Behind <br />
+                    SmartLibrary Solutions
+                  </h2>
                 </div>
-                <h2>
-                  Our Talented Team <br />
-                  Member Behind Xafran
-                </h2>
               </div>
-              <div className="row">
-                {/*Start Team Two Single */}
-                <div
-                  className="col-xl-4 col-lg-4 wow fadeInUp"
-                  data-wow-delay=".3s"
-                >
-                  <div className="team-two__single">
-                    <div className="team-two__single-img">
-                      <div className="inner">
-                        <img src="assets/img/team/team-v2-img1.jpg" alt="" />
-                      </div>
 
-                      <div className="content-box">
-                        <h3>
-                          <Link href="/team-details">Saiful Islam</Link>
-                        </h3>
-                        <p>Developer</p>
-                      </div>
-                      <ul className="social-links clearfix">
-                        <li className="share">
-                          <Link href="#">
-                            <span className="icon-share"></span>
-                          </Link>
-                          <ul className="social-links-inner">
-                            <li>
-                              <Link href="#">
-                                <i className="icon-linkedin-big-logo"></i>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href="#">
-                                <i className="icon-instagram"></i>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href="#">
-                                <i className="icon-facebook"></i>
-                              </Link>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                {/*End Team Two Single */}
-
-                {/*Start Team Two Single */}
-                <div
-                  className="col-xl-4 col-lg-4 wow fadeInDown"
-                  data-wow-delay=".3s"
-                >
-                  <div className="team-two__single">
-                    <div className="team-two__single-img">
-                      <div className="inner">
-                        <img src="assets/img/team/team-v2-img2.jpg" alt="" />
-                      </div>
-
-                      <div className="content-box">
-                        <h3>
-                          <Link href="team-details">Janes Cooper</Link>
-                        </h3>
-                        <p>Designer</p>
-                      </div>
-                      <ul className="social-links clearfix">
-                        <li className="share">
-                          <Link href="#">
-                            <span className="icon-share"></span>
-                          </Link>
-                          <ul className="social-links-inner">
-                            <li>
-                              <Link href="#">
-                                <i className="icon-linkedin-big-logo"></i>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href="#">
-                                <i className="icon-instagram"></i>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href="#">
-                                <i className="icon-facebook"></i>
-                              </Link>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                {/*End Team Two Single */}
-
-                {/*Start Team Two Single */}
-                <div
-                  className="col-xl-4 col-lg-4 wow fadeInUp"
-                  data-wow-delay=".3s"
-                >
-                  <div className="team-two__single">
-                    <div className="team-two__single-img">
-                      <div className="inner">
-                        <img src="assets/img/team/team-v2-img3.jpg" alt="" />
-                      </div>
-
-                      <div className="content-box">
-                        <h3>
-                          <Link href="/team-details">James Bond</Link>
-                        </h3>
-                        <p>Creator</p>
-                      </div>
-                      <ul className="social-links clearfix">
-                        <li className="share">
-                          <Link href="#">
-                            <span className="icon-share"></span>
-                          </Link>
-                          <ul className="social-links-inner">
-                            <li>
-                              <Link href="#">
-                                <i className="icon-linkedin-big-logo"></i>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href="#">
-                                <i className="icon-instagram"></i>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href="#">
-                                <i className="icon-facebook"></i>
-                              </Link>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                {/*End Team Two Single */}
-              </div>
+              <TeamSlider2 />
+              {/*If we need navigatsion button */}
             </div>
           </section>
-          {/*End Team Two */}
+          {/*End Team One */}
         </div>
       </Layout>
     </>

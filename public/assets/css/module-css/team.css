@@ -7,13 +7,12 @@
     background: var(--thm-white);
     padding: 0px 0px 114px;
     z-index: 1;
+    text-align: center;
 }
 
 .team-one__top {
     position: relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    display: block;
     margin-bottom: 57px;
 }
 

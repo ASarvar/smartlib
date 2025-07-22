@@ -12,15 +12,10 @@ export default function Team() {
                     <div className="team-one__top">
                         <div className="sec-title">
                             <div className="sub-title">
-                                <h5>OUR TEAM MEMBER</h5>
+                                <h5>OUR TEAM MEMBERS</h5>
                             </div>
-                            <h2>Our Talented Team <br/>
-                                Member Behind Xafran</h2>
-                        </div>
-                        <div className="btn-box">
-                            <a className="thm-btn" href="#">
-                                <span className="txt">JOIN OUR TEAM</span>
-                            </a>
+                            <h2>Expert Team Behind <br/>
+                                SmartLibrary Solutions</h2>
                         </div>
                     </div>
 

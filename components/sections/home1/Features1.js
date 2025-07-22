@@ -25,21 +25,21 @@ export default function Features1() {
                         <div className="feauture-three__content">
                             <div className="sec-title">
                                 <div className="sub-title">
-                                    <h5>EXPLORE OUR FEAUTURE</h5>
+                                    <h5>EXPLORE OUR SOLUTIONS</h5>
                                 </div>
                                 <h2>We provide the best <br/>
-                                    architect & interior design</h2>
+                                    RFID library management systems</h2>
                             </div>
 
                             <div className="text-box">
-                                <p>Arki features minimal and stylish design. The theme is well crafted for all the
-                                    modern architect and interior design website. With Arki, it makes your website look
-                                    even more attractive and impressive to</p>
+                                <p>SmartLibrary features cutting-edge RFID technology solutions. Our platform is expertly 
+                                    designed for modern libraries and information centers. With SmartLibrary, we make your 
+                                    library operations more efficient and user-friendly.</p>
                             </div>
                             <div className="btn-box">
-                                <a className="thm-btn" href="#">
+                                <Link className="thm-btn" href="/services">
                                     <span className="txt">Discover More</span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

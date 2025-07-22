@@ -8,9 +8,9 @@ export default function News() {
                 <div className="container">
                     <div className="sec-title text-center">
                         <div className="sub-title">
-                            <h5>OUR BLOG POST</h5>
+                            <h5>SMARTLIBRARY INSIGHTS</h5>
                         </div>
-                        <h2>Read Our Latest News</h2>
+                        <h2>Latest RFID Technology Updates</h2>
                     </div>
 
                     <div className="row">
@@ -28,14 +28,14 @@ export default function News() {
                                 <div className="blog-one__single-content">
                                     <ul className="meta-info">
                                         <li>
-                                            <p><Link href="#">Development</Link></p>
+                                            <p><Link href="#">RFID Technology</Link></p>
                                         </li>
                                         <li>
-                                            <p>02 July, 2023</p>
+                                            <p>15 July, 2025</p>
                                         </li>
                                     </ul>
-                                    <h2><Link href="/blog-details">Is Architecture a Good Career <br/>
-                                            in Our Daily Life? </Link></h2>
+                                    <h2><Link href="/blog-details">How RFID Technology is <br/>
+                                            Revolutionizing Library Management? </Link></h2>
                                     <div className="btn-box">
                                         <Link href="/blog-details">READ MORE <span className="icon-left-arrow"></span></Link>
                                     </div>
@@ -58,14 +58,14 @@ export default function News() {
                                 <div className="blog-one__single-content">
                                     <ul className="meta-info">
                                         <li>
-                                            <p><Link href="#">Development</Link></p>
+                                            <p><Link href="#">Library Solutions</Link></p>
                                         </li>
                                         <li>
-                                            <p>02 July, 2023</p>
+                                            <p>10 July, 2025</p>
                                         </li>
                                     </ul>
-                                    <h2><Link href="/blog-details">Architecture is a Visual Art, and <br/>
-                                            the Buildings Speak For</Link></h2>
+                                    <h2><Link href="/blog-details">Smart Libraries: The Future of <br/>
+                                            Digital Book Management</Link></h2>
                                     <div className="btn-box">
                                         <Link href="/blog-details">READ MORE <span className="icon-left-arrow"></span></Link>
                                     </div>
@@ -88,14 +88,14 @@ export default function News() {
                                 <div className="blog-one__single-content">
                                     <ul className="meta-info">
                                         <li>
-                                            <p><Link href="#">Development</Link></p>
+                                            <p><Link href="#">Innovation</Link></p>
                                         </li>
                                         <li>
-                                            <p>02 July, 2023</p>
+                                            <p>05 July, 2025</p>
                                         </li>
                                     </ul>
-                                    <h2><Link href="/blog-details">We Stand for Quality, Safety <br/>
-                                            Credibility, so You Could be Trust </Link></h2>
+                                    <h2><Link href="/blog-details">Bibliotheca Partnership: Trusted <br/>
+                                            Quality & Reliable RFID Solutions </Link></h2>
                                     <div className="btn-box">
                                         <Link href="/blog-details">READ MORE <span className="icon-left-arrow"></span></Link>
                                     </div>

@@ -10,10 +10,10 @@ export default function Projects() {
                 <div className="auto-container">
                     <div className="sec-title text-center">
                         <div className="sub-title">
-                            <h5>OUR RECENT PROJECT</h5>
+                            <h5>OUR RECENT PROJECTS</h5>
                         </div>
-                        <h2>Last Projects We Designed <br/>
-                            Check Our Work</h2>
+                        <h2>Latest Library Implementations <br/>
+                            Check Our Success Stories</h2>
                     </div>
                     <div className="row">
                         {/*Start Project One Single */}
@@ -28,8 +28,8 @@ export default function Projects() {
                                     </div>
 
                                     <div className="overlay-text">
-                                        <p>San Fransisco</p>
-                                        <h2><Link href="/project-details">Hotel Joshna Villa</Link></h2>
+                                        <p>Tashkent</p>
+                                        <h2><Link href="/project-details">National University Library</Link></h2>
                                     </div>
                                 </div>
                             </div>
@@ -48,8 +48,8 @@ export default function Projects() {
                                     </div>
 
                                     <div className="overlay-text">
-                                        <p>San Fransisco</p>
-                                        <h2><Link href="/project-details">Hotel Joshna Villa</Link></h2>
+                                        <p>Samarkand</p>
+                                        <h2><Link href="/project-details">Regional Public Library</Link></h2>
                                     </div>
                                 </div>
                             </div>
@@ -68,8 +68,8 @@ export default function Projects() {
                                     </div>
 
                                     <div className="overlay-text">
-                                        <p>San Fransisco</p>
-                                        <h2><Link href="/project-details">Hotel Joshna Villa</Link></h2>
+                                        <p>Bukhara</p>
+                                        <h2><Link href="/project-details">Educational Institute Library</Link></h2>
                                     </div>
                                 </div>
                             </div>
@@ -88,8 +88,8 @@ export default function Projects() {
                                     </div>
 
                                     <div className="overlay-text">
-                                        <p>San Fransisco</p>
-                                        <h2><Link href="/project-details">Hotel Joshna Villa</Link></h2>
+                                        <p>Nukus</p>
+                                        <h2><Link href="/project-details">Digital Archive Center</Link></h2>
                                     </div>
                                 </div>
                             </div>

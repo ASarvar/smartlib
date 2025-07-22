@@ -14,9 +14,9 @@ export default function Pricing() {
             <div className="container">
                 <div className="sec-title text-center">
                     <div className="sub-title">
-                        <h5>OUR SERVICE</h5>
+                        <h5>OUR SERVICES</h5>
                     </div>
-                    <h2>Our Architecture Services</h2>
+                    <h2>Smart RFID Solutions & Services</h2>
                 </div>
                 <div className="row">
                     {/*Start Service One Single */}
@@ -26,14 +26,13 @@ export default function Pricing() {
                             <div className="service-one__single-inner">
                                 <div className="count-text">01</div>
                                 <div className="icon-box">
-                                    <span className="icon-construction"></span>
+                                    <span className="icon-targeted"></span>
                                 </div>
                                 <div className="content-box">
-                                    <h2><Link href="/architecture">General Contracting</Link></h2>
-                                    <p>Through a unique combination of construction and design disciplines expertise,
-                                        Concor and delivers world class</p>
+                                    <h2><Link href="/catalog">RFID Technology</Link></h2>
+                                    <p>RFID solutions for library management including self-service stations, security gates, and automated inventory systems.</p>
                                     <div className="btn-box">
-                                        <Link href="/architecture">EXPLORE SERVICE</Link>
+                                        <Link href="/catalog">EXPLORE PRODUCTS</Link>
                                     </div>
                                 </div>
                             </div>
@@ -48,14 +47,13 @@ export default function Pricing() {
                             <div className="service-one__single-inner">
                                 <div className="count-text">02</div>
                                 <div className="icon-box">
-                                    <span className="icon-construction-machine"></span>
+                                    <span className="icon-analytics"></span>
                                 </div>
                                 <div className="content-box">
-                                    <h2><Link href="/architecture">Machine Design</Link></h2>
-                                    <p>Through a unique combination of construction and design disciplines expertise,
-                                        Concor and delivers world class</p>
+                                    <h2><Link href="/solutions">Automation Systems</Link></h2>
+                                    <p>Complete library automation solutions including integrated library systems, digital catalogs, and workflow optimization tools.</p>
                                     <div className="btn-box">
-                                        <Link href="/architecture">EXPLORE SERVICE</Link>
+                                        <Link href="/solutions">EXPLORE SOLUTIONS</Link>
                                     </div>
                                 </div>
                             </div>
@@ -70,14 +68,13 @@ export default function Pricing() {
                             <div className="service-one__single-inner">
                                 <div className="count-text">03</div>
                                 <div className="icon-box">
-                                    <span className="icon-check-list"></span>
+                                    <span className="icon-solution"></span>
                                 </div>
                                 <div className="content-box">
-                                    <h2><Link href="/architecture">Project Planing</Link></h2>
-                                    <p>Through a unique combination of construction and design disciplines expertise,
-                                        Concor and delivers world class</p>
+                                    <h2><Link href="/service">Installation & Support</Link></h2>
+                                    <p>Professional installation, training, and ongoing technical support for all library technology solutions and equipment systems.</p>
                                     <div className="btn-box">
-                                        <Link href="/architecture">EXPLORE SERVICE</Link>
+                                        <Link href="/service">EXPLORE SERVICES</Link>
                                     </div>
                                 </div>
                             </div>
@@ -92,14 +89,13 @@ export default function Pricing() {
                             <div className="service-one__single-inner">
                                 <div className="count-text">04</div>
                                 <div className="icon-box">
-                                    <span className="icon-interior-design"></span>
+                                    <span className="icon-light-bulb"></span>
                                 </div>
                                 <div className="content-box">
-                                    <h2><Link href="/architecture">Interior Design</Link></h2>
-                                    <p>Through a unique combination of construction and design disciplines expertise,
-                                        Concor and delivers world class</p>
+                                    <h2><Link href="/contact">Consulting & Training</Link></h2>
+                                    <p>Expert consultation for library modernization projects and comprehensive staff training programs for optimal system usage.</p>
                                     <div className="btn-box">
-                                        <Link href="/architecture">EXPLORE SERVICE</Link>
+                                        <Link href="/contact">GET CONSULTATION</Link>
                                     </div>
                                 </div>
                             </div>

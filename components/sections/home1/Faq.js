@@ -35,14 +35,11 @@ export default function Faq() {
                             {/*Start Faq One Single */}
                             <li className={isActive.key == 1 ? "accrodion active" : "accrodion"} onClick={() => handleToggle(1)}>
                                 <div className="accrodion-title">
-                                    <h3>How can we improve the lead generation process?</h3>
+                                    <h3>What is RFID technology and how does it benefit libraries?</h3>
                                 </div>
                                 <div className={isActive.key == 1 ? "accrodion-content current" : "accrodion-content"}>
                                     <div className="inner">
-                                        <p>The main elements of a marketing strategy are your target audiance
-                                            goals and objectives and the tax you will employ to acitvely
-                                            markter to your achive the goals.Lorem ipsum dolor sit amet, consectetur
-                                            adipiscing elit,</p>
+                                        <p>RFID (Radio Frequency Identification) technology uses electromagnetic fields to automatically identify and track tags attached to books and materials. It enables faster check-in/check-out processes, automated inventory management, enhanced security, and improved patron experience through self-service stations.</p>
                                     </div>
                                 </div>
                             </li>
@@ -51,14 +48,11 @@ export default function Faq() {
                             {/*Start Faq One Single */}
                             <li className={isActive.key == 2 ? "accrodion active" : "accrodion"} onClick={() => handleToggle(2)}>
                                 <div className="accrodion-title">
-                                    <h3>What is content marketing stratagy?</h3>
+                                    <h3>How long does it take to implement RFID in our library?</h3>
                                 </div>
                                 <div className={isActive.key == 2 ? "accrodion-content current" : "accrodion-content"}>
                                     <div className="inner">
-                                        <p>The main elements of a marketing strategy are your target audiance
-                                            goals and objectives and the tax you will employ to acitvely
-                                            markter to your achive the goals.Lorem ipsum dolor sit amet, consectetur
-                                            adipiscing elit,</p>
+                                        <p>Implementation time varies depending on library size and collection volume. Typically, a small to medium library takes 2-4 weeks, while larger institutions may require 6-8 weeks. This includes system setup, staff training, and material tagging. We provide a detailed timeline during consultation.</p>
                                     </div>
                                 </div>
                             </li>
@@ -67,14 +61,11 @@ export default function Faq() {
                             {/*Start Faq One Single */}
                             <li className={isActive.key == 3 ? "accrodion active" : "accrodion"} onClick={() => handleToggle(3)}>
                                 <div className="accrodion-title">
-                                    <h3>What is the purpose of digital agency?</h3>
+                                    <h3>What support and training do you provide after installation?</h3>
                                 </div>
                                 <div className={isActive.key == 3 ? "accrodion-content current" : "accrodion-content"}>
                                     <div className="inner">
-                                        <p>The main elements of a marketing strategy are your target audiance
-                                            goals and objectives and the tax you will employ to acitvely
-                                            markter to your achive the goals.Lorem ipsum dolor sit amet, consectetur
-                                            adipiscing elit,</p>
+                                        <p>We provide comprehensive staff training, detailed user manuals, and ongoing technical support. Our support package includes system maintenance, software updates, troubleshooting assistance, and 24/7 helpdesk service. We also offer refresher training sessions as needed.</p>
                                     </div>
                                 </div>
                             </li>
@@ -84,14 +75,11 @@ export default function Faq() {
                             {/*Start Faq One Single */}
                             <li className={isActive.key == 4 ? "accrodion active" : "accrodion"} onClick={() => handleToggle(4)}>
                                 <div className="accrodion-title">
-                                    <h3>Can I success on this platform with my experience?</h3>
+                                    <h3>Can RFID systems integrate with existing library management software?</h3>
                                 </div>
                                 <div className={isActive.key == 4 ? "accrodion-content current" : "accrodion-content"}>
                                     <div className="inner">
-                                        <p>The main elements of a marketing strategy are your target audiance
-                                            goals and objectives and the tax you will employ to acitvely
-                                            markter to your achive the goals.Lorem ipsum dolor sit amet, consectetur
-                                            adipiscing elit,</p>
+                                        <p>Yes, our RFID solutions are designed to integrate seamlessly with most existing library management systems (LMS). As official Bibliotheca partners, we ensure compatibility with popular LMS platforms and provide custom integration services when needed to maintain your current workflows.</p>
                                     </div>
                                 </div>
                             </li>

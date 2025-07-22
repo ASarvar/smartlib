@@ -1,4 +1,6 @@
 
+import Link from "next/link"
+
 export default function FeautureTwo() {
     return (
         <>        
@@ -13,12 +15,12 @@ export default function FeautureTwo() {
                                 <div className="feauture-two__single-img"
                                     style={{backgroundImage: 'url(assets/img/resource/feauture-v2-img1.jpg)'}}>
                                     <div className="icon-box">
-                                        <span className="icon-light-bulb"></span>
+                                        <span className="icon-targeted"></span>
                                     </div>
                                 </div>
                                 <div className="feauture-two__single-content">
-                                    <h2><a href="#">We Will Provide You <br/>
-                                            By Best Design</a></h2>
+                                    <h2><Link href="/catalog">Advanced RFID Solutions <br/>
+                                            For Modern Libraries</Link></h2>
                                 </div>
                             </div>
                         </div>
@@ -30,12 +32,12 @@ export default function FeautureTwo() {
                                 <div className="feauture-two__single-img"
                                     style={{backgroundImage: 'url(assets/img/resource/feauture-v2-img2.jpg)'}}>
                                     <div className="icon-box">
-                                        <span className="icon-engineer"></span>
+                                        <span className="icon-solution"></span>
                                     </div>
                                 </div>
                                 <div className="feauture-two__single-content">
-                                    <h2><a href="#">We Have Qualified <br/>
-                                            Engineer’s Team</a></h2>
+                                    <h2><Link href="/service">Expert Technical Support <br/>
+                                            & Professional Training</Link></h2>
                                 </div>
                             </div>
                         </div>
