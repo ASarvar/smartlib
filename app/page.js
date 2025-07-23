@@ -26,7 +26,6 @@ export default function Home() {
                 <FeautureTwo />
                 <Video />
                 <Brand />
-                <Features1 />
                 <Testimonial />
                 <News />
             </Layout>

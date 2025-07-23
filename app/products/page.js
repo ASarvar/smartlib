@@ -246,19 +246,21 @@ export default function Products() {
                   </div>
                 )}
 
-                <ul className="styled-pagination text-center clearfix">
-                                    
-                  {Array.from({ length: totalPages }, (_, index) => {
-                    const pageNumber = index + 1;
-                    return (
-                      <li key={pageNumber} className={currentPage === pageNumber ? 'active' : ''}>
-                        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage(pageNumber); }}>
-                          {pageNumber}
-                        </a>
-                      </li>
-                    );
-                  })}
-                </ul>
+                {totalPages > 1 && (
+                  <ul className="styled-pagination text-center clearfix">
+                                      
+                    {Array.from({ length: totalPages }, (_, index) => {
+                      const pageNumber = index + 1;
+                      return (
+                        <li key={pageNumber} className={currentPage === pageNumber ? 'active' : ''}>
+                          <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage(pageNumber); }}>
+                            {pageNumber}
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
                 {/* Custom Quote Section */}
                 <div className="col-xl-12">
                   <div className="custom-quote-section">

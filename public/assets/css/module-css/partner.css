@@ -7,7 +7,7 @@ Brand One
     position: relative;
     display: block;
     background: var(--thm-white);
-    padding: 120px 0 0px;
+    padding: 120px 0 120px;
     overflow: hidden;
     z-index: 1;
 }

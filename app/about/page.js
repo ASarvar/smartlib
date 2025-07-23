@@ -147,9 +147,7 @@ export default function Home() {
                   "url(assets/img/pattern/testimonials-v2-pattern.png)",
               }}
             ></div>
-            <div className="shape1 float-bob-x">
-              <img src="assets/img/shape/testimonials-v2-shape1.png" alt="" />
-            </div>
+            
             <div className="container">
               <div className="sec-title text-center">
                 <div className="sub-title">
