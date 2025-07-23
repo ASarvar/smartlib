@@ -6,6 +6,7 @@ import React from "react";
 import Link from "next/link";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useTranslation } from "react-i18next";
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -32,6 +33,8 @@ const swiperOptions = {
 
 export default function Banner() {
   const [isOpen, setOpen] = useState(false);
+  const { t } = useTranslation();
+  
   return (
     <>
       <section className="main-slider main-slider-two">
@@ -56,27 +59,25 @@ export default function Banner() {
               <div className="main-slider-two__single">
                 <div className="main-slider-two__content">
                   <div className="big-title">
-                    <h2>SmartLibrary</h2>
+                    <h2>{t('banner.title')}</h2>
                   </div>
                   <h2>
-                    SMART RFID <br />
-                    SOLUTIONS
+                    {t('banner.subtitle')}
                   </h2>
                   <div className="intro-text">
                     <p>
-                      Leading provider of innovative library technology
-                      solutions worldwide
+                      {t('banner.description')}
                     </p>
                   </div>
                   <div className="btn-box">
                     <div className="btn-one">
-                      <Link className="thm-btn" href="/catalog">
-                        <span className="txt">Discover More</span>
+                      <Link className="thm-btn" href="/products">
+                        <span className="txt">{t('banner.discoverMore')}</span>
                       </Link>
                     </div>
                     <div className="btn-two">
                       <Link className="thm-btn" href="/contact">
-                        <span className="txt">GET STARTED NOW</span>
+                        <span className="txt">{t('banner.getStartedNow')}</span>
                       </Link>
                     </div>
                   </div>

@@ -44,14 +44,15 @@
 @import url('./swiper.min.css');
 @import url('./module-css/about.css');
 @import url('./module-css/banner.css');
-
 @import url('./module-css/blog.css');
 @import url('./module-css/breadcrumb.css');
 @import url('./module-css/contact.css');
+@import url('./module-css/custom-quote.css');
 @import url('./module-css/fact-counter.css');
 @import url('./module-css/footer.css');
 @import url('./module-css/header.css');
 @import url('./module-css/partner.css');
+@import url('./module-css/products-filters.css');
 @import url('./module-css/services.css');
 @import url('./module-css/team.css');
 @import url('./module-css/testimonial.css');
@@ -302,55 +303,121 @@ h6 {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  font-family: var(--heading-font);
+  font-family: var(--thm-font);
   padding-right: 20px;
-
 }
 
 .selected-lang {
   padding: 10px 20px;
-  border-radius: 30px;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  color: #b4b2b2;
+  color: var(--thm-black);
+  font-family: var(--thm-font);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .selected-lang:hover {
-  border-color: #888;
+  color: var(--thm-primary);
 }
 
 .lang-dropdown {
   position: absolute;
   top: 100%;
-  left: 0;
-  background-color: white;
-  border: 1px solid #ccc;
-  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--thm-white);
+  border: none;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  width: 120px;
   z-index: 1000;
-  margin-top: 10px;
+  margin-top: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Show dropdown when open class is present */
+.lang-selector.open .lang-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.lang-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid var(--thm-white);
+  z-index: 1001;
 }
 
 .lang-dropdown li {
   width: 100%;
   list-style: none;
-  padding: 10px 15px;
+  padding: 12px 15px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.3s ease;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--thm-black);
+  position: relative;
+  overflow: hidden;
+}
+
+.lang-dropdown li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(var(--thm-primary-rgb), 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.lang-dropdown li:hover::before {
+  left: 100%;
 }
 
 .lang-dropdown li:hover {
-  background-color: #f0f0f0;
+  background-color: var(--thm-gray-bg);
+  color: var(--thm-primary);
+  transform: translateX(5px);
 }
 
+
 .flag-icon {
-  margin-right: 10px;
+  margin-right: 8px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.lang-dropdown li:hover .flag-icon {
+  transform: scale(1.1);
+}
+
+.lang-name {
+  transition: all 0.3s ease;
 }
 
 .lang-dropdown li:not(:last-child) {
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid rgba(var(--thm-gray-rgb), 0.15);
 }
 
 /*=============================
@@ -3951,6 +4018,7 @@ Shop Page
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .product__showing-sort {
@@ -4147,7 +4215,7 @@ Shop Page
 }
 
 .shop-page__single-content .text-box p {
-    color: var(--thm-primary);
+    color: var(--thm-black);
     font-size: 16px;
     line-height: 26px;
     font-weight: 500;

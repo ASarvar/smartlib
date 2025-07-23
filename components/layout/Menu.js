@@ -83,16 +83,8 @@ export default function Menu() {
           <Link href="/">{t('menu.home')}</Link>
         </li>
 
-        <li className={`menu-item-has-children ${hasActiveSubmenu(['/service', '/catalog']) ? 'active' : ''}`}>
-          <Link href="#">{t('menu.products')}</Link>
-          <ul className="sub-menu">
-            <li>
-              <Link href="/catalog">{t('menu.productsCatalog')}</Link>
-            </li>
-            <li>
-              <Link href="/service">{t('menu.services')}</Link>
-            </li>
-          </ul>
+        <li className={isActive('/products') ? 'active' : ''}>
+          <Link href="/products">{t('menu.products')}</Link>
         </li>
         <li className={isActive('/solutions') ? 'active' : ''}>
           <Link href="/solutions">{t('menu.solutions')}</Link>

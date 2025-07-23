@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Menu from "../Menu";
 import MobileMenu from "../MobileMenu";
+import LanguageSelector from "@/components/elements/LanguageSelector";
+
 export default function Header4({
   scroll,
   isMobileMenu,
@@ -90,11 +92,7 @@ export default function Header4({
                       </div>
 
                       <div className="main-header-one__right">
-                        <div className="btn-box">
-                          <Link className="thm-btn" href="/contact">
-                            <span className="txt">Get Started</span>
-                          </Link>
-                        </div>
+                        <LanguageSelector />
                       </div>
                     </div>
                   </nav>

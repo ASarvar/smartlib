@@ -17,6 +17,13 @@
     "phone": "Phone",
     "email": "Email"
   },
+  "banner": {
+    "title": "SmartLibrary",
+    "subtitle": "SMART RFID SOLUTIONS",
+    "description": "Leading provider of innovative library technology solutions worldwide",
+    "discoverMore": "Discover More",
+    "getStartedNow": "GET STARTED NOW"
+  },
   "footer": {
     "aboutUs": "About Us",
     "quickLinks": "Quick Links",

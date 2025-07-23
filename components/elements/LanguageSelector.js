@@ -11,9 +11,9 @@ const LanguageSelector = () => {
   const dropdownRef = useRef(null);
 
   const languages = [
-    { code: "En", name: "En", flag: "/assets/img/header/gb.png" },
-    { code: "Ru", name: "Ру", flag: "/assets/img/header/ru.png" },
-    { code: "Uz", name: "O‘z", flag: "/assets/img/header/uz.png" },
+    { code: "En", name: "EN", flag: "/assets/img/header/gb.png" },
+    { code: "Ru", name: "РУ", flag: "/assets/img/header/ru.png" },
+    { code: "Uz", name: "OʻZ", flag: "/assets/img/header/uz.png" },
   ];
 
   useEffect(() => {
@@ -48,7 +48,7 @@ const LanguageSelector = () => {
   };
 
   return (
-    <div className="lang-selector" ref={dropdownRef}>
+    <div className={`lang-selector ${isOpen ? 'open' : ''}`} ref={dropdownRef}>
       <div className="selected-lang" onClick={() => setIsOpen(!isOpen)}>
         <Image
           src={languages.find((lang) => lang.code === selectedLanguage)?.flag}
@@ -60,22 +60,20 @@ const LanguageSelector = () => {
         {languages.find((lang) => lang.code === selectedLanguage)?.name}
       </div>
 
-      {isOpen && (
-        <ul className="lang-dropdown">
-          {languages.map((language) => (
-            <li key={language.code} onClick={() => chooseLanguage(language.code)}>
-              <Image
-                src={language.flag}
-                alt={language.name}
-                width={25}
-                height={20}
-                className="flag-icon"
-              />
-              <span className="lang-name">{language.name}</span>
-            </li>
-          ))}
-        </ul>
-      )}
+      <ul className="lang-dropdown">
+        {languages.map((language) => (
+          <li key={language.code} onClick={() => chooseLanguage(language.code)}>
+            <Image
+              src={language.flag}
+              alt={language.name}
+              width={25}
+              height={20}
+              className="flag-icon"
+            />
+            <span className="lang-name">{language.name}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

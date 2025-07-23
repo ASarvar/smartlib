@@ -17,6 +17,13 @@
     "phone": "Telefon",
     "email": "Elektron pochta"
   },
+  "banner": {
+    "title": "SmartLibrary",
+    "subtitle": "AQLLI RFID YECHIMLARI",
+    "description": "Butun dunyo bo'ylab innovatsion kutubxona texnologiyalari yechimlarining etakchi yetkazib beruvchisi",
+    "discoverMore": "Ko'proq o'rganish",
+    "getStartedNow": "HOZIROQ BOSHLASH"
+  },
   "footer": {
     "aboutUs": "Biz haqimizda",
     "quickLinks": "Tezkor havolalar",
