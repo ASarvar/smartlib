@@ -1,0 +1,138 @@
+{
+  "1": {
+    "id": 1,
+    "name": "RFID Security Gates",
+    "price": "$2,499.00",
+    "sku": "RSG-001",
+    "category": "Security Gates",
+    "tags": "security, RFID, gates, library",
+    "rating": 5,
+    "reviewsCount": 18,
+    "images": [
+      "assets/img/shop/shop-page-img1.jpg",
+      "assets/img/shop/shop-page-img2.jpg",
+      "assets/img/shop/shop-page-img2.jpg",
+      "assets/img/shop/shop-page-img2.jpg"
+    ],
+    "description": "Advanced RFID-enabled security gates for library entrances. Features automatic detection, alarm system, and integration with library management systems. Built with durable materials and designed for high-traffic areas.",
+    "fullDescription": "Our RFID Security Gates represent the pinnacle of library security technology. These gates utilize advanced RFID detection systems to ensure that all materials leaving the library are properly checked out. The gates feature a sleek, modern design that complements any library environment while providing robust security features. With a 99.9% detection rate, these gates virtually eliminate unauthorized removal of library materials. The system includes LED indicators for visual feedback, silent alarm capabilities for discrete security alerts, and full integration with existing library management systems. Installation is straightforward, and the gates can be configured for various entrance widths.",
+    "specifications": {
+      "Detection Rate": "99.9%",
+      "Operating Frequency": "13.56 MHz",
+      "Detection Width": "90cm standard",
+      "Power Supply": "AC 100-240V",
+      "Dimensions": "160cm H x 50cm W x 15cm D",
+      "Weight": "45kg per panel"
+    },
+    "features": [
+      "99.9% detection rate",
+      "Silent alarm system",
+      "LED status indicators",
+      "Remote monitoring capability",
+      "Integration with LMS",
+      "Tamper-resistant design"
+    ],
+    "technicalSpecs": "ISO 15693 compliant, supports multiple tag formats, includes professional installation and 2-year warranty",
+    "reviews": [
+      {
+        "id": 1,
+        "author": "Sarah Johnson",
+        "date": "March 15, 2024",
+        "rating": 5,
+        "comment": "Excellent security gates! Easy to install and very reliable. Our library has seen zero security incidents since installation.",
+        "image": "assets/img/testimonial/testimonials-v1-img1.jpg"
+      },
+      {
+        "id": 2,
+        "author": "Michael Chen",
+        "date": "February 28, 2024",
+        "rating": 5,
+        "comment": "Outstanding build quality and performance. The silent alarm feature is perfect for our quiet library environment.",
+        "image": "assets/img/testimonial/testimonials-v1-img2.jpg"
+      }
+    ]
+  },
+  "2": {
+    "id": 2,
+    "name": "RFID Tags & Labels",
+    "price": "$0.25",
+    "sku": "RTL-500",
+    "category": "Tags & Labels",
+    "tags": "RFID, tags, labels, library materials",
+    "rating": 5,
+    "reviewsCount": 45,
+    "images": [
+      "assets/img/shop/shop-page-img3.jpg",
+      "assets/img/shop/shop-page-img4.jpg"
+    ],
+    "description": "High-quality RFID tags and labels for books, media, and library materials. Durable, tamper-evident, and compatible with all major library systems.",
+    "fullDescription": "Our RFID Tags & Labels are designed specifically for library environments, offering exceptional durability and performance. Each tag is manufactured to the highest standards using premium materials that ensure long-term reliability. The tags feature tamper-evident properties that make unauthorized removal virtually impossible without damaging the material. Compatible with all major library management systems, these tags support seamless integration into existing workflows. The adhesive is designed to bond permanently with various surface types including paper, plastic, and multimedia cases.",
+    "specifications": {
+      "Standard": "ISO 15693",
+      "Frequency": "13.56 MHz",
+      "Memory": "1024 bits",
+      "Read Range": "Up to 30cm",
+      "Size": "50mm x 13mm",
+      "Thickness": "0.3mm"
+    },
+    "features": [
+      "ISO 15693 compliant",
+      "Tamper-evident design",
+      "10+ year lifespan",
+      "Compatible with all systems",
+      "Permanent adhesive",
+      "Bulk packaging available"
+    ],
+    "technicalSpecs": "Self-adhesive, waterproof, temperature resistant (-40°C to +85°C), available in rolls of 500 or 1000 pieces",
+    "reviews": [
+      {
+        "id": 1,
+        "author": "Linda Martinez",
+        "date": "April 2, 2024",
+        "rating": 5,
+        "comment": "These tags are fantastic! Very easy to apply and they stay put. We've tagged over 10,000 books with no issues.",
+        "image": "assets/img/testimonial/testimonials-v1-img3.jpg"
+      }
+    ]
+  },
+  "3": {
+    "id": 3,
+    "name": "SelfCheck 3000",
+    "price": "$4,299.00",
+    "sku": "SCK-200",
+    "category": "Self-Service Terminals",
+    "tags": "self-service, library, RFID, barcode, kiosk",
+    "rating": 5,
+    "reviewsCount": 12,
+    "images": [
+      "assets/img/shop/shop-page-img1.jpg",
+      "assets/img/shop/shop-page-img2.jpg",
+      "assets/img/shop/shop-page-img2.jpg",
+      "assets/img/shop/shop-page-img2.jpg"
+    ],
+    "description": "Intuitive self-service terminal for libraries. High performance, energy efficiency, and flexible use in both desktop and floor-standing configurations.",
+    "fullDescription": "The SelfCheck 3000 is a modern self-service terminal designed for efficient and user-friendly operation in library environments. It supports RFID and barcode technologies, can read up to 5 books simultaneously, and ensures safe and convenient service for patrons. Its versatile design allows for use in both desktop and floor-mounted configurations. With quickConnect™ software and SIP2 protocol support, it integrates easily with existing systems. Optional UNIFI+ and OPEN+ SUITE modules extend its capabilities by promoting library events and enabling access outside regular hours.",
+    "specifications": {
+      "Operating Frequency": "13.56 ± 0.007 MHz",
+      "RF Power": "1.2 W",
+      "Performance": "Reads up to 5 books simultaneously",
+      "Compatibility": "ISO 15693, ISO 18000-3 A/B",
+      "Dimensions": "510 mm x 640 mm x 360 mm",
+      "Weight": "32 kg",
+      "Power Supply": "Input C13, 240 VAC, 130W, 50Hz",
+      "Connectivity": "10/100 Ethernet",
+      "OS": "Windows 10 IoT Enterprise 2019 LTSC 64-bit",
+      "Country of Origin": "EU"
+    },
+    "features": [
+      "Optimized self-service workflows",
+      "Remote device management",
+      "Library usage analytics",
+      "Book recommendation feature",
+      "Event promotion via UNIFI+",
+      "After-hours access with OPEN+",
+      "SIP2 integration"
+    ],
+    "technicalSpecs": "Compliant with ISO 15693 and ISO 18000-3 A/B, includes quickConnect™ software (license required), identification via RFID, barcode, smartcard, or manual entry"
+  }
+}

@@ -2,6 +2,7 @@
 import Layout from "@/components/layout/Layout";
 import Link from "next/link";
 import { useState } from "react";
+import productDetailsData from "@/data/product-details.json";
 
 export default function Products() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -9,146 +10,29 @@ export default function Products() {
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 6;
 
+  // Convert JSON object to array for easier handling
+  const products = Object.values(productDetailsData).map((product) => ({
+    id: product.id,
+    name: product.name,
+    description: product.description,
+    image: product.images[0], // Use first image as main image
+    category: product.category,
+    features: product.features || [],
+  }));
+
+  // Helper function to truncate text to specified number of lines
+  const truncateText = (text, maxLength = 150) => {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength).trim() + '...';
+  };
+
+  // Generate categories dynamically from product data
+  const uniqueCategories = [
+    ...new Set(products.map((product) => product.category)),
+  ];
   const categories = [
     { id: "all", name: "All Products" },
-    { id: "kiosks", name: "Kiosks" },
-    { id: "security", name: "Security Gates" },
-    { id: "readers", name: "RFID Readers" },
-    { id: "returns", name: "Return Systems" },
-    { id: "software", name: "Software" },
-    { id: "tags", name: "Tags & Labels" },
-    { id: "antennas", name: "Antennas" },
-    { id: "workstations", name: "Workstations" },
-  ];
-
-  // Sample products data
-  const products = [
-    {
-      id: 1,
-      name: "RFID Security Gates",
-      description:
-        "Advanced RFID-enabled security gates for library entrances. Features automatic detection, alarm system, and integration with library management systems.",
-      image: "assets/img/shop/shop-page-img1.jpg",
-      category: "security",
-      features: [
-        "99.9% detection rate",
-        "Silent alarm",
-        "LED indicators",
-        "Remote monitoring",
-      ],
-    },
-    {
-      id: 2,
-      name: "RFID Tags & Labels",
-      description:
-        "High-quality RFID tags and labels for books, media, and library materials. Durable, tamper-evident, and compatible with all major library systems.",
-      image: "assets/img/shop/shop-page-img2.jpg",
-      category: "tags",
-      features: [
-        "ISO 15693 compliant",
-        "Tamper-evident",
-        "Long lifespan",
-        "Compatible with all systems",
-      ],
-    },
-    {
-      id: 3,
-      name: "Self-Checkout Kiosks",
-      description:
-        "User-friendly self-service stations enabling patrons to check out books independently. Touchscreen interface with multilingual support.",
-      image: "assets/img/shop/shop-page-img3.jpg",
-      category: "kiosks",
-      features: [
-        "Touch screen interface",
-        "RFID reader",
-        "Receipt printer",
-        "Multi-language support",
-      ],
-    },
-    {
-      id: 4,
-      name: "Handheld RFID Readers",
-      description:
-        "Portable RFID readers for inventory management and collection maintenance. Lightweight design with long battery life.",
-      image: "assets/img/shop/shop-page-img4.jpg",
-      category: "readers",
-      features: [
-        "Fast processing",
-        "Ergonomic design",
-        "Multi-tag reading",
-        "Durable construction",
-      ],
-    },
-    {
-      id: 5,
-      name: "Staff Workstations",
-      description:
-        "Complete RFID-enabled workstations for library staff. Includes integrated reader, monitor, and professional software suite.",
-      image: "assets/img/shop/shop-page-img5.jpg",
-      category: "workstations",
-      features: [
-        "Integrated RFID reader",
-        '21" HD monitor',
-        "Professional software",
-        "Ergonomic design",
-      ],
-    },
-    {
-      id: 6,
-      name: "Smart Return Bins",
-      description:
-        "Automated book return system with RFID verification. Sorts materials automatically and provides instant receipt confirmation.",
-      image: "assets/img/shop/shop-page-img6.jpg",
-      category: "returns",
-      features: [
-        "Automated sorting",
-        "Secure storage",
-        "24/7 operation",
-        "Weather resistant",
-      ],
-    },
-    {
-      id: 7,
-      name: "RFID Antennas",
-      description:
-        "High-performance RFID antennas for various library applications. Optimized for library environments with adjustable sensitivity.",
-      image: "assets/img/shop/shop-page-img7.jpg",
-      category: "antennas",
-      features: [
-        "High performance",
-        "Adjustable sensitivity",
-        "Library optimized",
-        "Easy installation",
-      ],
-    },
-    {
-      id: 8,
-      name: "Library Management",
-      description:
-        "Comprehensive library management system with RFID integration. Includes cataloging, circulation, and analytics modules.",
-      image: "assets/img/shop/shop-page-img8.jpg",
-      category: "software",
-      features: [
-        "Inventory management",
-        "Patron management",
-        "Reporting tools",
-        "Cloud-based",
-      ],
-    },
-    {
-      id: 9,
-      name: "RFID Card Readers",
-      description:
-        "Proximity card readers for patron identification and access control. Compatible with standard library cards and student IDs.",
-      image: "assets/img/shop/shop-page-img9.jpg",
-      category: "readers",
-      features: [
-        "Wireless connectivity",
-        "Long battery life",
-        "Lightweight design",
-        "Real-time sync",
-      ],
-    },
+    ...uniqueCategories.map((category) => ({ id: category, name: category })),
   ];
 
   const filteredProducts = products.filter((product) => {
@@ -163,7 +47,10 @@ export default function Products() {
   // Pagination calculations
   const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
   const startIndex = (currentPage - 1) * productsPerPage;
-  const currentProducts = filteredProducts.slice(startIndex, startIndex + productsPerPage);
+  const currentProducts = filteredProducts.slice(
+    startIndex,
+    startIndex + productsPerPage
+  );
 
   // Reset to page 1 when filters change
   const handleCategoryChange = (categoryId) => {
@@ -209,7 +96,7 @@ export default function Products() {
                       <div className="shop-page__single-img">
                         <img src={product.image} alt={product.name} />
                         <div className="btn-box">
-                          <Link href={`/products/${product.category}`}>
+                          <Link href={`/prodcut-details?id=${product.id}`}>
                             VIEW DETAILS
                           </Link>
                         </div>
@@ -218,13 +105,22 @@ export default function Products() {
                       <div className="shop-page__single-content">
                         <div className="text-box">
                           <h4>
-                            <Link href={`/products/${product.category}`}>
+                            <Link href={`/prodcut-details?id=${product.id}`}>
                               {product.name}
                             </Link>
                           </h4>
-                          <p>{product.description}</p>
+                          <p style={{
+                            display: '-webkit-box',
+                            WebkitLineClamp: 4,
+                            WebkitBoxOrient: 'vertical',
+                            overflow: 'hidden',
+                            lineHeight: '1.4em',
+                            maxHeight: '5.6em'
+                          }}>
+                            {product.description}
+                          </p>
                           <ul className="product-features">
-                            {product.features.map((feature, featureIndex) => (
+                            {product.features.slice(0, 5).map((feature, featureIndex) => (
                               <li key={featureIndex}>{feature}</li>
                             ))}
                           </ul>
@@ -248,12 +144,20 @@ export default function Products() {
 
                 {totalPages > 1 && (
                   <ul className="styled-pagination text-center clearfix">
-                                      
                     {Array.from({ length: totalPages }, (_, index) => {
                       const pageNumber = index + 1;
                       return (
-                        <li key={pageNumber} className={currentPage === pageNumber ? 'active' : ''}>
-                          <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage(pageNumber); }}>
+                        <li
+                          key={pageNumber}
+                          className={currentPage === pageNumber ? "active" : ""}
+                        >
+                          <a
+                            href="#"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              setCurrentPage(pageNumber);
+                            }}
+                          >
                             {pageNumber}
                           </a>
                         </li>
