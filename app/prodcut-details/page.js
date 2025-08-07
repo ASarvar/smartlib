@@ -1,16 +1,23 @@
 "use client";
 import QuantityInput from "@/components/elements/QuantityInput";
 import Layout from "@/components/layout/Layout";
+import Preloader from "@/components/elements/Preloader";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import productDetailsData from "@/data/product-details.json";
+import React from "react";
+import { useTranslation } from "react-i18next";
+import ModalVideo from "react-modal-video";
 
 export default function ProductDetails() {
+  const { t } = useTranslation();
   const searchParams = useSearchParams();
   const [product, setProduct] = useState(null);
   const [selectedImage, setSelectedImage] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [isAutoSliding, setIsAutoSliding] = useState(true);
+  const [isVideoOpen, setVideoOpen] = useState(false);
 
   useEffect(() => {
     const productId = searchParams.get("id") || "1";
@@ -23,16 +30,31 @@ export default function ProductDetails() {
     setLoading(false);
   }, [searchParams]);
 
+  // Auto-slide effect
+  useEffect(() => {
+    if (!product || !isAutoSliding || product.images.length <= 1) return;
+
+    const interval = setInterval(() => {
+      setSelectedImage((prevIndex) =>
+        prevIndex === product.images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [product, isAutoSliding]);
+
+  const handleImageSelect = (index) => {
+    setSelectedImage(index);
+    setIsAutoSliding(false); // Stop auto-slide when user manually selects
+
+    // Resume auto-slide after 5 seconds of no interaction
+    setTimeout(() => {
+      setIsAutoSliding(true);
+    }, 5000);
+  };
+
   if (loading) {
-    return (
-      <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Loading...">
-        <div className="container">
-          <div className="text-center">
-            <h2>Loading product details...</h2>
-          </div>
-        </div>
-      </Layout>
-    );
+    return <Preloader />;
   }
 
   if (!product) {
@@ -70,37 +92,50 @@ export default function ProductDetails() {
                           src={product.images[selectedImage]}
                           alt={product.name}
                         />
-                        <div className="shop-details__link">
-                          <Link
-                            className="img-popup"
-                            href={product.images[selectedImage]}
-                          >
-                            <span className="icon-search-interface-symbol"></span>
-                          </Link>
-                        </div>
+
+                        {product.images.length > 1 && (
+                          <>
+                            {/* Auto-slide control */}
+                            {/* <div className="auto-slide-control">
+                              <button
+                                onClick={() => setIsAutoSliding(!isAutoSliding)}
+                                className="slide-control-btn"
+                                title={
+                                  isAutoSliding
+                                    ? "Pause slideshow"
+                                    : "Play slideshow"
+                                }
+                              >
+                                {isAutoSliding ? "⏸️" : "▶️"}
+                              </button>
+                            </div> */}
+
+                            {/* Slide indicators
+                            <div className="slide-indicators">
+                              {product.images.map((_, index) => (
+                                <div
+                                  key={index}
+                                  className={`indicator ${
+                                    selectedImage === index ? "active" : ""
+                                  }`}
+                                  onClick={() => handleImageSelect(index)}
+                                />
+                              ))}
+                            </div> */}
+                          </>
+                        )}
                       </div>
                       {product.images.length > 1 && (
-                        <div
-                          className="image-thumbnails"
-                          style={{ marginTop: "15px" }}
-                        >
+                        <div className="image-thumbnails">
                           {product.images.map((image, index) => (
                             <img
                               key={index}
                               src={image}
                               alt={`${product.name} ${index + 1}`}
-                              onClick={() => setSelectedImage(index)}
-                              style={{
-                                width: "60px",
-                                height: "60px",
-                                objectFit: "cover",
-                                margin: "0 5px",
-                                cursor: "pointer",
-                                border:
-                                  selectedImage === index
-                                    ? "2px solid #007bff"
-                                    : "1px solid #ddd",
-                              }}
+                              onClick={() => handleImageSelect(index)}
+                              className={`thumbnail-image ${
+                                selectedImage === index ? "active" : ""
+                              }`}
                             />
                           ))}
                         </div>
@@ -112,38 +147,42 @@ export default function ProductDetails() {
                     <div className="shop-details__top-content">
                       <div className="shop-details__top-content-text1">
                         <h2>{product.name}</h2>
-                        <p>{product.description}</p>
+                        <p className="product-description-clamp">
+                          {product.description}
+                        </p>
                       </div>
 
                       <div className="shop-details__top-content-text2">
-                        <h4>Key Features</h4>
-                        <ul style={{ listStyle: "none", padding: 0 }}>
-                          {product.features.map((feature, index) => (
-                            <li key={index} style={{ marginBottom: "5px" }}>
-                              ✓ {feature}
-                            </li>
-                          ))}
-                        </ul>
+                        <div className="product-features-details">
+                          <h4>Key Features</h4>
+                          <div className="table-content">
+                            <ul>
+                              {product.features.map((feature, index) => (
+                                <li key={index}>
+                                  <div className="icon-box">
+                                    <span className="icon-check-mark"></span>
+                                  </div>{" "}
+                                  <div className="text-box">
+                                    <p>{feature}</p>
+                                  </div>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
                       </div>
 
                       <div className="shop-details__top-content-text3">
-                        <div className="inner">
-                          <div className="product-quantity">
-                            <div className="product-quantity-box">
-                              <div className="input-box">
-                                <QuantityInput />
-                              </div>
-                            </div>
+                        <div className="btn-box">
+                          <div className="btn-one">
+                            <Link className="thm-btn" href="/products">
+                              <span className="txt">Download Brochure</span>
+                            </Link>
                           </div>
-
-                          <div className="cart-btn">
-                            <button
-                              className="thm-btn"
-                              type="submit"
-                              data-loading-text="Please wait..."
-                            >
-                              <span className="txt">Add to Cart</span>
-                            </button>
+                          <div className="btn-two">
+                            <Link className="thm-btn" href="/contact">
+                              <span className="txt">Contact Us</span>
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -196,27 +235,12 @@ export default function ProductDetails() {
                 <p>{product.fullDescription}</p>
 
                 {product.specifications && (
-                  <div style={{ marginTop: "30px" }}>
+                  <div className="specifications-section">
                     <h3>Technical Specifications</h3>
-                    <div
-                      style={{
-                        display: "grid",
-                        gridTemplateColumns:
-                          "repeat(auto-fit, minmax(250px, 1fr))",
-                        gap: "15px",
-                        marginTop: "15px",
-                      }}
-                    >
+                    <div className="specifications-grid">
                       {Object.entries(product.specifications).map(
                         ([key, value]) => (
-                          <div
-                            key={key}
-                            style={{
-                              padding: "10px",
-                              border: "1px solid #eee",
-                              borderRadius: "5px",
-                            }}
-                          >
+                          <div key={key} className="specification-item">
                             <strong>{key}:</strong> {value}
                           </div>
                         )
@@ -224,12 +248,49 @@ export default function ProductDetails() {
                     </div>
                   </div>
                 )}
+
+                {/* Product Video Section */}
+                <div className="product-video-section">
+                  <div className="video-one__inner text-center">
+                    <div
+                      className="video-one__bg"
+                      style={{
+                        backgroundImage:
+                          "url(assets/img/background/video-v1-bg.jpg)",
+                      }}
+                    ></div>
+                    <div className="title-box">
+                      <h2>
+                        See {product.name} <br />
+                        in Action
+                      </h2>
+                    </div>
+                    <div className="video-one__video-btn">
+                      <a
+                        onClick={() => setVideoOpen(true)}
+                        className="video-one__icon video-popup"
+                        style={{ cursor: "pointer" }}
+                      >
+                        <span className="icon-play-button-1"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
           {/*End Shop Details */}
         </div>
       </Layout>
+
+      {/* Modal Video */}
+      <ModalVideo
+        channel="youtube"
+        autoplay
+        isOpen={isVideoOpen}
+        videoId="vfhzo499OeA"
+        onClose={() => setVideoOpen(false)}
+      />
     </>
   );
 }

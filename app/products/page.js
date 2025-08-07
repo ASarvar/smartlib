@@ -23,7 +23,7 @@ export default function Products() {
   // Helper function to truncate text to specified number of lines
   const truncateText = (text, maxLength = 150) => {
     if (text.length <= maxLength) return text;
-    return text.substring(0, maxLength).trim() + '...';
+    return text.substring(0, maxLength).trim() + "...";
   };
 
   // Generate categories dynamically from product data
@@ -109,20 +109,15 @@ export default function Products() {
                               {product.name}
                             </Link>
                           </h4>
-                          <p style={{
-                            display: '-webkit-box',
-                            WebkitLineClamp: 4,
-                            WebkitBoxOrient: 'vertical',
-                            overflow: 'hidden',
-                            lineHeight: '1.4em',
-                            maxHeight: '5.6em'
-                          }}>
+                          <p className="product-description-clamp">
                             {product.description}
                           </p>
                           <ul className="product-features">
-                            {product.features.slice(0, 5).map((feature, featureIndex) => (
-                              <li key={featureIndex}>{feature}</li>
-                            ))}
+                            {product.features
+                              .slice(0, 5)
+                              .map((feature, featureIndex) => (
+                                <li key={featureIndex}>{feature}</li>
+                              ))}
                           </ul>
                         </div>
                       </div>
