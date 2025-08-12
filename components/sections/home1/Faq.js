@@ -1,7 +1,10 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
+
 export default function Faq() {
+  const { t } = useTranslation();
   const [isActive, setIsActive] = useState({
     status: false,
     key: 1,
@@ -26,7 +29,7 @@ export default function Faq() {
         <div className="container clearfix">
           <div className="faq-one__inner">
             <div className="big-title">
-              <h2>FAQ</h2>
+              <h2>{t('faq.title')}</h2>
             </div>
             <ul
               className="accrodion-grp faq-one__accrodion"
@@ -39,7 +42,7 @@ export default function Faq() {
               >
                 <div className="accrodion-title">
                   <h3>
-                    What is RFID technology and how does it benefit libraries?
+                    {t('faq.question1')}
                   </h3>
                 </div>
                 <div
@@ -51,12 +54,7 @@ export default function Faq() {
                 >
                   <div className="inner">
                     <p>
-                      RFID (Radio Frequency Identification) technology uses
-                      electromagnetic fields to automatically identify and track
-                      tags attached to books and materials. It enables faster
-                      check-in/check-out processes, automated inventory
-                      management, enhanced security, and improved patron
-                      experience through self-service stations.
+                      {t('faq.answer1')}
                     </p>
                   </div>
                 </div>
@@ -70,7 +68,7 @@ export default function Faq() {
               >
                 <div className="accrodion-title">
                   <h3>
-                    How long does it take to implement RFID in our library?
+                    {t('faq.question2')}
                   </h3>
                 </div>
                 <div
@@ -82,12 +80,7 @@ export default function Faq() {
                 >
                   <div className="inner">
                     <p>
-                      Implementation time varies depending on library size and
-                      collection volume. Typically, a small to medium library
-                      takes 2-4 weeks, while larger institutions may require 6-8
-                      weeks. This includes system setup, staff training, and
-                      material tagging. We provide a detailed timeline during
-                      consultation.
+                      {t('faq.answer2')}
                     </p>
                   </div>
                 </div>
@@ -101,7 +94,7 @@ export default function Faq() {
               >
                 <div className="accrodion-title">
                   <h3>
-                    What support and training do you provide after installation?
+                    {t('faq.question3')}
                   </h3>
                 </div>
                 <div
@@ -113,11 +106,7 @@ export default function Faq() {
                 >
                   <div className="inner">
                     <p>
-                      We provide comprehensive staff training, detailed user
-                      manuals, and ongoing technical support. Our support
-                      package includes system maintenance, software updates,
-                      troubleshooting assistance, and 24/7 helpdesk service. We
-                      also offer refresher training sessions as needed.
+                      {t('faq.answer3')}
                     </p>
                   </div>
                 </div>
@@ -131,8 +120,7 @@ export default function Faq() {
               >
                 <div className="accrodion-title">
                   <h3>
-                    Can RFID systems integrate with existing library management
-                    software?
+                    {t('faq.question4')}
                   </h3>
                 </div>
                 <div
@@ -144,12 +132,7 @@ export default function Faq() {
                 >
                   <div className="inner">
                     <p>
-                      Yes, our RFID solutions are designed to integrate
-                      seamlessly with most existing library management systems
-                      (LMS). As official Bibliotheca partners, we ensure
-                      compatibility with popular LMS platforms and provide
-                      custom integration services when needed to maintain your
-                      current workflows.
+                      {t('faq.answer4')}
                     </p>
                   </div>
                 </div>

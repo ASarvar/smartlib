@@ -5,11 +5,17 @@ import BrandSlider2 from "@/components/slider/BrandSlider2";
 import Layout from "@/components/layout/Layout";
 import CounterUp from "@/components/elements/CounterUp";
 import TeamSlider2 from "@/components/slider/TeamSlider2";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const { t } = useTranslation();
   return (
     <>
-      <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="About Us">
+      <Layout
+        headerStyle={4}
+        footerStyle={1}
+        breadcrumbTitle={t("about.pageTitle")}
+      >
         <div>
           {/*Start About One */}
           <section className="about-one about-one--about">
@@ -35,9 +41,9 @@ export default function Home() {
                       </div>
                       <div className="text-box">
                         <p>
-                          YEARS <br />
-                          WORKIGN <br />
-                          EXPERIENCE
+                          {t("about.years")} <br />
+                          {t("about.working")} <br />
+                          {t("about.experience")}
                         </p>
                       </div>
                     </div>
@@ -53,25 +59,19 @@ export default function Home() {
                   <div className="about-one__content">
                     <div className="sec-title">
                       <div className="sub-title">
-                        <h5>About SmartLibrary</h5>
+                        <h5>{t("about.title")}</h5>
                       </div>
-                      <h2>Leading RFID Solutions for Modern Libraries</h2>
+                      <h2>{t("about.pageHeading")}</h2>
                     </div>
 
                     <div className="text-box">
-                      <p>
-                        SmartLibrary is at the forefront of RFID technology,
-                        delivering innovative solutions that redefine library
-                        management. Our systems are designed to enhance
-                        efficiency, streamline operations, and improve the user
-                        experience for libraries of all sizes.
-                      </p>
+                      <p>{t("about.pageDescription")}</p>
                     </div>
 
                     <div className="about-one__content-progress">
                       <div className="about-one__content-progress-single">
                         <div className="title">
-                          <h4>RFID Solutions</h4>
+                          <h4>{t("about.rfidSolutions")}</h4>
                         </div>
                         <div className="bar">
                           <div
@@ -85,7 +85,7 @@ export default function Home() {
 
                       <div className="about-one__content-progress-single mb0">
                         <div className="title">
-                          <h4>Library Automation</h4>
+                          <h4>{t("about.libraryAutomation")}</h4>
                         </div>
                         <div className="bar">
                           <div
@@ -102,7 +102,9 @@ export default function Home() {
                       <div className="about-one__content-bottom-author-box">
                         <div className="btn-box">
                           <Link className="thm-btn" href="/about">
-                            <span className="txt">More About Us</span>
+                            <span className="txt">
+                              {t("about.moreAboutUs")}
+                            </span>
                           </Link>
                         </div>
 
@@ -123,7 +125,7 @@ export default function Home() {
                       </div>
                       <div className="text">
                         <h4>
-                          Need RFID solutions for your library? Call Us:{" "}
+                          {t("about.callText")}{" "}
                           <Link href="tel:+998712007009">
                             +998 71 200 70 09
                           </Link>
@@ -147,16 +149,13 @@ export default function Home() {
                   "url(assets/img/pattern/testimonials-v2-pattern.png)",
               }}
             ></div>
-            
+
             <div className="container">
               <div className="sec-title text-center">
                 <div className="sub-title">
-                  <h5>OUR CLIENT TESTIMONIALS</h5>
+                  <h5>{t("about.clientTestimonials")}</h5>
                 </div>
-                <h2>
-                  Why Our Clients Trust <br />
-                  SmartLibrary
-                </h2>
+                <h2>{t("about.whyClientsTitle")}</h2>
               </div>
 
               <TestimonialSlider4 />
@@ -225,11 +224,8 @@ export default function Home() {
                             <span className="icon-rfid-chip"></span>
                           </div>
                           <div className="content-box">
-                            <h2>Advanced RFID Technology</h2>
-                            <p>
-                              We leverage state-of-the-art RFID technology to
-                              provide reliable and efficient library solutions.
-                            </p>
+                            <h2>{t("about.advancedRFID")}</h2>
+                            <p>{t("about.advancedRFIDDesc")}</p>
                           </div>
                         </div>
                       </li>
@@ -240,11 +236,8 @@ export default function Home() {
                             <span className="icon-library-automation"></span>
                           </div>
                           <div className="content-box">
-                            <h2>Seamless Library Automation</h2>
-                            <p>
-                              Our systems automate key library processes, from
-                              check-in/out to inventory management.
-                            </p>
+                            <h2>{t("about.seamlessAutomation")}</h2>
+                            <p>{t("about.seamlessAutomationDesc")}</p>
                           </div>
                         </div>
                       </li>
@@ -255,12 +248,8 @@ export default function Home() {
                             <span className="icon-expert-support"></span>
                           </div>
                           <div className="content-box">
-                            <h2>Expert Support & Planning</h2>
-                            <p>
-                              We offer professional planning and dedicated
-                              support to ensure successful implementation and
-                              operation.
-                            </p>
+                            <h2>{t("about.expertSupport")}</h2>
+                            <p>{t("about.expertSupportDesc")}</p>
                           </div>
                         </div>
                       </li>
@@ -285,11 +274,11 @@ export default function Home() {
             <div className="container">
               <div className="call-to-action-one__inner">
                 <div className="call-to-action-one__content text-center">
-                  <h2>Ready to Upgrade Your Library?</h2>
-                  <h3>Contact Us for RFID Technology Solutions</h3>
+                  <h2>{t("about.readyToUpgrade")}</h2>
+                  <h3>{t("about.contactForSolutions")}</h3>
                   <div className="btn-box">
                     <Link className="thm-btn" href="/contact">
-                      <span className="txt">GET IN TOUCH</span>
+                      <span className="txt">{t("about.getInTouch")}</span>
                     </Link>
                   </div>
                 </div>
@@ -303,12 +292,9 @@ export default function Home() {
               <div className="team-one__top">
                 <div className="sec-title">
                   <div className="sub-title">
-                    <h5>OUR TEAM MEMBERS</h5>
+                    <h5>{t("about.ourTeamMembers")}</h5>
                   </div>
-                  <h2>
-                    Expert Team Behind <br />
-                    SmartLibrary Solutions
-                  </h2>
+                  <h2>{t("about.expertTeam")}</h2>
                 </div>
               </div>
 

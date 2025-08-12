@@ -407,6 +407,7 @@ h6 {
 .flag-icon {
   margin-right: 8px;
   border-radius: 2px;
+  border: 0.01em solid var(--thm-logocolor);
   transition: all 0.3s ease;
 }
 
@@ -1537,10 +1538,12 @@ Feauture One
 
 .feauture-one__single {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: var(--thm-gray-bg);
   padding: 31px 40px 40px;
   margin-bottom: 30px;
+  min-height: 250px;
   z-index: 1;
 }
 
@@ -1570,7 +1573,8 @@ Feauture One
 .feauture-one__single-text {
   position: relative;
   display: block;
-  margin-bottom: 54px;
+  margin-bottom: 34px;
+  flex-grow: 1;
 }
 
 .feauture-one__single-text p {
@@ -1591,6 +1595,9 @@ Feauture One
   font-weight: 700;
   text-transform: capitalize;
   letter-spacing: -0.02em;
+  min-height: 60px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .feauture-one__single-text h2 a {
@@ -1608,6 +1615,7 @@ Feauture One
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: auto;
 }
 
 .feauture-one__single-bottom .btn-box {
@@ -2304,6 +2312,7 @@ Faq One
   position: absolute;
   left: 55px;
   bottom: 55px;
+  right: 55px;
   opacity: 0;
   transform: translateY(50px);
   transition: all 800ms ease;
@@ -2322,9 +2331,9 @@ Faq One
 }
 
 .project-one__single .overlay-text h2 {
-  font-size: 26px;
-  line-height: 30px;
-  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
   text-transform: capitalize;
 }
 

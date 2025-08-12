@@ -1,6 +1,10 @@
+"use client";
 import Link from "next/link";
 import CounterUp from "@/components/elements/CounterUp";
+import { useTranslation } from "react-i18next";
+
 export default function About() {
+  const { t } = useTranslation();
   return (
     <>
       {/*Start About One */}
@@ -27,9 +31,9 @@ export default function About() {
                   </div>
                   <div className="text-box">
                     <p>
-                      YEARS <br />
-                      WORKING <br />
-                      EXPERIENCE
+                      {t("about.years")} <br />
+                      {t("about.working")} <br />
+                      {t("about.experience")}
                     </p>
                   </div>
                 </div>
@@ -45,43 +49,34 @@ export default function About() {
               <div className="about-one__content">
                 <div className="sec-title">
                   <div className="sub-title">
-                    <h5>About SmartLibrary</h5>
+                    <h5>{t("about.title")}</h5>
                   </div>
-                  <h2>
-                    Leading RFID Solutions <br />
-                    for Modern Libraries
-                  </h2>
+                  <h2>{t("about.heading")}</h2>
                 </div>
 
                 <div className="text-box">
-                  <p>
-                    SmartLibrary is the official partner of Bibliotheca in
-                    Uzbekistan, providing cutting-edge RFID technology solutions
-                    for libraries, archives, and educational institutions. We
-                    specialize in library automation systems that enhance
-                    efficiency and improve user experience.
-                  </p>
+                  <p>{t("about.description")}</p>
                 </div>
 
                 <div className="about-one__content-progress">
                   <div className="about-one__content-progress-single">
                     <div className="title">
-                      <h4>RFID Technology</h4>
+                      <h4>{t("about.rfidTechnology")}</h4>
                     </div>
                     <div className="bar">
-                      <div className="bar-inner1 count-bar" data-percent="95%">
-                        <div className="count-text">95%</div>
+                      <div className="bar-inner1 count-bar" data-percent="90%">
+                        <div className="count-text">90%</div>
                       </div>
                     </div>
                   </div>
 
                   <div className="about-one__content-progress-single mb0">
                     <div className="title">
-                      <h4>Automation Systems</h4>
+                      <h4>{t("about.automationSystems")}</h4>
                     </div>
                     <div className="bar">
-                      <div className="bar-inner2 count-bar" data-percent="90%">
-                        <div className="count-text style2">90%</div>
+                      <div className="bar-inner2 count-bar" data-percent="95%">
+                        <div className="count-text style2">95%</div>
                       </div>
                     </div>
                   </div>
@@ -91,25 +86,25 @@ export default function About() {
                   <div className="about-one__content-bottom-author-box">
                     <div className="btn-box">
                       <Link className="thm-btn" href="/about">
-                        <span className="txt">Discover More</span>
+                        <span className="txt">{t("about.discoverMore")}</span>
                       </Link>
                     </div>
 
-                    <div className="author-info">
+                    {/* <div className="author-info">
                       <div className="img-box">
                         <img src="assets/img/about/about-v1-img2.jpg" alt="" />
                       </div>
                       <div className="signature-box">
                         <img src="assets/img/about/signature-1.png" alt="" />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
-                  <div className="text">
+                  {/* <div className="text">
                     <h4>
                       Need RFID solutions for your library? Call Us:{" "}
                       <Link href="tel:+998711234567">+998 71 123 45 67</Link>
                     </h4>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
