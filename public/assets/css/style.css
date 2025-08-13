@@ -423,6 +423,74 @@ h6 {
   border-bottom: 1px solid rgba(var(--thm-gray-rgb), 0.15);
 }
 
+/* Mobile Language Selector Styles */
+.mobile-language-selector {
+  padding: 20px 30px;
+  margin: 15px 0;
+}
+
+.mobile-language-selector .lang-selector {
+  padding-right: 0;
+  width: 100%;
+  position: relative;
+}
+
+/* Hide the selected language display in mobile */
+.mobile-language-selector .selected-lang {
+  display: none;
+}
+
+/* Show all languages in a horizontal line */
+.mobile-language-selector .lang-dropdown {
+  position: static;
+  transform: none;
+  width: 100%;
+  margin-top: 0;
+  box-shadow: none;
+  border-radius: 5px;
+  background-color: transparent;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.mobile-language-selector .lang-dropdown::before {
+  display: none;
+}
+
+.mobile-language-selector .lang-dropdown li {
+  flex: none;
+  width: auto;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: var(--thm-white);
+  transition: all 0.3s ease;
+  margin: 0;
+  min-width: 60px;
+  justify-content: center;
+}
+
+.mobile-language-selector .lang-dropdown li:not(:last-child) {
+  border-bottom: none;
+}
+
+.mobile-language-selector .lang-dropdown li:hover {
+  background-color: var(--thm-primary);
+  color: var(--thm-white);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(var(--thm-primary-rgb), 0.3);
+}
+
+.mobile-language-selector .lang-dropdown li:hover .flag-icon {
+  transform: scale(1.05);
+}
+
 /*=============================
 	Sec Title CSS
 ===============================*/
