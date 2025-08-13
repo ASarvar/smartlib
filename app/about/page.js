@@ -98,7 +98,7 @@ export default function Home() {
                       </div>
                     </div>
 
-                    <div className="about-one__content-bottom">
+                    {/* <div className="about-one__content-bottom">
                       <div className="about-one__content-bottom-author-box">
                         <div className="btn-box">
                           <Link className="thm-btn" href="/about">
@@ -131,7 +131,7 @@ export default function Home() {
                           </Link>
                         </h4>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 {/*End About One Content */}

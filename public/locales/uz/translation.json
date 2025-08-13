@@ -74,6 +74,28 @@
   "video": {
     "leaderInRfidTechnology": "Biz kutubxona RFID texnologiyasida yetakchimiz"
   },
+  "testimonials": {
+    "testimonial1": {
+      "text": "SmartLibrary RFID tizimi bizning kutubxona faoliyatini butunlay o'zgartirdi. Avtomatlashtirilgan kitob berish va qaytarish jarayoni har kuni soatlab vaqtimizni tejaydi va mijozlarga ajoyib xizmat ko'rsatishni ta'minlaydi.",
+      "name": "Dr. Sara Jonson",
+      "position": "Kutubxona direktori"
+    },
+    "testimonial2": {
+      "text": "Joriy etish muammosiz o'tdi va ta'lim keng qamrovli edi. Bizning xodimlarimiz yangi tizimga tezda moslashdi va tashrif buyuruvchilar o'z-o'ziga xizmat imkoniyatlarini yaxshi ko'radilar.",
+      "name": "Ahmad Karimov",
+      "position": "Bosh kutubxonachi"
+    },
+    "testimonial3": {
+      "text": "Ajoyib texnik yordam va professional xizmat. RFID yechimi bizning inventar boshqaruvimizni sezilarli darajada yaxshiladi va xavfsizlik choralarini kuchaytirdi.",
+      "name": "Mariya Rodriges",
+      "position": "IT menejeri"
+    },
+    "testimonial4": {
+      "text": "Ajoyib investitsiya daromadligi va ishonchli texnologiya. SmartLibrary ning RFID yechimlari bo'yicha ekspertizasi bizning butun kutubxona infratuzilmasini samarali modernizatsiya qilishga yordam berdi.",
+      "name": "Dr. Elena Petrov",
+      "position": "Bosh kutubxonachi"
+    }
+  },
   "solutions": {
     "ourServices": "BIZNING YECHIMLARIMIZ",
     "heading": "Aqlli RFID yechimlari va texnologiyalar",

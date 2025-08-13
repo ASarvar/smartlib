@@ -71,6 +71,28 @@
   "video": {
     "leaderInRfidTechnology": "We Are The Leader in Library RFID Technology"
   },
+  "testimonials": {
+    "testimonial1": {
+      "text": "SmartLibrary's RFID system transformed our library operations completely. The automated check-in/check-out process saves us hours daily and provides excellent patron experience.",
+      "name": "Dr. Sarah Johnson",
+      "position": "Library Director"
+    },
+    "testimonial2": {
+      "text": "The implementation was seamless and the training provided was comprehensive. Our staff adapted quickly to the new system and patrons love the self-service options.",
+      "name": "Ahmad Karimov",
+      "position": "Head Librarian"
+    },
+    "testimonial3": {
+      "text": "Outstanding technical support and professional service. The RFID solution has improved our inventory management significantly and enhanced security measures.",
+      "name": "Maria Rodriguez",
+      "position": "IT Manager"
+    },
+    "testimonial4": {
+      "text": "Excellent ROI and reliable technology. SmartLibrary's expertise in RFID solutions helped us modernize our entire library infrastructure efficiently.",
+      "name": "Dr. Elena Petrov",
+      "position": "Chief Librarian"
+    }
+  },
   "solutions": {
     "ourServices": "OUR SOLUTIONS",
     "heading": "Smart RFID Solutions & Technology",
