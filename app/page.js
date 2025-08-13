@@ -23,11 +23,11 @@ export default function Home() {
         <Projects />
         {/* <Team /> */}
         <Faq />
-        {/* <FeautureTwo /> */}
+        <FeautureTwo />
         <Video />
         <Brand />
-        <Testimonial />
-        <News />
+        {/* <Testimonial /> */}
+        {/* <News /> */}
       </Layout>
     </>
   );

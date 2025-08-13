@@ -62,7 +62,14 @@
     "exploreFeature": "EXPLORE FEATURE",
     "rfidTechnology": "RFID Technology",
     "automationSystems": "Automation Systems",
-    "services": "Solutions"
+    "services": "Solutions",
+    "advancedRfidSolutions": "Advanced RFID Solutions For Modern Libraries",
+    "forModernLibraries": "For Modern Libraries",
+    "expertTechnicalSupport": "Expert Technical Support & Professional Training",
+    "professionalTraining": "& Professional Training"
+  },
+  "video": {
+    "leaderInRfidTechnology": "We Are The Leader in Library RFID Technology"
   },
   "solutions": {
     "ourServices": "OUR SOLUTIONS",

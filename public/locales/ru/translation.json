@@ -65,7 +65,14 @@
     "exploreFeature": "ИЗУЧИТЬ ФУНКЦИЮ",
     "rfidTechnology": "RFID Технологии",
     "automationSystems": "Системы автоматизации",
-    "services": "Решения"
+    "services": "Решения",
+    "advancedRfidSolutions": "Передовые RFID-решения Для современных библиотек",
+    "forModernLibraries": "Для современных библиотек",
+    "expertTechnicalSupport": "техническая поддержка и профессиональное обучение",
+    "professionalTraining": "профессиональное обучение"
+  },
+  "video": {
+    "leaderInRfidTechnology": "Мы лидеры в области RFID технологий для библиотек"
   },
   "solutions": {
     "ourServices": "НАШИ РЕШЕНИЯ",

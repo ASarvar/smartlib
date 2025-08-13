@@ -65,7 +65,14 @@
     "exploreFeature": "XUSUSIYATNI O'RGANISH",
     "rfidTechnology": "RFID Texnologiyasi",
     "automationSystems": "Avtomatlashtirish tizimlari",
-    "services": "Yechimlar"
+    "services": "Yechimlar",
+    "advancedRfidSolutions": "Zamonaviy kutubxonalar uchun Ilg'or RFID yechimlari",
+    "forModernLibraries": "Zamonaviy kutubxonalar uchun",
+    "expertTechnicalSupport": "Mutaxassis texnik yordami va professional o'qitish",
+    "professionalTraining": "va professional o'qitish"
+  },
+  "video": {
+    "leaderInRfidTechnology": "Biz kutubxona RFID texnologiyasida yetakchimiz"
   },
   "solutions": {
     "ourServices": "BIZNING YECHIMLARIMIZ",
