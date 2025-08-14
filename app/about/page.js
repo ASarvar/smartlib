@@ -36,7 +36,7 @@ export default function Home() {
                     <div className="experience-box">
                       <div className="counter-box">
                         <h2 className="count">
-                          <CounterUp end={4} />
+                          <CounterUp end={30} />
                         </h2>
                       </div>
                       <div className="text-box">
@@ -65,10 +65,18 @@ export default function Home() {
                     </div>
 
                     <div className="text-box">
-                      <p>{t("about.pageDescription")}</p>
+                      <p>{t("about.description")}</p>
+                      <br />
+                    </div>
+                    <div className="text-box">
+                      <p>{t("about.description1")}</p>
+                      <br />
+                    </div>
+                    <div className="text-box">
+                      <p>{t("about.description2")}</p>
                     </div>
 
-                    <div className="about-one__content-progress">
+                    {/* <div className="about-one__content-progress">
                       <div className="about-one__content-progress-single">
                         <div className="title">
                           <h4>{t("about.rfidSolutions")}</h4>
@@ -96,7 +104,7 @@ export default function Home() {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
 
                     {/* <div className="about-one__content-bottom">
                       <div className="about-one__content-bottom-author-box">

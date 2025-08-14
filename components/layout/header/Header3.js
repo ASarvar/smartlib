@@ -14,7 +14,7 @@ export default function Header3({
   handleSidebar,
 }) {
   const { t } = useTranslation();
-  
+
   return (
     <>
       {/* <header className="main-header header-style-three"> */}
@@ -55,7 +55,7 @@ export default function Header3({
                       <LanguageSelector />
                       <div className="btn-box">
                         <Link className="thm-btn" href="/contact">
-                          <span className="txt">{t('header.getStarted')}</span>
+                          <span className="txt">{t("menu.contact")}</span>
                         </Link>
                       </div>
                     </div>

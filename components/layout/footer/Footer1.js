@@ -1,6 +1,26 @@
+"use client";
+
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import { useState, useEffect } from "react";
 
 export default function Footer1() {
+  const { t } = useTranslation();
+  const [emailVisible, setEmailVisible] = useState(false);
+
+  // Obfuscated email parts for anti-spam
+  const emailUser = "info";
+  const emailDomain = "smartlibrary.asia"; // Updated to match footer
+  const email = `${emailUser}@${emailDomain}`;
+
+  // Phone number with proper formatting
+  const phoneNumber = "+77074044744";
+  const phoneDisplay = "+77 07 404 47 44";
+
+  useEffect(() => {
+    setEmailVisible(true);
+  }, []);
+
   return (
     <>
       {/*Start Footer One */}
@@ -33,22 +53,48 @@ export default function Footer1() {
 
                   <div className="footer-widget__about-inner">
                     <div className="text-box">
-                      <p>Official Partner of Bibliotheca </p>
+                      <p>{t("footer.officialPartner")}</p>
                     </div>
                     <div className="number-box">
-                      <Link href="tel:+998711234567"><i className="icon-call">   </i>+998 71 123 45 67</Link>
+                      <Link
+                        href={`tel:${phoneNumber}`}
+                        aria-label={t("footer.callUs")}
+                        title={t("footer.callUsTitle")}
+                      >
+                        {phoneDisplay}
+                      </Link>
                     </div>
                     <div className="footer-social-link">
-                      <Link href="#">
+                      <Link
+                        href="#"
+                        rel="noopener noreferrer"
+                        aria-label={t("footer.telegramAria")}
+                        title={t("footer.telegramTitle")}
+                      >
                         <i className="icon-telegram"></i>
                       </Link>
-                      <Link href="#">
+                      <Link
+                        href="#"
+                        rel="noopener noreferrer"
+                        aria-label={t("footer.instagramAria")}
+                        title={t("footer.instagramTitle")}
+                      >
                         <i className="icon-instagram"></i>
                       </Link>
-                      <Link href="#">
+                      <Link
+                        href="#"
+                        rel="noopener noreferrer"
+                        aria-label={t("footer.facebookAria")}
+                        title={t("footer.facebookTitle")}
+                      >
                         <i className="icon-facebook"></i>
                       </Link>
-                      <Link href="#">
+                      <Link
+                        href="#"
+                        rel="noopener noreferrer"
+                        aria-label={t("footer.youtubeAria")}
+                        title={t("footer.youtubeTitle")}
+                      >
                         <i className="icon-youtube"></i>
                       </Link>
                     </div>
@@ -64,22 +110,22 @@ export default function Footer1() {
               >
                 <div className="single-footer-widget footer-widget__links">
                   <div className="title">
-                    <h2>Navigation</h2>
+                    <h2>{t("footer.navigation")}</h2>
                   </div>
 
                   <div className="footer-widget__links-box">
                     <ul>
                       <li>
-                        <Link href="/">Home</Link>
+                        <Link href="/">{t("footer.home")}</Link>
                       </li>
                       <li>
-                        <Link href="/catalog">Products</Link>
+                        <Link href="/products">{t("footer.products")}</Link>
                       </li>
                       <li>
-                        <Link href="/solutions">Services</Link>
+                        <Link href="/solutions">{t("footer.solutions")}</Link>
                       </li>
                       <li>
-                        <Link href="/solutions">Solutions</Link>
+                        <Link href="/news">{t("menu.news")}</Link>
                       </li>
                     </ul>
                   </div>
@@ -94,26 +140,37 @@ export default function Footer1() {
               >
                 <div className="single-footer-widget footer-widget__newsletter">
                   <div className="title">
-                    <h2>Contact Info</h2>
+                    <h2>{t("footer.contactInfo")}</h2>
                   </div>
 
                   <div className="footer-widget__newsletter-box">
                     <div className="footer-widget__newsletter-text">
                       <div className="contact-item">
-                        <i className="icon-pin">{" "}</i>
-                        <span> Tashkent, Uzbekistan, Mirzo Ulugbek District, 100125</span>
+                        <i className="icon-pin"> </i>
+                        <span>{t("footer.address")}</span>
                       </div>
-                      
+
                       <div className="contact-item">
-                        <i className="icon-envelope">{" "}</i>
+                        <i className="icon-envelope"> </i>
                         <span>
-                          <Link href="mailto:yourmail@email.com"> info@smartlibrary.uz</Link>
+                          {emailVisible ? (
+                            <Link
+                              href={`mailto:${email}`}
+                              aria-label={t("footer.emailUs")}
+                              title={t("footer.emailUsTitle")}
+                              rel="noopener noreferrer"
+                            >
+                              {email}
+                            </Link>
+                          ) : (
+                            <span>{t("footer.loading")}</span>
+                          )}
                         </span>
                       </div>
-                      
+
                       <div className="contact-item">
-                        <i className="icon-clock">{" "}</i>
-                        <span> Mon - Fri: 9:00 AM - 6:00 PM</span>
+                        <i className="icon-clock"> </i>
+                        <span>{t("footer.workingHours")}</span>
                       </div>
                     </div>
                   </div>
@@ -130,10 +187,7 @@ export default function Footer1() {
           <div className="container">
             <div className="footer-bottom__inner">
               <div className="footer-bottom__text text-center">
-                <p>
-                  Copyright © 2025 Smartlibrary. All
-                  Rights Reserved
-                </p>
+                <p>{t("footer.copyright")}</p>
               </div>
             </div>
           </div>

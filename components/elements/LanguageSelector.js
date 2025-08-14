@@ -13,7 +13,7 @@ const LanguageSelector = () => {
   const languages = [
     { code: "En", name: "EN", flag: "/assets/img/header/gb.png" },
     { code: "Ru", name: "РУ", flag: "/assets/img/header/ru.png" },
-    { code: "Uz", name: "OʻZ", flag: "/assets/img/header/uz.png" },
+    // { code: "Uz", name: "OʻZ", flag: "/assets/img/header/uz.png" },
   ];
 
   useEffect(() => {
@@ -48,7 +48,7 @@ const LanguageSelector = () => {
   };
 
   return (
-    <div className={`lang-selector ${isOpen ? 'open' : ''}`} ref={dropdownRef}>
+    <div className={`lang-selector ${isOpen ? "open" : ""}`} ref={dropdownRef}>
       <div className="selected-lang" onClick={() => setIsOpen(!isOpen)}>
         <Image
           src={languages.find((lang) => lang.code === selectedLanguage)?.flag}

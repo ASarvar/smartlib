@@ -2,6 +2,7 @@ import Link from "next/link";
 import Menu from "../Menu";
 import MobileMenu from "../MobileMenu";
 import LanguageSelector from "@/components/elements/LanguageSelector";
+import { useState, useEffect } from "react";
 
 export default function Header4({
   scroll,
@@ -11,6 +12,21 @@ export default function Header4({
   handlePopup,
   handleSidebar,
 }) {
+  const [emailVisible, setEmailVisible] = useState(false);
+
+  // Obfuscated email parts for anti-spam
+  const emailUser = "info";
+  const emailDomain = "smartlibrary.asia"; // Updated to match footer
+  const email = `${emailUser}@${emailDomain}`;
+
+  // Phone number with proper formatting
+  const phoneNumber = "+77074044744";
+  const phoneDisplay = "+77 07 404 47 44";
+
+  useEffect(() => {
+    setEmailVisible(true);
+  }, []);
+
   return (
     <>
       {/* <header className="main-header main-header-one style4"> */}
@@ -26,12 +42,27 @@ export default function Header4({
                 <div className="header-contact-box">
                   <ul>
                     <li>
-                      <Link href="tel:+99871234567">+9987 123 45 67</Link>
+                      <Link
+                        href={`tel:${phoneNumber}`}
+                        aria-label={`Call us at ${phoneDisplay}`}
+                        title={`Call SmartLibrary at ${phoneDisplay}`}
+                      >
+                        {phoneDisplay}
+                      </Link>
                     </li>
                     <li>
-                      <Link href="mailto:yourmail@email.com">
-                        info@smartlibrary.uz
-                      </Link>
+                      {emailVisible ? (
+                        <Link
+                          href={`mailto:${email}`}
+                          aria-label={`Send email to ${email}`}
+                          title={`Send email to SmartLibrary at ${email}`}
+                          rel="noopener noreferrer"
+                        >
+                          {email}
+                        </Link>
+                      ) : (
+                        <span>Loading...</span>
+                      )}
                     </li>
                   </ul>
                 </div>
@@ -39,22 +70,42 @@ export default function Header4({
                 <div className="header-social-links">
                   <ul>
                     <li>
-                      <Link href="#">
+                      <Link
+                        href="#"
+                        aria-label="Follow us on Telegram"
+                        title="SmartLibrary on Telegram"
+                        rel="noopener noreferrer"
+                      >
                         <span className="icon-telegram"></span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="#">
+                      <Link
+                        href="#"
+                        aria-label="Follow us on Instagram"
+                        title="SmartLibrary on Instagram"
+                        rel="noopener noreferrer"
+                      >
                         <span className="icon-instagram"></span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="#">
+                      <Link
+                        href="#"
+                        aria-label="Follow us on Facebook"
+                        title="SmartLibrary on Facebook"
+                        rel="noopener noreferrer"
+                      >
                         <span className="icon-facebook"></span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="#">
+                      <Link
+                        href="#"
+                        aria-label="Follow us on YouTube"
+                        title="SmartLibrary on YouTube"
+                        rel="noopener noreferrer"
+                      >
                         <span className="icon-youtube"></span>
                       </Link>
                     </li>

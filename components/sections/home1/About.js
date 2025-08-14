@@ -26,7 +26,7 @@ export default function About() {
                 <div className="experience-box">
                   <div className="counter-box">
                     <h2 className="count">
-                      <CounterUp end={4} />
+                      <CounterUp end={30} />
                     </h2>
                   </div>
                   <div className="text-box">
@@ -56,9 +56,17 @@ export default function About() {
 
                 <div className="text-box">
                   <p>{t("about.description")}</p>
+                  <br />
+                </div>
+                <div className="text-box">
+                  <p>{t("about.description1")}</p>
+                  <br />
+                </div>
+                <div className="text-box">
+                  <p>{t("about.description2")}</p>
                 </div>
 
-                <div className="about-one__content-progress">
+                {/* <div className="about-one__content-progress">
                   <div className="about-one__content-progress-single">
                     <div className="title">
                       <h4>{t("about.rfidTechnology")}</h4>
@@ -80,9 +88,9 @@ export default function About() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
 
-                <div className="about-one__content-bottom">
+                {/* <div className="about-one__content-bottom">
                   <div className="about-one__content-bottom-author-box">
                     <div className="btn-box">
                       <Link className="thm-btn" href="/about">
@@ -97,15 +105,15 @@ export default function About() {
                       <div className="signature-box">
                         <img src="assets/img/about/signature-1.png" alt="" />
                       </div>
-                    </div> */}
+                    </div> 
                   </div>
-                  {/* <div className="text">
+                  <div className="text">
                     <h4>
                       Need RFID solutions for your library? Call Us:{" "}
                       <Link href="tel:+998711234567">+998 71 123 45 67</Link>
                     </h4>
-                  </div> */}
-                </div>
+                  </div> 
+                </div> */}
               </div>
             </div>
             {/*End About One Content */}
