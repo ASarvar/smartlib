@@ -3,6 +3,7 @@ import Menu from "../Menu";
 import MobileMenu from "../MobileMenu";
 import LanguageSelector from "@/components/elements/LanguageSelector";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Header4({
   scroll,
@@ -12,6 +13,7 @@ export default function Header4({
   handlePopup,
   handleSidebar,
 }) {
+  const { t } = useTranslation();
   const [emailVisible, setEmailVisible] = useState(false);
 
   // Obfuscated email parts for anti-spam
@@ -44,8 +46,8 @@ export default function Header4({
                     <li>
                       <Link
                         href={`tel:${phoneNumber}`}
-                        aria-label={`Call us at ${phoneDisplay}`}
-                        title={`Call SmartLibrary at ${phoneDisplay}`}
+                        aria-label={t("header.callUs")}
+                        title={t("header.callUsTitle")}
                       >
                         {phoneDisplay}
                       </Link>
@@ -54,14 +56,14 @@ export default function Header4({
                       {emailVisible ? (
                         <Link
                           href={`mailto:${email}`}
-                          aria-label={`Send email to ${email}`}
-                          title={`Send email to SmartLibrary at ${email}`}
+                          aria-label={t("header.emailUs")}
+                          title={t("header.emailUsTitle")}
                           rel="noopener noreferrer"
                         >
                           {email}
                         </Link>
                       ) : (
-                        <span>Loading...</span>
+                        <span>{t("header.loading")}</span>
                       )}
                     </li>
                   </ul>
@@ -72,8 +74,8 @@ export default function Header4({
                     <li>
                       <Link
                         href="#"
-                        aria-label="Follow us on Telegram"
-                        title="SmartLibrary on Telegram"
+                        aria-label={t("header.telegramAria")}
+                        title={t("header.telegramTitle")}
                         rel="noopener noreferrer"
                       >
                         <span className="icon-telegram"></span>
@@ -82,8 +84,8 @@ export default function Header4({
                     <li>
                       <Link
                         href="#"
-                        aria-label="Follow us on Instagram"
-                        title="SmartLibrary on Instagram"
+                        aria-label={t("header.instagramAria")}
+                        title={t("header.instagramTitle")}
                         rel="noopener noreferrer"
                       >
                         <span className="icon-instagram"></span>
@@ -92,8 +94,8 @@ export default function Header4({
                     <li>
                       <Link
                         href="#"
-                        aria-label="Follow us on Facebook"
-                        title="SmartLibrary on Facebook"
+                        aria-label={t("header.facebookAria")}
+                        title={t("header.facebookTitle")}
                         rel="noopener noreferrer"
                       >
                         <span className="icon-facebook"></span>
@@ -102,8 +104,8 @@ export default function Header4({
                     <li>
                       <Link
                         href="#"
-                        aria-label="Follow us on YouTube"
-                        title="SmartLibrary on YouTube"
+                        aria-label={t("header.youtubeAria")}
+                        title={t("header.youtubeTitle")}
                         rel="noopener noreferrer"
                       >
                         <span className="icon-youtube"></span>

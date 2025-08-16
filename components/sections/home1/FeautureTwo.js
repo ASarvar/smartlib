@@ -30,7 +30,7 @@ export default function FeautureTwo() {
                 </div>
                 <div className="feauture-two__single-content">
                   <h2>
-                    <Link href="/catalog">
+                    <Link href="/products">
                       {t("features.advancedRfidSolutions")}
                     </Link>
                   </h2>
@@ -58,7 +58,7 @@ export default function FeautureTwo() {
                 </div>
                 <div className="feauture-two__single-content">
                   <h2>
-                    <Link href="/service">
+                    <Link href="/solutions">
                       {t("features.expertTechnicalSupport")}
                     </Link>
                   </h2>

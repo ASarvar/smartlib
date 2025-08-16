@@ -1,10 +1,127 @@
+"use client";
+
 import Layout from "@/components/layout/Layout";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import { useState, useEffect } from "react";
+
 export default function Home() {
+  const { t } = useTranslation();
+  const [emailVisible, setEmailVisible] = useState(false);
+  const [activeTab, setActiveTab] = useState("uzbekistan");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Anti-spam email obfuscation
+  const emailUser = "info";
+  const emailDomain = "smartlibrary.uz";
+  const email = `${emailUser}@${emailDomain}`;
+
+  // Kazakhstan contact info
+  const kazakhstanEmailUser = "info";
+  const kazakhstanEmailDomain = "smartlibrary.kz";
+  const kazakhstanEmail = `${kazakhstanEmailUser}@${kazakhstanEmailDomain}`;
+
+  // Phone numbers with proper formatting
+  const uzbekistanPhoneNumber = "+998712007009";
+  const uzbekistanPhoneDisplay = "+998 71 200 70 09";
+  const kazakhstanPhoneNumber = "+77273004040";
+  const kazakhstanPhoneDisplay = "+7 727 300 40 40";
+
+  useEffect(() => {
+    setEmailVisible(true);
+  }, []);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    // Basic XSS prevention
+    const sanitizedValue = value.replace(
+      /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
+      ""
+    );
+    setFormData((prev) => ({
+      ...prev,
+      [name]: sanitizedValue,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Basic form validation
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.message
+    ) {
+      alert(t("contact.fillAllFields"));
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      alert(t("contact.validEmail"));
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      // Here you would typically send the form data to your backend
+      console.log("Form submitted:", formData);
+      alert(t("contact.messageSuccess"));
+      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert(t("contact.messageError"));
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <>
-      <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Contact Us">
+      <Layout
+        headerStyle={4}
+        footerStyle={1}
+        breadcrumbTitle={t("contact.contactUs")}
+      >
         <div>
+          {/*Start Contact Tabs */}
+          <section className="contact-tabs-section">
+            <div className="container">
+              <div className="contact-tabs">
+                <ul className="tab-nav">
+                  <li
+                    className={activeTab === "uzbekistan" ? "active" : ""}
+                    onClick={() => setActiveTab("uzbekistan")}
+                  >
+                    <a href="#uzbekistan" onClick={(e) => e.preventDefault()}>
+                      {t("contact.uzbekistan")}
+                    </a>
+                  </li>
+                  <li
+                    className={activeTab === "kazakhstan" ? "active" : ""}
+                    onClick={() => setActiveTab("kazakhstan")}
+                  >
+                    <a href="#kazakhstan" onClick={(e) => e.preventDefault()}>
+                      {t("contact.kazakhstan")}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          {/*End Contact Tabs */}
+
           {/*Start Contact Page */}
           <section className="contact-page">
             <div className="contact-page__top">
@@ -13,17 +130,16 @@ export default function Home() {
                   <div className="col-xl-6 col-lg-6">
                     <div className="contact-page__top-content">
                       <div className="contact-page__top-content-top">
-                        <h2>Get in Touch</h2>
+                        <h2>{t("contact.getInTouch")}</h2>
                         <p>
-                          Ready to transform your library with cutting-edge RFID
-                          technology? SmartLibrary offers comprehensive
-                          solutions for modern libraries. Contact us today to
-                          discuss your library automation needs.
+                          {activeTab === "uzbekistan"
+                            ? t("contact.description")
+                            : t("contact.kazakhstanDescription")}
                         </p>
                       </div>
 
                       <div className="contact-page__top-content-bottom">
-                        <h2>Contact Info</h2>
+                        <h2>{t("contact.contactInfo")}</h2>
                         <ul>
                           <li>
                             <div className="inner">
@@ -32,11 +148,11 @@ export default function Home() {
                               </div>
 
                               <div className="content-box">
-                                <h4>Address</h4>
+                                <h4>{t("contact.address")}</h4>
                                 <p>
-                                  Tashkent, Uzbekistan
-                                  <br />
-                                  Innovation Hub, Tech District
+                                  {activeTab === "uzbekistan"
+                                    ? t("contact.addressDetails")
+                                    : t("contact.kazakhstanAddressDetails")}
                                 </p>
                               </div>
                             </div>
@@ -49,11 +165,21 @@ export default function Home() {
                               </div>
 
                               <div className="content-box">
-                                <h4>Phone</h4>
+                                <h4>{t("contact.phone")}</h4>
                                 <p>
-                                  <a href="tel:+998712007009">+998 71 200 70 09</a>{" "}
-                                  or{" "}
-                                  <a href="tel:+998712007008">+998 71 200 70 08</a>
+                                  <a
+                                    href={`tel:${
+                                      activeTab === "uzbekistan"
+                                        ? uzbekistanPhoneNumber
+                                        : kazakhstanPhoneNumber
+                                    }`}
+                                    aria-label={t("contact.callUs")}
+                                    title={t("contact.callUsTitle")}
+                                  >
+                                    {activeTab === "uzbekistan"
+                                      ? uzbekistanPhoneDisplay
+                                      : kazakhstanPhoneDisplay}
+                                  </a>
                                 </p>
                               </div>
                             </div>
@@ -66,15 +192,26 @@ export default function Home() {
                               </div>
 
                               <div className="content-box">
-                                <h4>Email</h4>
+                                <h4>{t("contact.email")}</h4>
                                 <p>
-                                  <a href="mailto:info@smartlibrary.uz">
-                                    info@smartlibrary.uz
-                                  </a>
-                                  or{" "}
-                                  <a href="mailto:support@smartlibrary.uz">
-                                    support@smartlibrary.uz
-                                  </a>
+                                  {emailVisible ? (
+                                    <a
+                                      href={`mailto:${
+                                        activeTab === "uzbekistan"
+                                          ? email
+                                          : kazakhstanEmail
+                                      }`}
+                                      aria-label={t("contact.emailUs")}
+                                      title={t("contact.emailUsTitle")}
+                                      rel="noopener noreferrer"
+                                    >
+                                      {activeTab === "uzbekistan"
+                                        ? email
+                                        : kazakhstanEmail}
+                                    </a>
+                                  ) : (
+                                    <span>{t("contact.loading")}</span>
+                                  )}
                                 </p>
                               </div>
                             </div>
@@ -87,8 +224,19 @@ export default function Home() {
                   <div className="col-xl-6 col-lg-6">
                     <div className="contact-page__google-map">
                       <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
+                        src={
+                          activeTab === "uzbekistan"
+                            ? "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d516.7556805859915!2d69.27404415543796!3d41.295972351165425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suz!2s!4v1755243452437!5m2!1suz!2s"
+                            : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.5348927968967!2d76.94557587640016!3d43.23888987113481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3883692bfe0f4d4d%3A0x20203c91e2b52b96!2sAlmaty%2C%20Kazakhstan!5e0!3m2!1sen!2s!4v1692345678901!5m2!1sen!2s"
+                        }
                         className="contact-page-google-map__one"
+                        title={
+                          activeTab === "uzbekistan"
+                            ? t("contact.mapTitle")
+                            : t("contact.kazakhstanMapTitle")
+                        }
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
                       ></iframe>
                     </div>
                   </div>
@@ -101,22 +249,30 @@ export default function Home() {
               <div className="contact-two">
                 <div className="container">
                   <div className="contact-two__inner">
-                                                        <div className="title-box">
-                                        <h2>Let's Discuss Your Library Project</h2>
-                                        <p>Ready to upgrade your library with RFID technology? Share your requirements below and we'll get back to you.</p>
-                                    </div>
+                    <div className="title-box">
+                      <h2>{t("contact.discussProject")}</h2>
+                      <p>{t("contact.shareRequirements")}</p>
+                    </div>
                     <div className="contact-two__inner-box">
                       <form
-                        action="/"
+                        onSubmit={handleSubmit}
                         className="contact-page__form contact-form-validated"
+                        noValidate
                       >
                         <div className="row">
                           <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <div className="contact-page__input-box">
                               <input
                                 type="text"
-                                placeholder="Library Name*"
+                                placeholder={t(
+                                  "contact.libraryNamePlaceholder"
+                                )}
                                 name="name"
+                                value={formData.name}
+                                onChange={handleInputChange}
+                                required
+                                aria-label={t("contact.libraryNameLabel")}
+                                maxLength={100}
                               />
                             </div>
                           </div>
@@ -124,8 +280,13 @@ export default function Home() {
                             <div className="contact-page__input-box">
                               <input
                                 type="email"
-                                placeholder="Your Email*"
+                                placeholder={t("contact.emailPlaceholder")}
                                 name="email"
+                                value={formData.email}
+                                onChange={handleInputChange}
+                                required
+                                aria-label={t("contact.emailLabel")}
+                                maxLength={100}
                               />
                             </div>
                           </div>
@@ -135,8 +296,13 @@ export default function Home() {
                             <div className="contact-page__input-box">
                               <input
                                 type="text"
-                                placeholder="Phone*"
+                                placeholder={t("contact.phonePlaceholder")}
                                 name="phone"
+                                value={formData.phone}
+                                onChange={handleInputChange}
+                                required
+                                aria-label={t("contact.phoneLabel")}
+                                maxLength={20}
                               />
                             </div>
                           </div>
@@ -144,8 +310,14 @@ export default function Home() {
                             <div className="contact-page__input-box">
                               <input
                                 type="text"
-                                placeholder="RFID Requirements*"
+                                placeholder={t(
+                                  "contact.rfidRequirementsPlaceholder"
+                                )}
                                 name="subject"
+                                value={formData.subject}
+                                onChange={handleInputChange}
+                                aria-label={t("contact.rfidRequirementsLabel")}
+                                maxLength={100}
                               />
                             </div>
                           </div>
@@ -155,16 +327,27 @@ export default function Home() {
                             <div className="contact-page__input-box">
                               <textarea
                                 name="message"
-                                placeholder="Tell us about your library and RFID technology needs*"
+                                placeholder={t("contact.messagePlaceholder")}
+                                value={formData.message}
+                                onChange={handleInputChange}
+                                required
+                                aria-label={t("contact.messageLabel")}
+                                rows="6"
+                                maxLength={1000}
                               ></textarea>
                             </div>
                             <div className="contact-page__btn">
                               <button
                                 className="thm-btn"
                                 type="submit"
-                                data-loading-text="Please wait..."
+                                disabled={isSubmitting}
+                                aria-label={t("contact.sendMessageLabel")}
                               >
-                                <span className="txt">SEND MESSAGE</span>
+                                <span className="txt">
+                                  {isSubmitting
+                                    ? t("contact.sending")
+                                    : t("contact.sendMessage")}
+                                </span>
                               </button>
                             </div>
                           </div>
