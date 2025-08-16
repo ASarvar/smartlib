@@ -23,7 +23,7 @@ export default function Header4({
 
   // Phone number with proper formatting
   const phoneNumber = "+77074044744";
-  const phoneDisplay = "+77 07 404 47 44";
+  const phoneDisplay = "+7 707 404 47 44";
 
   useEffect(() => {
     setEmailVisible(true);

@@ -4,9 +4,10 @@ import Layout from "@/components/layout/Layout";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function Home() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [emailVisible, setEmailVisible] = useState(false);
   const [activeTab, setActiveTab] = useState("uzbekistan");
   const [formData, setFormData] = useState({
@@ -62,7 +63,7 @@ export default function Home() {
       !formData.phone ||
       !formData.message
     ) {
-      alert(t("contact.fillAllFields"));
+      toast.error(t("contact.fillAllFields"));
       setIsSubmitting(false);
       return;
     }
@@ -70,19 +71,58 @@ export default function Home() {
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      alert(t("contact.validEmail"));
+      toast.error(t("contact.validEmail"));
       setIsSubmitting(false);
       return;
     }
 
     try {
-      // Here you would typically send the form data to your backend
-      console.log("Form submitted:", formData);
-      alert(t("contact.messageSuccess"));
-      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+      // Show loading toast
+      const loadingToast = toast.loading(t("contact.sending"));
+
+      // Send form data to API
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          formData,
+          selectedCountry: activeTab,
+          language: i18n.language,
+        }),
+      });
+
+      const result = await response.json();
+
+      // Dismiss loading toast
+      toast.dismiss(loadingToast);
+
+      if (result.success) {
+        toast.success(result.message || t("contact.messageSuccess"), {
+          duration: 5000,
+          icon: "✅",
+        });
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        toast.error(result.message || t("contact.messageError"), {
+          duration: 5000,
+          icon: "❌",
+        });
+      }
     } catch (error) {
       console.error("Form submission error:", error);
-      alert(t("contact.messageError"));
+      toast.error(t("contact.messageError"), {
+        duration: 5000,
+        icon: "❌",
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -363,6 +403,38 @@ export default function Home() {
           {/*End Contact Page */}
         </div>
       </Layout>
+      <Toaster
+        position="bottom-right"
+        toastOptions={{
+          duration: 4000,
+          style: {
+            background: "#fff",
+            color: "#333",
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+            borderRadius: "8px",
+            padding: "12px 16px",
+            maxWidth: "400px",
+          },
+          success: {
+            style: {
+              border: "1px solid #10B981",
+              color: "#059669",
+            },
+          },
+          error: {
+            style: {
+              border: "1px solid #EF4444",
+              color: "#DC2626",
+            },
+          },
+          loading: {
+            style: {
+              border: "1px solid #3B82F6",
+              color: "#1D4ED8",
+            },
+          },
+        }}
+      />
     </>
   );
 }

@@ -207,7 +207,7 @@
     "messageLabel": "Message",
     "sendMessage": "SEND MESSAGE",
     "sendMessageLabel": "Send message to SmartLibrary",
-    "sending": "SENDING...",
+    "sending": "Sending your message...",
     "fillAllFields": "Please fill in all required fields.",
     "validEmail": "Please enter a valid email address.",
     "messageSuccess": "Thank you! Your message has been sent successfully. We'll get back to you soon.",
