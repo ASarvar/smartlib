@@ -9,7 +9,7 @@ import toast, { Toaster } from "react-hot-toast";
 export default function Home() {
   const { t, i18n } = useTranslation();
   const [emailVisible, setEmailVisible] = useState(false);
-  const [activeTab, setActiveTab] = useState("uzbekistan");
+  const [activeTab, setActiveTab] = useState("kazakhstan");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,19 +19,19 @@ export default function Home() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Anti-spam email obfuscation
+  // Anti-spam email obfuscation - Kazakhstan (Default)
   const emailUser = "info";
   const emailDomain = "smartlibrary.asia";
   const email = `${emailUser}@${emailDomain}`;
 
-  // Kazakhstan contact info
+  // Kazakhstan contact info (Default)
   const kazakhstanEmailUser = "info";
   const kazakhstanEmailDomain = "smartlibrary.asia";
   const kazakhstanEmail = `${kazakhstanEmailUser}@${kazakhstanEmailDomain}`;
 
-  // Phone numbers with proper formatting
-  const uzbekistanPhoneNumber = "+998712007009";
-  const uzbekistanPhoneDisplay = "+998 71 200 70 09";
+  // Phone numbers with proper formatting - Kazakhstan (Default)
+  // const uzbekistanPhoneNumber = "+998712007009";
+  // const uzbekistanPhoneDisplay = "+998 71 200 70 09";
   const kazakhstanPhoneNumber = "+77074044744";
   const kazakhstanPhoneDisplay = "+7 707 404 47 44";
 
@@ -136,19 +136,19 @@ export default function Home() {
       >
         <div>
           {/*Start Contact Tabs */}
-          <section className="contact-tabs-section">
+          {/* <section className="contact-tabs-section">
             <div className="container">
               <div className="contact-tabs">
                 <ul className="tab-nav">
-                  <li
+                  {/* Uzbekistan tab - temporarily hidden */}
+          {/* <li
                     className={activeTab === "uzbekistan" ? "active" : ""}
                     onClick={() => setActiveTab("uzbekistan")}
                   >
                     <a href="#uzbekistan" onClick={(e) => e.preventDefault()}>
                       {t("contact.uzbekistan")}
                     </a>
-                  </li>
-                  <li
+                  </li> 
                     className={activeTab === "kazakhstan" ? "active" : ""}
                     onClick={() => setActiveTab("kazakhstan")}
                   >
@@ -159,7 +159,7 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-          </section>
+          </section> */}
           {/*End Contact Tabs */}
 
           {/*Start Contact Page */}
@@ -172,9 +172,8 @@ export default function Home() {
                       <div className="contact-page__top-content-top">
                         <h2>{t("contact.getInTouch")}</h2>
                         <p>
-                          {activeTab === "uzbekistan"
-                            ? t("contact.description")
-                            : t("contact.kazakhstanDescription")}
+                          {/* Show Kazakhstan description by default */}
+                          {t("contact.kazakhstanDescription")}
                         </p>
                       </div>
 
@@ -190,9 +189,8 @@ export default function Home() {
                               <div className="content-box">
                                 <h4>{t("contact.address")}</h4>
                                 <p>
-                                  {activeTab === "uzbekistan"
-                                    ? t("contact.addressDetails")
-                                    : t("contact.kazakhstanAddressDetails")}
+                                  {/* Show Kazakhstan address by default */}
+                                  {t("contact.kazakhstanAddressDetails")}
                                 </p>
                               </div>
                             </div>
@@ -208,17 +206,12 @@ export default function Home() {
                                 <h4>{t("contact.phone")}</h4>
                                 <p>
                                   <a
-                                    href={`tel:${
-                                      activeTab === "uzbekistan"
-                                        ? uzbekistanPhoneNumber
-                                        : kazakhstanPhoneNumber
-                                    }`}
+                                    href={`tel:${kazakhstanPhoneNumber}`}
                                     aria-label={t("contact.callUs")}
                                     title={t("contact.callUsTitle")}
                                   >
-                                    {activeTab === "uzbekistan"
-                                      ? uzbekistanPhoneDisplay
-                                      : kazakhstanPhoneDisplay}
+                                    {/* Show Kazakhstan phone by default */}
+                                    {kazakhstanPhoneDisplay}
                                   </a>
                                 </p>
                               </div>
