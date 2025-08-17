@@ -26,6 +26,18 @@ export default function Header3({
       >
         <div className={`menu-area ${scroll ? "sticky-menu" : ""}`}>
           {/* header-lower */}
+          <div className="main-header-four__top">
+            <div className="container">
+              <div className="main-header-four__top-inner">
+                {/* Site Under Construction Banner */}
+                <div className="construction-banner">
+                  <span className="construction-text">
+                    {t("header.constructionBanner")}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="auto-container">
             <div className="menu-area__inner">
               <div className="mobile-nav-toggler" onClick={handleMobileMenu}>
@@ -53,6 +65,7 @@ export default function Header3({
 
                     <div className="main-header-one__right">
                       <LanguageSelector />
+
                       <div className="btn-box">
                         <Link className="thm-btn" href="/contact">
                           <span className="txt">{t("menu.contact")}</span>

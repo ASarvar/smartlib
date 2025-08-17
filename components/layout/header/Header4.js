@@ -69,6 +69,13 @@ export default function Header4({
                   </ul>
                 </div>
 
+                {/* Site Under Construction Banner */}
+                <div className="construction-banner">
+                  <span className="construction-text">
+                    {t("header.constructionBanner")}
+                  </span>
+                </div>
+
                 <div className="header-social-links">
                   <ul>
                     <li>

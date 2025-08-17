@@ -120,6 +120,16 @@ export default function MobileMenu({
           <div className="mobile-language-selector">
             <LanguageSelector />
           </div>
+
+          {/* Mobile Construction Banner */}
+          <div className="mobile-construction-banner">
+            <div className="construction-banner">
+              <span className="construction-text">
+                {t("header.constructionBanner")}
+              </span>
+            </div>
+          </div>
+
           {/* <div className="social-links">
             <ul className="clearfix list-wrap">
               <li>

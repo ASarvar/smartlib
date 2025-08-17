@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Menu from "../Menu";
 import MobileMenu from "../MobileMenu";
+import { useTranslation } from "react-i18next";
 
 export default function Header({
   scroll,
@@ -10,6 +11,7 @@ export default function Header({
   handlePopup,
   handleSidebar,
 }) {
+  const { t } = useTranslation();
   return (
     <>
       <header className={`main-header main-header-one ${scroll ? "" : ""}`}>
@@ -41,6 +43,13 @@ export default function Header({
                     </div>
 
                     <div className="main-header-one__right">
+                      {/* Site Under Construction Banner */}
+                      <div className="construction-banner">
+                        <span className="construction-text">
+                          {t("header.constructionBanner")}
+                        </span>
+                      </div>
+
                       <div className="btn-box">
                         <Link className="thm-btn" href="/contact">
                           <span className="txt">Get Started</span>

@@ -492,6 +492,124 @@ h6 {
 }
 
 /*=============================
+  Construction Banner CSS
+===============================*/
+.construction-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.construction-text {
+  background: linear-gradient(135deg, var(--thm-primary), var(--thm-secondary));
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(252, 252, 252, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  animation: constructionPulse 2s ease-in-out infinite;
+}
+
+.construction-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  animation: constructionShine 3s ease-in-out infinite;
+}
+
+@keyframes constructionPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 2px 8px rgba(190, 189, 188, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(209, 209, 208, 0.5);
+  }
+}
+
+@keyframes constructionShine {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .construction-banner {
+    margin-right: 10px;
+  }
+
+  .construction-text {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .construction-banner {
+    display: none;
+  }
+}
+
+/* Header3 specific construction banner positioning */
+.main-header-one__right .construction-banner {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/* Mobile Menu Construction Banner */
+.mobile-construction-banner {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 10px;
+}
+
+.mobile-construction-banner .construction-banner {
+  margin: 0;
+}
+
+.mobile-construction-banner .construction-text {
+  font-size: 11px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, var(--thm-primary), var(--thm-secondary));
+  border-radius: 15px;
+  animation: constructionPulse 2s ease-in-out infinite;
+}
+
+/* Show mobile construction banner on all screen sizes in mobile menu */
+@media (max-width: 768px) {
+  .mobile-construction-banner {
+    display: flex;
+  }
+}
+
+/*=============================
   Contact Tabs CSS
 ===============================*/
 .contact-tabs-section {
