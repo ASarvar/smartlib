@@ -35,7 +35,7 @@ export default function Projects() {
                     >
                       <span className="icon-search-interface-symbol"></span>
                     </Link>
-                    <Link href="/project-details">
+                    <Link href="#">
                       <span className="icon-link"></span>
                     </Link>
                   </div>
@@ -43,7 +43,7 @@ export default function Projects() {
                   <div className="overlay-text">
                     <p>{t("projects.tashkent")}</p>
                     <h2>
-                      <Link href="/project-details">
+                      <Link href="#">
                         {t("projects.nationalUniversityLibrary")}
                       </Link>
                     </h2>
@@ -68,7 +68,7 @@ export default function Projects() {
                     >
                       <span className="icon-search-interface-symbol"></span>
                     </Link>
-                    <Link href="/project-details">
+                    <Link href="#">
                       <span className="icon-link"></span>
                     </Link>
                   </div>
@@ -76,7 +76,7 @@ export default function Projects() {
                   <div className="overlay-text">
                     <p>{t("projects.samarkand")}</p>
                     <h2>
-                      <Link href="/project-details">
+                      <Link href="#">
                         {t("projects.regionalPublicLibrary")}
                       </Link>
                     </h2>
@@ -101,7 +101,7 @@ export default function Projects() {
                     >
                       <span className="icon-search-interface-symbol"></span>
                     </Link>
-                    <Link href="/project-details">
+                    <Link href="#">
                       <span className="icon-link"></span>
                     </Link>
                   </div>
@@ -109,7 +109,7 @@ export default function Projects() {
                   <div className="overlay-text">
                     <p>{t("projects.bukhara")}</p>
                     <h2>
-                      <Link href="/project-details">
+                      <Link href="#">
                         {t("projects.educationalInstituteLibrary")}
                       </Link>
                     </h2>
@@ -134,7 +134,7 @@ export default function Projects() {
                     >
                       <span className="icon-search-interface-symbol"></span>
                     </Link>
-                    <Link href="/project-details">
+                    <Link href="#">
                       <span className="icon-link"></span>
                     </Link>
                   </div>
@@ -142,9 +142,7 @@ export default function Projects() {
                   <div className="overlay-text">
                     <p>{t("projects.nukus")}</p>
                     <h2>
-                      <Link href="/project-details">
-                        {t("projects.digitalArchiveCenter")}
-                      </Link>
+                      <Link href="#">{t("projects.digitalArchiveCenter")}</Link>
                     </h2>
                   </div>
                 </div>

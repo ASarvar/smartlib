@@ -40,13 +40,13 @@ export default function Pricing() {
                   </div>
                   <div className="content-box">
                     <h2>
-                      <Link href="/catalog">
+                      <Link href="/products">
                         {t("solutions.rfidTechnology")}
                       </Link>
                     </h2>
                     <p>{t("solutions.rfidDescription")}</p>
                     <div className="btn-box">
-                      <Link href="/catalog">
+                      <Link href="/products">
                         {t("solutions.exploreProducts")}
                       </Link>
                     </div>
@@ -104,13 +104,13 @@ export default function Pricing() {
                   </div>
                   <div className="content-box">
                     <h2>
-                      <Link href="/service">
+                      <Link href="/solutions">
                         {t("solutions.installationSupport")}
                       </Link>
                     </h2>
                     <p>{t("solutions.installationDescription")}</p>
                     <div className="btn-box">
-                      <Link href="/service">
+                      <Link href="/solutions">
                         {t("solutions.exploreServices")}
                       </Link>
                     </div>
