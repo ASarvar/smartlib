@@ -21,19 +21,19 @@ export default function Home() {
 
   // Anti-spam email obfuscation
   const emailUser = "info";
-  const emailDomain = "smartlibrary.uz";
+  const emailDomain = "smartlibrary.asia";
   const email = `${emailUser}@${emailDomain}`;
 
   // Kazakhstan contact info
   const kazakhstanEmailUser = "info";
-  const kazakhstanEmailDomain = "smartlibrary.kz";
+  const kazakhstanEmailDomain = "smartlibrary.asia";
   const kazakhstanEmail = `${kazakhstanEmailUser}@${kazakhstanEmailDomain}`;
 
   // Phone numbers with proper formatting
   const uzbekistanPhoneNumber = "+998712007009";
   const uzbekistanPhoneDisplay = "+998 71 200 70 09";
-  const kazakhstanPhoneNumber = "+77273004040";
-  const kazakhstanPhoneDisplay = "+7 727 300 40 40";
+  const kazakhstanPhoneNumber = "+77074044744";
+  const kazakhstanPhoneDisplay = "+7 707 404 47 44";
 
   useEffect(() => {
     setEmailVisible(true);

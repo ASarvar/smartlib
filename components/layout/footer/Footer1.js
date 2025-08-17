@@ -145,10 +145,10 @@ export default function Footer1() {
 
                   <div className="footer-widget__newsletter-box">
                     <div className="footer-widget__newsletter-text">
-                      <div className="contact-item">
+                      {/* <div className="contact-item">
                         <i className="icon-pin"> </i>
                         <span>{t("footer.address")}</span>
-                      </div>
+                      </div> */}
 
                       <div className="contact-item">
                         <i className="icon-envelope"> </i>
