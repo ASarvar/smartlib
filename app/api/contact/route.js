@@ -3,27 +3,53 @@ import nodemailer from "nodemailer";
 
 // Email configuration
 const createTransporter = () => {
-  // You can configure different email services here
-  return nodemailer.createTransporter({
-    // For Gmail (recommended for production)
-    service: "gmail",
+  // Use custom SMTP settings for smartlibrary.asia
+  return nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: parseInt(process.env.SMTP_PORT),
+    secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
     auth: {
-      user: process.env.SMTP_USER, // Your email
-      pass: process.env.SMTP_PASSWORD, // Your app password
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASSWORD,
     },
-    // Alternatively, use custom SMTP settings
-    // host: process.env.SMTP_HOST,
-    // port: process.env.SMTP_PORT,
-    // secure: process.env.SMTP_SECURE === 'true',
-    // auth: {
-    //   user: process.env.SMTP_USER,
-    //   pass: process.env.SMTP_PASSWORD,
-    // },
+    // Additional settings for better reliability
+    tls: {
+      // Do not fail on invalid certs
+      rejectUnauthorized: false
+    },
+    // Add debugging and connection options
+    debug: true,
+    logger: true,
+    connectionTimeout: 60000,
+    greetingTimeout: 30000,
+    socketTimeout: 60000,
   });
+};
+
+// Utility function to normalize language codes
+const normalizeLanguage = (language) => {
+  const normalizedLang = language.toLowerCase();
+  const langMap = {
+    'en': 'en',
+    'eng': 'en', 
+    'english': 'en',
+    'ru': 'ru',
+    'rus': 'ru',
+    'russian': 'ru', 
+    'uz': 'uz',
+    'uzb': 'uz',
+    'uzbek': 'uz'
+  };
+  
+  const finalLang = langMap[normalizedLang] || 'en';
+  console.log("Language mapping:", language, "->", normalizedLang, "->", finalLang);
+  return finalLang;
 };
 
 // Localized content for email templates
 const getLocalizedContent = (language = "en") => {
+  const finalLang = normalizeLanguage(language);
+  
   const content = {
     en: {
       emailSubject: "New Contact Form Submission - SmartLibrary",
@@ -141,24 +167,25 @@ const getLocalizedContent = (language = "en") => {
     },
   };
 
-  return content[language] || content.en;
+  return content[finalLang] || content.en;
 };
 
 // Email template
 const createEmailTemplate = (data, selectedCountry, language = "en") => {
   const loc = getLocalizedContent(language);
+  
   const countryInfo =
     selectedCountry === "uzbekistan"
       ? {
           country: "Uzbekistan",
-          office: "Tashkent Office",
+          office: "Tashkent Office", 
           phone: "+998 71 200 70 09",
           email: "info@smartlibrary.uz",
         }
       : {
           country: "Kazakhstan",
           office: "Almaty Office",
-          phone: "+7 727 300 40 40",
+          phone: "+7 727 300 40 40", 
           email: "info@smartlibrary.kz",
         };
 
@@ -250,6 +277,7 @@ const createEmailTemplate = (data, selectedCountry, language = "en") => {
 // Auto-reply template
 const createAutoReplyTemplate = (data, selectedCountry, language = "en") => {
   const loc = getLocalizedContent(language);
+  
   const countryInfo =
     selectedCountry === "uzbekistan"
       ? {
@@ -260,12 +288,11 @@ const createAutoReplyTemplate = (data, selectedCountry, language = "en") => {
           address: "Tashkent, Uzbekistan, Mirzo Ulugbek District, 100125",
         }
       : {
-          country: "Kazakhstan",
+          country: "Kazakhstan", 
           office: "Almaty Office",
           phone: "+7 727 300 40 40",
           email: "info@smartlibrary.kz",
-          address:
-            "Almaty, Kazakhstan, Bostandyk District, Al-Farabi Avenue, 050040",
+          address: "Almaty, Kazakhstan, Bostandyk District, Al-Farabi Avenue, 050040",
         };
 
   return `
@@ -305,8 +332,6 @@ const createAutoReplyTemplate = (data, selectedCountry, language = "en") => {
                 ? `<li><strong>${loc.rfidRequirements}</strong> ${data.subject}</li>`
                 : ""
             }
-                : ""
-            }
             <li><strong>Inquiry Office:</strong> ${countryInfo.office}</li>
           </ul>
         </div>
@@ -342,23 +367,79 @@ const createAutoReplyTemplate = (data, selectedCountry, language = "en") => {
   `;
 };
 
+// Localized API messages
+const getLocalizedMessages = (language) => {
+  const finalLang = normalizeLanguage(language);
+  
+  const messages = {
+    en: {
+      requiredFields: "All required fields must be filled",
+      invalidEmail: "Please provide a valid email address",
+      smtpError: "Email configuration error. Please try again later.",
+      success: "Your message has been sent successfully! We will get back to you soon.",
+      generalError: "Sorry, there was an error sending your message. Please try again later or contact us directly."
+    },
+    ru: {
+      requiredFields: "Все обязательные поля должны быть заполнены",
+      invalidEmail: "Пожалуйста, укажите действительный адрес электронной почты", 
+      smtpError: "Ошибка конфигурации электронной почты. Пожалуйста, попробуйте позже.",
+      success: "Ваше сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время.",
+      generalError: "Извините, произошла ошибка при отправке сообщения. Пожалуйста, попробуйте позже или свяжитесь с нами напрямую."
+    },
+    uz: {
+      requiredFields: "Barcha majburiy maydonlar to'ldirilishi kerak",
+      invalidEmail: "Iltimos, haqiqiy elektron pochta manzilini kiriting",
+      smtpError: "Elektron pochta konfiguratsiya xatosi. Iltimos, keyinroq qayta urinib ko'ring.",
+      success: "Xabaringiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog'lanamiz.",
+      generalError: "Kechirasiz, xabaringizni yuborishda xatolik yuz berdi. Iltimos, keyinroq qayta urinib ko'ring yoki to'g'ridan-to'g'ri biz bilan bog'laning."
+    }
+  };
+  
+  return messages[finalLang] || messages.en;
+};
+
+export async function GET(request) {
+  return NextResponse.json(
+    { 
+      success: false, 
+      message: "This endpoint only accepts POST requests. Please use the contact form." 
+    },
+    { status: 405 }
+  );
+}
+
 export async function POST(request) {
+  let requestLanguage = "en";
+  
   try {
+    console.log("Contact API called - Starting");
+    
+    // Log environment variables to check they're loaded
+    console.log("Environment check:", {
+      SMTP_HOST: process.env.SMTP_HOST,
+      SMTP_PORT: process.env.SMTP_PORT,
+      SMTP_USER: process.env.SMTP_USER,
+      SMTP_PASSWORD: process.env.SMTP_PASSWORD ? "***HIDDEN***" : "NOT_SET"
+    });
+    
+    const requestBody = await request.json();
+    console.log("Request body received:", requestBody);
+    
     const {
       formData,
-      selectedCountry = "uzbekistan",
+      selectedCountry = "uzbekistan", 
       language = "en",
-    } = await request.json();
+    } = requestBody;
+
+    requestLanguage = language;
+    console.log("Form data received:", { formData, selectedCountry, language });
+
+    const messages = getLocalizedMessages(language);
 
     // Validate required fields
-    if (
-      !formData.name ||
-      !formData.email ||
-      !formData.phone ||
-      !formData.message
-    ) {
+    if (!formData.name || !formData.email || !formData.phone || !formData.message) {
       return NextResponse.json(
-        { success: false, message: "All required fields must be filled" },
+        { success: false, message: messages.requiredFields },
         { status: 400 }
       );
     }
@@ -367,66 +448,94 @@ export async function POST(request) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       return NextResponse.json(
-        { success: false, message: "Please provide a valid email address" },
+        { success: false, message: messages.invalidEmail },
         { status: 400 }
       );
     }
 
-    // Create transporter
+    console.log("Creating transporter...");
     const transporter = createTransporter();
 
-    // Determine recipient email based on selected country
-    const recipientEmail =
-      selectedCountry === "uzbekistan"
-        ? process.env.CONTACT_EMAIL_UZ || "info@smartlibrary.uz"
-        : process.env.CONTACT_EMAIL_KZ || "info@smartlibrary.kz";
+    // Test SMTP connection with detailed error logging
+    try {
+      console.log("Testing SMTP connection...");
+      await transporter.verify();
+      console.log("SMTP connection verified successfully");
+    } catch (verifyError) {
+      console.error("SMTP verification failed with details:", {
+        message: verifyError.message,
+        code: verifyError.code,
+        response: verifyError.response,
+        responseCode: verifyError.responseCode,
+        command: verifyError.command
+      });
+      return NextResponse.json(
+        {
+          success: false,
+          message: messages.smtpError,
+          error: process.env.NODE_ENV === "development" ? verifyError.message : undefined,
+        },
+        { status: 500 }
+      );
+    }
 
-    // Get localized content for email subjects
+    // Determine recipient email
+    const recipientEmail = selectedCountry === "uzbekistan"
+      ? process.env.CONTACT_EMAIL_UZ || "info@smartlibrary.uz"
+      : process.env.CONTACT_EMAIL_KZ || "info@smartlibrary.kz";
+
+    console.log("Recipient email:", recipientEmail);
+
     const loc = getLocalizedContent(language);
 
-    // Email to company
+    // Prepare email options
     const companyMailOptions = {
       from: `"SmartLibrary Contact Form" <${process.env.SMTP_USER}>`,
       to: recipientEmail,
-      cc: process.env.ADMIN_EMAIL, // Optional admin email
-      subject: `🏛️ ${loc.emailSubject} - ${
-        formData.name
-      } (${selectedCountry.toUpperCase()})`,
+      cc: process.env.ADMIN_EMAIL,
+      subject: `🏛️ ${loc.emailSubject} - ${formData.name} (${selectedCountry.toUpperCase()})`,
       html: createEmailTemplate(formData, selectedCountry, language),
       replyTo: formData.email,
     };
 
-    // Auto-reply to customer
     const autoReplyOptions = {
       from: `"SmartLibrary" <${process.env.SMTP_USER}>`,
       to: formData.email,
-      subject: `${loc.autoReplySubject} - ${
-        selectedCountry === "uzbekistan" ? "Tashkent" : "Almaty"
-      } Office`,
+      subject: `${loc.autoReplySubject} - ${selectedCountry === "uzbekistan" ? "Tashkent" : "Almaty"} Office`,
       html: createAutoReplyTemplate(formData, selectedCountry, language),
     };
 
+    console.log("Sending emails...");
+    
     // Send emails
     await Promise.all([
       transporter.sendMail(companyMailOptions),
       transporter.sendMail(autoReplyOptions),
     ]);
 
+    console.log("Emails sent successfully");
+    
     return NextResponse.json({
       success: true,
-      message:
-        "Your message has been sent successfully! We will get back to you soon.",
+      message: messages.success,
     });
+    
   } catch (error) {
-    console.error("Email sending error:", error);
-
+    console.error("Contact API Error - Full details:", {
+      message: error.message,
+      stack: error.stack,
+      name: error.name,
+      code: error.code
+    });
+    
+    const messages = getLocalizedMessages(requestLanguage);
+    
     return NextResponse.json(
       {
         success: false,
-        message:
-          "Sorry, there was an error sending your message. Please try again later or contact us directly.",
-        error:
-          process.env.NODE_ENV === "development" ? error.message : undefined,
+        message: messages.generalError,
+        error: process.env.NODE_ENV === "development" ? error.message : undefined,
+        errorType: error.name,
       },
       { status: 500 }
     );

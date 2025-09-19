@@ -99,7 +99,7 @@ export default function Home() {
       toast.dismiss(loadingToast);
 
       if (result.success) {
-        toast.success(result.message || t("contact.messageSuccess"), {
+        toast.success(t("contact.messageSuccess"), {
           duration: 5000,
           icon: "✅",
         });
@@ -112,7 +112,7 @@ export default function Home() {
           message: "",
         });
       } else {
-        toast.error(result.message || t("contact.messageError"), {
+        toast.error(t("contact.messageError"), {
           duration: 5000,
           icon: "❌",
         });
