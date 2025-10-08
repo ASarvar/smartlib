@@ -1,21 +1,79 @@
 "use client";
 import Layout from "@/components/layout/Layout";
 import Link from "next/link";
-import { useState } from "react";
-import productDetailsData from "@/data/product-details.json";
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Products() {
+  const { t, i18n } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  const [productDetailsData, setProductDetailsData] = useState({});
+  const [loading, setLoading] = useState(true);
   const productsPerPage = 6;
+
+  // Load appropriate product data based on language
+  useEffect(() => {
+    const loadProductData = async () => {
+      try {
+        let data;
+        const currentLang = i18n.language;
+        
+        console.log('Products page - Current language detected:', currentLang); // Debug log
+        
+        // Handle different language code formats (En, Ru, Uz, en, ru, uz)
+        const normalizedLang = currentLang.toLowerCase();
+        
+        if (normalizedLang === 'ru' || normalizedLang === 'russian') {
+          console.log('Loading Russian product data...'); // Debug log
+          const module = await import('@/data/product-details-ru.json');
+          data = module.default;
+        } else if (normalizedLang === 'uz' || normalizedLang === 'uzbek') {
+          console.log('Loading Uzbek product data...'); // Debug log
+          const module = await import('@/data/product-details-uz.json');
+          data = module.default;
+        } else {
+          // Default to English (handles 'En', 'en', 'English', etc.)
+          console.log('Loading English product data...'); // Debug log
+          const module = await import('@/data/product-details.json');
+          data = module.default;
+        }
+        
+        console.log('Loaded product data sample:', Object.keys(data).length, 'products'); // Debug log
+        setProductDetailsData(data);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error loading product data:', error);
+        // Fallback to English data
+        const module = await import('@/data/product-details.json');
+        setProductDetailsData(module.default);
+        setLoading(false);
+      }
+    };
+
+    loadProductData();
+  }, [i18n.language]);
+
+  // Helper function to get localized product data
+  const getLocalizedProductData = (product) => {
+    // Since we're now loading the appropriate JSON file based on language,
+    // we can use the data directly
+    return product;
+  };
+
+  // Helper function to get localized category name
+  const getLocalizedCategory = (category) => {
+    // Categories are now already localized in the JSON files
+    return category;
+  };
 
   // Convert JSON object to array for easier handling
   const products = Object.values(productDetailsData).map((product) => ({
     id: product.id,
     name: product.name,
     description: product.description,
-    image: product.images[0], // Use first image as main image
+    image: product.images?.[0] || "assets/img/shop/default-product.jpg", // Use first image as main image
     category: product.category,
     features: product.features || [],
   }));
@@ -31,8 +89,11 @@ export default function Products() {
     ...new Set(products.map((product) => product.category)),
   ];
   const categories = [
-    { id: "all", name: "All Products" },
-    ...uniqueCategories.map((category) => ({ id: category, name: category })),
+    { id: "all", name: t("products.allProducts") },
+    ...uniqueCategories.map((category) => ({ 
+      id: category, 
+      name: category // Categories are already localized in the JSON files
+    })),
   ];
 
   const filteredProducts = products.filter((product) => {
@@ -58,9 +119,22 @@ export default function Products() {
     setCurrentPage(1);
   };
 
+  // Show loading state
+  if (loading) {
+    return (
+      <Layout headerStyle={4} footerStyle={1} breadcrumbTitle={t("products.pageTitle")}>
+        <div className="container">
+          <div className="text-center" style={{ padding: "100px 0" }}>
+            <h3>{t("loading", "Loading...")}</h3>
+          </div>
+        </div>
+      </Layout>
+    );
+  }
+
   return (
     <>
-      <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Our Products">
+      <Layout headerStyle={4} footerStyle={1} breadcrumbTitle={t("products.pageTitle")}>
         <div>
           {/*Start Shop Page */}
           <section className="shop-page">
@@ -97,7 +171,7 @@ export default function Products() {
                         <img src={product.image} alt={product.name} />
                         <div className="btn-box">
                           <Link href={`/prodcut-details?id=${product.id}`}>
-                            VIEW DETAILS
+                            {t("products.viewDetails")}
                           </Link>
                         </div>
                       </div>
@@ -128,10 +202,9 @@ export default function Products() {
                 {filteredProducts.length === 0 && (
                   <div className="col-12">
                     <div className="no-products">
-                      <h3>No products found</h3>
+                      <h3>{t("products.noProductsFound")}</h3>
                       <p>
-                        Try adjusting your search criteria or browse all
-                        categories.
+                        {t("products.noProductsMessage")}
                       </p>
                     </div>
                   </div>
@@ -167,13 +240,12 @@ export default function Products() {
                       <div className="row justify-content-center text-center">
                         <div className="col-lg-8">
                           <div className="custom-quote-content">
-                            <h3>Need a Custom RFID Solution?</h3>
+                            <h3>{t("products.customQuoteTitle")}</h3>
                             <p>
-                              Get a personalized quote tailored to your
-                              library's specific requirements
+                              {t("products.customQuoteDescription")}
                             </p>
                             <Link href="/contact" className="thm-btn">
-                              <span className="txt">Get In Touch</span>
+                              <span className="txt">{t("products.getInTouch")}</span>
                             </Link>
                           </div>
                         </div>

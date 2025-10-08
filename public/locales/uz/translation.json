@@ -213,5 +213,31 @@
     "validEmail": "Iltimos, haqiqiy elektron pochta manzilini kiriting.",
     "messageSuccess": "Rahmat! Xabaringiz muvaffaqiyatli yuborildi. Tez orada siz bilan bog'lanamiz.",
     "messageError": "Kechirasiz, xabaringizni yuborishda xatolik yuz berdi. Iltimos, keyinroq qayta urinib ko'ring."
+  },
+  "products": {
+    "title": "Bizning mahsulotlarimiz",
+    "pageTitle": "Bizning mahsulotlarimiz",
+    "allProducts": "Barcha mahsulotlar",
+    "viewDetails": "TAFSILOTLARNI KO'RISH",
+    "noProductsFound": "Mahsulotlar topilmadi",
+    "noProductsMessage": "Qidiruv mezonlarini o'zgartiring yoki barcha kategoriyalarni ko'ring.",
+    "customQuoteTitle": "Maxsus RFID yechimi kerakmi?",
+    "customQuoteDescription": "Kutubxonangizning o'ziga xos talablariga moslashtirilgan shaxsiy taklif oling",
+    "getInTouch": "Bog'lanish"
+  },
+  "productDetailsPage": {
+    "keyFeatures": "Asosiy xususiyatlar",
+    "downloadBrochure": "Broshyura yuklab olish",
+    "contactUs": "Biz bilan bog'laning",
+    "category": "Kategoriya",
+    "tags": "Teglar",
+    "share": "Ulashish",
+    "productDescription": "Mahsulot tavsifi",
+    "technicalSpecifications": "Texnik xususiyatlar",
+    "seeInAction": "{productName} ni amalda ko'ring",
+    "productNotFound": "Mahsulot topilmadi",
+    "productNotFoundMessage": "Mahsulot topilmadi",
+    "backToProducts": "Mahsulotlarga qaytish",
+    "loading": "Yuklanmoqda..."
   }
 }

@@ -1,0 +1,138 @@
+{
+  "1": {
+    "id": 1,
+    "name": "RFID xavfsizlik darvozalari",
+    "price": "$2,499.00",
+    "sku": "RSG-001",
+    "category": "Xavfsizlik darvozalari",
+    "tags": "xavfsizlik, RFID, darvozalar, kutubxona",
+    "rating": 5,
+    "reviewsCount": 18,
+    "images": [
+      "assets/img/shop/shop-page-img1.jpg",
+      "assets/img/shop/shop-page-img2.jpg",
+      "assets/img/shop/shop-page-img2.jpg",
+      "assets/img/shop/shop-page-img2.jpg"
+    ],
+    "description": "Kutubxona kirishlari uchun ilg'or RFID-ga asoslangan xavfsizlik darvozalari. Avtomatik aniqlash, signal tizimi va kutubxona boshqaruv tizimlari bilan integratsiya xususiyatlariga ega. Bardoshli materiallardan yasalgan va yuqori trafik hududlari uchun mo'ljallangan.",
+    "fullDescription": "Bizning RFID xavfsizlik darvozalarimiz kutubxona xavfsizlik texnologiyasining cho'qqisini ifodalaydi. Ushbu darvozalar kutubxonani tark etayotgan barcha materiallarning to'g'ri topshirilganligini ta'minlash uchun ilg'or RFID aniqlash tizimlaridan foydalanadi. Darvozalar ishonchli xavfsizlik xususiyatlarini ta'minlagan holda har qanday kutubxona muhitini to'ldiruvchi zamonaviy dizaynga ega. 99,9% aniqlash darajasi bilan bu darvozalar kutubxona materiallarining ruxsatsiz olinishini deyarli yo'q qiladi. Tizimda vizual fikr-mulohaza uchun LED indikatorlar, diskret xavfsizlik signallari uchun jimgina signal imkoniyatlari va mavjud kutubxona boshqaruv tizimlari bilan to'liq integratsiya mavjud. O'rnatish oddiy va darvozalarni turli kirish kengligi uchun sozlash mumkin.",
+    "specifications": {
+      "Aniqlash darajasi": "99,9%",
+      "Ish chastotasi": "13,56 MGts",
+      "Aniqlash kengligi": "90sm standart",
+      "Quvvat ta'minoti": "AC 100-240V",
+      "O'lchamlar": "160sm B x 50sm En x 15sm Ch",
+      "Og'irligi": "Har panel uchun 45kg"
+    },
+    "features": [
+      "99,9% aniqlash darajasi",
+      "Jimgina signal tizimi",
+      "LED holat ko'rsatkichlari",
+      "Masofaviy monitoring imkoniyati",
+      "KBT bilan integratsiya",
+      "Buzish-buzishga chidamli dizayn"
+    ],
+    "technicalSpecs": "ISO 15693 ga mos, ko'plab teg formatlarini qo'llab-quvvatlaydi, professional o'rnatish va 2 yillik kafolat kiradi",
+    "reviews": [
+      {
+        "id": 1,
+        "author": "Sara Jonson",
+        "date": "15 mart 2024",
+        "rating": 5,
+        "comment": "Ajoyib xavfsizlik darvozalari! O'rnatish oson va juda ishonchli. Bizning kutubxonamizda o'rnatishdan beri xavfsizlik hodisalari bo'lmagan.",
+        "image": "assets/img/testimonial/testimonials-v1-img1.jpg"
+      },
+      {
+        "id": 2,
+        "author": "Maykl Chen",
+        "date": "28 fevral 2024",
+        "rating": 5,
+        "comment": "Ajoyib qurilish sifati va ishlash. Jimgina signal funksiyasi bizning sokin kutubxona muhiti uchun mukammal.",
+        "image": "assets/img/testimonial/testimonials-v1-img2.jpg"
+      }
+    ]
+  },
+  "2": {
+    "id": 2,
+    "name": "RFID teglar va yorliqlar",
+    "price": "$0.25",
+    "sku": "RTL-500",
+    "category": "Teglar va yorliqlar",
+    "tags": "RFID, teglar, yorliqlar, kutubxona materiallari",
+    "rating": 5,
+    "reviewsCount": 45,
+    "images": [
+      "assets/img/shop/shop-page-img3.jpg",
+      "assets/img/shop/shop-page-img4.jpg"
+    ],
+    "description": "Kitoblar, media va kutubxona materiallari uchun yuqori sifatli RFID teglar va yorliqlar. Bardoshli, soxtalashtirishga qarshi va barcha asosiy kutubxona tizimlari bilan mos keladi.",
+    "fullDescription": "Bizning RFID teglar va yorliqlarimiz kutubxona muhiti uchun maxsus ishlab chiqilgan bo'lib, ajoyib bardoshlilik va ishlashni ta'minlaydi. Har bir teg uzoq muddatli ishonchlilikni ta'minlaydigan premium materiallar yordamida eng yuqori standartlarga ko'ra ishlab chiqariladi. Teglar soxtalashtirishga qarshi xususiyatlarga ega bo'lib, materialni buzmasdan ruxsatsiz olib tashlashni deyarli imkonsiz qiladi. Barcha asosiy kutubxona boshqaruv tizimlari bilan mos keladigan bu teglar mavjud ish jarayonlariga muammosiz integratsiyani qo'llab-quvvatlaydi. Yopishtiruvchi qog'oz, plastik va multimedia qutilari kabi turli sirt turlari bilan doimiy bog'lanish uchun ishlab chiqilgan.",
+    "specifications": {
+      "Standart": "ISO 15693",
+      "Chastota": "13,56 MGts",
+      "Xotira": "1024 bit",
+      "O'qish masofasi": "30sm gacha",
+      "O'lcham": "50mm x 13mm",
+      "Qalinligi": "0,3mm"
+    },
+    "features": [
+      "ISO 15693 ga mos",
+      "Soxtalashtirishga qarshi dizayn",
+      "10+ yil xizmat muddati",
+      "Barcha tizimlar bilan mos",
+      "Doimiy yopishtiruvchi",
+      "Ommaviy qadoqlash mavjud"
+    ],
+    "technicalSpecs": "O'z-o'ziga yopishuvchi, suv o'tkazmaydigan, harorat bardoshli (-40°C dan +85°C gacha), 500 yoki 1000 dona rulon halida mavjud",
+    "reviews": [
+      {
+        "id": 1,
+        "author": "Linda Martines",
+        "date": "2 aprel 2024",
+        "rating": 5,
+        "comment": "Bu teglar ajoyib! Juda oson qo'llaniladi va o'z joyida qoladi. Biz 10,000 dan ortiq kitobni hech qanday muammosiz belgiladik.",
+        "image": "assets/img/testimonial/testimonials-v1-img3.jpg"
+      }
+    ]
+  },
+  "3": {
+    "id": 3,
+    "name": "SelfCheck 3000",
+    "price": "$4,299.00",
+    "sku": "SCK-200",
+    "category": "O'z-o'ziga xizmat terminallari",
+    "tags": "o'z-o'ziga xizmat, kutubxona, RFID, shtrix-kod, kiosk",
+    "rating": 5,
+    "reviewsCount": 12,
+    "images": [
+      "assets/img/shop/shop-page-img1.jpg",
+      "assets/img/shop/shop-page-img2.jpg",
+      "assets/img/shop/shop-page-img2.jpg",
+      "assets/img/shop/shop-page-img2.jpg"
+    ],
+    "description": "Kutubxonalar uchun intuitiv o'z-o'ziga xizmat ko'rsatish terminali. Yuqori unumdorlik, energiya samaradorligi va stol va pol konfiguratsiyalarida moslashuvchan foydalanish.",
+    "fullDescription": "SelfCheck 3000 - bu kutubxona muhitida samarali va foydalanuvchi-do'st operatsiya uchun mo'ljallangan zamonaviy o'z-o'ziga xizmat terminali. U RFID va shtrix-kod texnologiyalarini qo'llab-quvvatlaydi, bir vaqtning o'zida 5 tagacha kitobni o'qiy oladi va tashrif buyuruvchilar uchun xavfsiz va qulay xizmatni ta'minlaydi. Uning ko'p qirrali dizayni ham stol, ham pol konfiguratsiyalarida foydalanishga imkon beradi. quickConnect™ dasturiy ta'minoti va SIP2 protokoli qo'llab-quvvatlashi bilan u mavjud tizimlar bilan oson integratsiyalanadi. Ixtiyoriy UNIFI+ va OPEN+ SUITE modullari kutubxona tadbirlarini targ'ib qilish va muntazam soatlar tashqarisida kirishni ta'minlash orqali uning imkoniyatlarini kengaytiradi.",
+    "specifications": {
+      "Ish chastotasi": "13,56 ± 0,007 MGts",
+      "RF quvvati": "1,2 Vt",
+      "Unumdorlik": "Bir vaqtning o'zida 5 tagacha kitobni o'qiydi",
+      "Muvofiqlik": "ISO 15693, ISO 18000-3 A/B",
+      "O'lchamlar": "510 mm x 640 mm x 360 mm",
+      "Og'irligi": "32 kg",
+      "Quvvat ta'minoti": "Kirish C13, 240 VAC, 130Vt, 50Gts",
+      "Ulanish": "10/100 Ethernet",
+      "OS": "Windows 10 IoT Enterprise 2019 LTSC 64-bit",
+      "Kelib chiqish mamlakati": "Yevropa Ittifoqi"
+    },
+    "features": [
+      "Optimallashtirilgan o'z-o'ziga xizmat ish jarayonlari",
+      "Masofaviy qurilma boshqaruvi",
+      "Kutubxona foydalanish tahlili",
+      "Kitob tavsiya qilish funksiyasi",
+      "UNIFI+ orqali tadbirlarni targ'ib qilish",
+      "OPEN+ bilan ish soatlari tashqarisida kirish",
+      "SIP2 integratsiyasi"
+    ],
+    "technicalSpecs": "ISO 15693 va ISO 18000-3 A/B ga mos, quickConnect™ dasturiy ta'minotini o'z ichiga oladi (litsenziya talab qilinadi), RFID, shtrix-kod, smart-karta yoki qo'lda kiritish orqali identifikatsiya"
+  }
+}

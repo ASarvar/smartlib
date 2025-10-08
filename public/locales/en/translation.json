@@ -213,5 +213,31 @@
     "validEmail": "Please enter a valid email address.",
     "messageSuccess": "Thank you! Your message has been sent successfully. We'll get back to you soon.",
     "messageError": "Sorry, there was an error sending your message. Please try again later."
+  },
+  "products": {
+    "title": "Our Products",
+    "pageTitle": "Our Products",
+    "allProducts": "All Products",
+    "viewDetails": "VIEW DETAILS",
+    "noProductsFound": "No products found",
+    "noProductsMessage": "Try adjusting your search criteria or browse all categories.",
+    "customQuoteTitle": "Need a Custom RFID Solution?",
+    "customQuoteDescription": "Get a personalized quote tailored to your library's specific requirements",
+    "getInTouch": "Get In Touch"
+  },
+  "productDetailsPage": {
+    "keyFeatures": "Key Features",
+    "downloadBrochure": "Download Brochure",
+    "contactUs": "Contact Us",
+    "category": "Category",
+    "tags": "Tags",
+    "share": "Share",
+    "productDescription": "Product Description",
+    "technicalSpecifications": "Technical Specifications",
+    "seeInAction": "See {productName} in Action",
+    "productNotFound": "Product Not Found",
+    "productNotFoundMessage": "Product not found",
+    "backToProducts": "Back to Products",
+    "loading": "Loading..."
   }
 }

@@ -5,30 +5,73 @@ import Preloader from "@/components/elements/Preloader";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import productDetailsData from "@/data/product-details.json";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import ModalVideo from "react-modal-video";
 
 export default function ProductDetails() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const searchParams = useSearchParams();
   const [product, setProduct] = useState(null);
   const [selectedImage, setSelectedImage] = useState(0);
   const [loading, setLoading] = useState(true);
   const [isAutoSliding, setIsAutoSliding] = useState(true);
   const [isVideoOpen, setVideoOpen] = useState(false);
+  const [productDetailsData, setProductDetailsData] = useState({});
 
+  // Load appropriate product data based on language
   useEffect(() => {
-    const productId = searchParams.get("id") || "1";
-    const productData = productDetailsData[productId];
+    const loadProductData = async () => {
+      try {
+        let data;
+        const currentLang = i18n.language;
+        
+        console.log('Current language detected:', currentLang); // Debug log
+        
+        // Handle different language code formats (En, Ru, Uz, en, ru, uz)
+        const normalizedLang = currentLang.toLowerCase();
+        
+        if (normalizedLang === 'ru' || normalizedLang === 'russian') {
+          console.log('Loading Russian product data...'); // Debug log
+          const module = await import('@/data/product-details-ru.json');
+          data = module.default;
+        } else if (normalizedLang === 'uz' || normalizedLang === 'uzbek') {
+          console.log('Loading Uzbek product data...'); // Debug log
+          const module = await import('@/data/product-details-uz.json');
+          data = module.default;
+        } else {
+          // Default to English (handles 'En', 'en', 'English', etc.)
+          console.log('Loading English product data...'); // Debug log
+          const module = await import('@/data/product-details.json');
+          data = module.default;
+        }
+        
+        console.log('Loaded product data:', Object.keys(data).length, 'products'); // Debug log
+        setProductDetailsData(data);
+      } catch (error) {
+        console.error('Error loading product data:', error);
+        // Fallback to English data
+        const module = await import('@/data/product-details.json');
+        setProductDetailsData(module.default);
+      }
+    };
 
-    if (productData) {
-      setProduct(productData);
-      setSelectedImage(0);
+    loadProductData();
+  }, [i18n.language]);
+
+  // Load product based on ID and language data
+  useEffect(() => {
+    if (Object.keys(productDetailsData).length > 0) {
+      const productId = searchParams.get("id") || "1";
+      const productData = productDetailsData[productId];
+
+      if (productData) {
+        setProduct(productData);
+        setSelectedImage(0);
+      }
+      setLoading(false);
     }
-    setLoading(false);
-  }, [searchParams]);
+  }, [searchParams, productDetailsData]);
 
   // Auto-slide effect
   useEffect(() => {
@@ -62,13 +105,13 @@ export default function ProductDetails() {
       <Layout
         headerStyle={4}
         footerStyle={1}
-        breadcrumbTitle="Product Not Found"
+        breadcrumbTitle={t("productDetailsPage.productNotFound")}
       >
         <div className="container">
           <div className="text-center">
-            <h2>Product not found</h2>
+            <h2>{t("productDetailsPage.productNotFoundMessage")}</h2>
             <Link href="/products" className="thm-btn">
-              <span className="txt">Back to Products</span>
+              <span className="txt">{t("productDetailsPage.backToProducts")}</span>
             </Link>
           </div>
         </div>
@@ -154,7 +197,7 @@ export default function ProductDetails() {
 
                       <div className="shop-details__top-content-text2">
                         <div className="product-features-details">
-                          <h4>Key Features</h4>
+                          <h4>{t("productDetailsPage.keyFeatures")}</h4>
                           <div className="table-content">
                             <ul>
                               {product.features.map((feature, index) => (
@@ -176,12 +219,12 @@ export default function ProductDetails() {
                         <div className="btn-box">
                           <div className="btn-one">
                             <Link className="thm-btn" href="/products">
-                              <span className="txt">Download Brochure</span>
+                              <span className="txt">{t("productDetailsPage.downloadBrochure")}</span>
                             </Link>
                           </div>
                           <div className="btn-two">
                             <Link className="thm-btn" href="/contact">
-                              <span className="txt">Contact Us</span>
+                              <span className="txt">{t("productDetailsPage.contactUs")}</span>
                             </Link>
                           </div>
                         </div>
@@ -189,16 +232,16 @@ export default function ProductDetails() {
 
                       <div className="shop-details__top-content-text4">
                         <p>
-                          <span>Category:</span> {product.category}
+                          <span>{t("productDetailsPage.category")}:</span> {product.category}
                         </p>
                         <p>
-                          <span>Tags:</span> {product.tags}
+                          <span>{t("productDetailsPage.tags")}:</span> {product.tags}
                         </p>
                       </div>
 
                       <div className="shop-details__top-content-text5">
                         <div className="title-box">
-                          <p>Share:</p>
+                          <p>{t("productDetailsPage.share")}:</p>
                         </div>
                         <div className="social-links">
                           <ul>
@@ -231,12 +274,12 @@ export default function ProductDetails() {
               </div>
 
               <div className="shop-details__description">
-                <h2>Product Description</h2>
+                <h2>{t("productDetailsPage.productDescription")}</h2>
                 <p>{product.fullDescription}</p>
 
                 {product.specifications && (
                   <div className="specifications-section">
-                    <h3>Technical Specifications</h3>
+                    <h3>{t("productDetailsPage.technicalSpecifications")}</h3>
                     <div className="specifications-grid">
                       {Object.entries(product.specifications).map(
                         ([key, value]) => (
@@ -261,8 +304,12 @@ export default function ProductDetails() {
                     ></div>
                     <div className="title-box">
                       <h2>
-                        See {product.name} <br />
-                        in Action
+                        {i18n.language.toLowerCase() === 'ru' 
+                          ? `Увидеть ${product.name} в действии`
+                          : i18n.language.toLowerCase() === 'uz'
+                          ? `${product.name} ni amalda ko'ring`
+                          : `See ${product.name} in Action`
+                        }
                       </h2>
                     </div>
                     <div className="video-one__video-btn">
