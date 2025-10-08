@@ -149,7 +149,7 @@ export default function Home() {
           {/*End About One */}
 
           {/*Start Testimonials Two */}
-          <section className="testimonials-two">
+          {/* <section className="testimonials-two">
             <div
               className="testimonials-two__pattern"
               style={{
@@ -167,9 +167,9 @@ export default function Home() {
               </div>
 
               <TestimonialSlider4 />
-              {/*If we need navigation buttons */}
+              {/*If we need navigation buttons *
             </div>
-          </section>
+          </section> */}
           {/*End Testimonials Two */}
 
           {/*Start Brand Two */}
@@ -295,7 +295,7 @@ export default function Home() {
           </section>
           {/*End Call To Action One */}
           {/*Start Team One */}
-          <section className="team-one p100-top">
+          {/* <section className="team-one p100-top">
             <div className="container">
               <div className="team-one__top">
                 <div className="sec-title">
@@ -307,9 +307,9 @@ export default function Home() {
               </div>
 
               <TeamSlider2 />
-              {/*If we need navigatsion button */}
+              {/*If we need navigatsion button *
             </div>
-          </section>
+          </section> */}
           {/*End Team One */}
         </div>
       </Layout>
