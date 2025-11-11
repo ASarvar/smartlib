@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function Breadcrumb({ breadcrumbTitle }) {
+export default function Breadcrumb({ breadcrumbTitle, breadcrumbItems }) {
     return (
         <>
             
@@ -13,7 +13,12 @@ export default function Breadcrumb({ breadcrumbTitle }) {
                     <div className="page-header__inner text-center">
                         <ul className="thm-breadcrumb">
                             <li><Link href="/">Home</Link></li>
-                            <li className="active">{breadcrumbTitle}</li>
+                            {breadcrumbItems && breadcrumbItems.map((item, index) => (
+                                <li key={index} className={index === breadcrumbItems.length - 1 ? "active" : ""}>
+                                    {item.href ? <Link href={item.href}>{item.label}</Link> : item.label}
+                                </li>
+                            ))}
+                            {!breadcrumbItems && <li className="active">{breadcrumbTitle}</li>}
                         </ul>
                         <h2>{breadcrumbTitle}</h2>
                     </div>

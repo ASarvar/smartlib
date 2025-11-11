@@ -9,10 +9,9 @@
     "rating": 5,
     "reviewsCount": 18,
     "images": [
-      "assets/img/shop/shop-page-img1.jpg",
-      "assets/img/shop/shop-page-img2.jpg",
-      "assets/img/shop/shop-page-img2.jpg",
-      "assets/img/shop/shop-page-img2.jpg"
+      "assets/img/shop/Gate1.jpg",
+      "assets/img/shop/Gate2.jpg",
+      "assets/img/shop/Gate3.jpg"
     ],
     "description": "Advanced RFID-enabled security gates for library entrances. Features automatic detection, alarm system, and integration with library management systems. Built with durable materials and designed for high-traffic areas.",
     "fullDescription": "Our RFID Security Gates represent the pinnacle of library security technology. These gates utilize advanced RFID detection systems to ensure that all materials leaving the library are properly checked out. The gates feature a sleek, modern design that complements any library environment while providing robust security features. With a 99.9% detection rate, these gates virtually eliminate unauthorized removal of library materials. The system includes LED indicators for visual feedback, silent alarm capabilities for discrete security alerts, and full integration with existing library management systems. Installation is straightforward, and the gates can be configured for various entrance widths.",
@@ -50,7 +49,8 @@
         "comment": "Outstanding build quality and performance. The silent alarm feature is perfect for our quiet library environment.",
         "image": "assets/img/testimonial/testimonials-v1-img2.jpg"
       }
-    ]
+    ],
+    "videoId": "Nqsw7X0DLdY"
   },
   "2": {
     "id": 2,
@@ -62,8 +62,8 @@
     "rating": 5,
     "reviewsCount": 45,
     "images": [
-      "assets/img/shop/shop-page-img3.jpg",
-      "assets/img/shop/shop-page-img4.jpg"
+      "assets/img/shop/Tag1.jpg",
+      "assets/img/shop/Tag2.jpg"
     ],
     "description": "High-quality RFID tags and labels for books, media, and library materials. Durable, tamper-evident, and compatible with all major library systems.",
     "fullDescription": "Our RFID Tags & Labels are designed specifically for library environments, offering exceptional durability and performance. Each tag is manufactured to the highest standards using premium materials that ensure long-term reliability. The tags feature tamper-evident properties that make unauthorized removal virtually impossible without damaging the material. Compatible with all major library management systems, these tags support seamless integration into existing workflows. The adhesive is designed to bond permanently with various surface types including paper, plastic, and multimedia cases.",
@@ -93,7 +93,8 @@
         "comment": "These tags are fantastic! Very easy to apply and they stay put. We've tagged over 10,000 books with no issues.",
         "image": "assets/img/testimonial/testimonials-v1-img3.jpg"
       }
-    ]
+    ],
+    "videoId": "ErRg4fRO6K8"
   },
   "3": {
     "id": 3,
@@ -105,10 +106,9 @@
     "rating": 5,
     "reviewsCount": 12,
     "images": [
-      "assets/img/shop/shop-page-img1.jpg",
-      "assets/img/shop/shop-page-img2.jpg",
-      "assets/img/shop/shop-page-img2.jpg",
-      "assets/img/shop/shop-page-img2.jpg"
+      "assets/img/shop/selfcheck3000-1.jpg",
+      "assets/img/shop/selfcheck3000-2.jpg",
+      "assets/img/shop/selfcheck3000-3.jpg"
     ],
     "description": "Intuitive self-service terminal for libraries. High performance, energy efficiency, and flexible use in both desktop and floor-standing configurations.",
     "fullDescription": "The SelfCheck 3000 is a modern self-service terminal designed for efficient and user-friendly operation in library environments. It supports RFID and barcode technologies, can read up to 5 books simultaneously, and ensures safe and convenient service for patrons. Its versatile design allows for use in both desktop and floor-mounted configurations. With quickConnect™ software and SIP2 protocol support, it integrates easily with existing systems. Optional UNIFI+ and OPEN+ SUITE modules extend its capabilities by promoting library events and enabling access outside regular hours.",
@@ -133,6 +133,7 @@
       "After-hours access with OPEN+",
       "SIP2 integration"
     ],
-    "technicalSpecs": "Compliant with ISO 15693 and ISO 18000-3 A/B, includes quickConnect™ software (license required), identification via RFID, barcode, smartcard, or manual entry"
+    "technicalSpecs": "Compliant with ISO 15693 and ISO 18000-3 A/B, includes quickConnect™ software (license required), identification via RFID, barcode, smartcard, or manual entry",
+    "videoId": "8d06gSBhkI0"
   }
 }

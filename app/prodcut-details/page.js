@@ -121,7 +121,15 @@ export default function ProductDetails() {
 
   return (
     <>
-      <Layout headerStyle={4} footerStyle={1} breadcrumbTitle={product.name}>
+      <Layout 
+        headerStyle={4} 
+        footerStyle={1} 
+        breadcrumbTitle={product.name}
+        breadcrumbItems={[
+          { label: "Products", href: "/products" },
+          { label: product.name }
+        ]}
+      >
         <div>
           {/*Start Shop Details */}
           <section className="shop-details">
@@ -299,7 +307,7 @@ export default function ProductDetails() {
                       className="video-one__bg"
                       style={{
                         backgroundImage:
-                          "url(assets/img/background/video-v1-bg.jpg)",
+                          `url(https://img.youtube.com/vi/${product.videoId}/maxresdefault.jpg)`,
                       }}
                     ></div>
                     <div className="title-box">
@@ -335,7 +343,7 @@ export default function ProductDetails() {
         channel="youtube"
         autoplay
         isOpen={isVideoOpen}
-        videoId="vfhzo499OeA"
+        videoId={product.videoId}
         onClose={() => setVideoOpen(false)}
       />
     </>

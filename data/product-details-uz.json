@@ -9,10 +9,9 @@
     "rating": 5,
     "reviewsCount": 18,
     "images": [
-      "assets/img/shop/shop-page-img1.jpg",
-      "assets/img/shop/shop-page-img2.jpg",
-      "assets/img/shop/shop-page-img2.jpg",
-      "assets/img/shop/shop-page-img2.jpg"
+      "assets/img/shop/Gate1.jpg",
+      "assets/img/shop/Gate2.jpg",
+      "assets/img/shop/Gate3.jpg"
     ],
     "description": "Kutubxona kirishlari uchun ilg'or RFID-ga asoslangan xavfsizlik darvozalari. Avtomatik aniqlash, signal tizimi va kutubxona boshqaruv tizimlari bilan integratsiya xususiyatlariga ega. Bardoshli materiallardan yasalgan va yuqori trafik hududlari uchun mo'ljallangan.",
     "fullDescription": "Bizning RFID xavfsizlik darvozalarimiz kutubxona xavfsizlik texnologiyasining cho'qqisini ifodalaydi. Ushbu darvozalar kutubxonani tark etayotgan barcha materiallarning to'g'ri topshirilganligini ta'minlash uchun ilg'or RFID aniqlash tizimlaridan foydalanadi. Darvozalar ishonchli xavfsizlik xususiyatlarini ta'minlagan holda har qanday kutubxona muhitini to'ldiruvchi zamonaviy dizaynga ega. 99,9% aniqlash darajasi bilan bu darvozalar kutubxona materiallarining ruxsatsiz olinishini deyarli yo'q qiladi. Tizimda vizual fikr-mulohaza uchun LED indikatorlar, diskret xavfsizlik signallari uchun jimgina signal imkoniyatlari va mavjud kutubxona boshqaruv tizimlari bilan to'liq integratsiya mavjud. O'rnatish oddiy va darvozalarni turli kirish kengligi uchun sozlash mumkin.",
@@ -50,7 +49,8 @@
         "comment": "Ajoyib qurilish sifati va ishlash. Jimgina signal funksiyasi bizning sokin kutubxona muhiti uchun mukammal.",
         "image": "assets/img/testimonial/testimonials-v1-img2.jpg"
       }
-    ]
+    ],
+    "videoId": "Nqsw7X0DLdY"
   },
   "2": {
     "id": 2,
@@ -62,8 +62,8 @@
     "rating": 5,
     "reviewsCount": 45,
     "images": [
-      "assets/img/shop/shop-page-img3.jpg",
-      "assets/img/shop/shop-page-img4.jpg"
+      "assets/img/shop/Tag1.jpg",
+      "assets/img/shop/Tag2.jpg"
     ],
     "description": "Kitoblar, media va kutubxona materiallari uchun yuqori sifatli RFID teglar va yorliqlar. Bardoshli, soxtalashtirishga qarshi va barcha asosiy kutubxona tizimlari bilan mos keladi.",
     "fullDescription": "Bizning RFID teglar va yorliqlarimiz kutubxona muhiti uchun maxsus ishlab chiqilgan bo'lib, ajoyib bardoshlilik va ishlashni ta'minlaydi. Har bir teg uzoq muddatli ishonchlilikni ta'minlaydigan premium materiallar yordamida eng yuqori standartlarga ko'ra ishlab chiqariladi. Teglar soxtalashtirishga qarshi xususiyatlarga ega bo'lib, materialni buzmasdan ruxsatsiz olib tashlashni deyarli imkonsiz qiladi. Barcha asosiy kutubxona boshqaruv tizimlari bilan mos keladigan bu teglar mavjud ish jarayonlariga muammosiz integratsiyani qo'llab-quvvatlaydi. Yopishtiruvchi qog'oz, plastik va multimedia qutilari kabi turli sirt turlari bilan doimiy bog'lanish uchun ishlab chiqilgan.",
@@ -93,7 +93,8 @@
         "comment": "Bu teglar ajoyib! Juda oson qo'llaniladi va o'z joyida qoladi. Biz 10,000 dan ortiq kitobni hech qanday muammosiz belgiladik.",
         "image": "assets/img/testimonial/testimonials-v1-img3.jpg"
       }
-    ]
+    ],
+    "videoId": "ErRg4fRO6K8"
   },
   "3": {
     "id": 3,
@@ -105,10 +106,9 @@
     "rating": 5,
     "reviewsCount": 12,
     "images": [
-      "assets/img/shop/shop-page-img1.jpg",
-      "assets/img/shop/shop-page-img2.jpg",
-      "assets/img/shop/shop-page-img2.jpg",
-      "assets/img/shop/shop-page-img2.jpg"
+      "assets/img/shop/selfcheck3000-1.jpg",
+      "assets/img/shop/selfcheck3000-2.jpg",
+      "assets/img/shop/selfcheck3000-3.jpg"
     ],
     "description": "Kutubxonalar uchun intuitiv o'z-o'ziga xizmat ko'rsatish terminali. Yuqori unumdorlik, energiya samaradorligi va stol va pol konfiguratsiyalarida moslashuvchan foydalanish.",
     "fullDescription": "SelfCheck 3000 - bu kutubxona muhitida samarali va foydalanuvchi-do'st operatsiya uchun mo'ljallangan zamonaviy o'z-o'ziga xizmat terminali. U RFID va shtrix-kod texnologiyalarini qo'llab-quvvatlaydi, bir vaqtning o'zida 5 tagacha kitobni o'qiy oladi va tashrif buyuruvchilar uchun xavfsiz va qulay xizmatni ta'minlaydi. Uning ko'p qirrali dizayni ham stol, ham pol konfiguratsiyalarida foydalanishga imkon beradi. quickConnect™ dasturiy ta'minoti va SIP2 protokoli qo'llab-quvvatlashi bilan u mavjud tizimlar bilan oson integratsiyalanadi. Ixtiyoriy UNIFI+ va OPEN+ SUITE modullari kutubxona tadbirlarini targ'ib qilish va muntazam soatlar tashqarisida kirishni ta'minlash orqali uning imkoniyatlarini kengaytiradi.",
@@ -133,6 +133,7 @@
       "OPEN+ bilan ish soatlari tashqarisida kirish",
       "SIP2 integratsiyasi"
     ],
-    "technicalSpecs": "ISO 15693 va ISO 18000-3 A/B ga mos, quickConnect™ dasturiy ta'minotini o'z ichiga oladi (litsenziya talab qilinadi), RFID, shtrix-kod, smart-karta yoki qo'lda kiritish orqali identifikatsiya"
+    "technicalSpecs": "ISO 15693 va ISO 18000-3 A/B ga mos, quickConnect™ dasturiy ta'minotini o'z ichiga oladi (litsenziya talab qilinadi), RFID, shtrix-kod, smart-karta yoki qo'lda kiritish orqali identifikatsiya",
+    "videoId": "8d06gSBhkI0"
   }
 }

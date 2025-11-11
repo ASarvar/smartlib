@@ -34,6 +34,8 @@ export default function Home() {
   // const uzbekistanPhoneDisplay = "+998 71 200 70 09";
   const kazakhstanPhoneNumber = "+77074044744";
   const kazakhstanPhoneDisplay = "+7 707 404 47 44";
+  const kazakhstanPhoneNumber2 = "+998777510017";
+  const kazakhstanPhoneDisplay2= "+998 77 751 00 17";
 
   useEffect(() => {
     setEmailVisible(true);
@@ -212,6 +214,18 @@ export default function Home() {
                                   >
                                     {/* Show Kazakhstan phone by default */}
                                     {kazakhstanPhoneDisplay}
+                                  </a>
+                                </p>
+                              </div>
+                              <div className="content-box">
+                                <p>
+                                  <a
+                                    href={`tel:${kazakhstanPhoneNumber2}`}
+                                    aria-label={t("contact.callUs")}
+                                    title={t("contact.callUsTitle")}
+                                  >
+                                    {/* Show Kazakhstan phone by default */}
+                                    {kazakhstanPhoneDisplay2}
                                   </a>
                                 </p>
                               </div>
