@@ -1,6 +1,9 @@
+'use client'
 import Link from "next/link"
+import { useTranslation } from "react-i18next"
 
 export default function Breadcrumb({ breadcrumbTitle, breadcrumbItems }) {
+    const { t, i18n } = useTranslation();
     return (
         <>
             
@@ -12,7 +15,7 @@ export default function Breadcrumb({ breadcrumbTitle, breadcrumbItems }) {
                 <div className="container">
                     <div className="page-header__inner text-center">
                         <ul className="thm-breadcrumb">
-                            <li><Link href="/">Home</Link></li>
+                            <li><Link href="/">{t("menu.home")}</Link></li>
                             {breadcrumbItems && breadcrumbItems.map((item, index) => (
                                 <li key={index} className={index === breadcrumbItems.length - 1 ? "active" : ""}>
                                     {item.href ? <Link href={item.href}>{item.label}</Link> : item.label}

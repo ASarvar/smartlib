@@ -126,7 +126,7 @@ export default function ProductDetails() {
         footerStyle={1} 
         breadcrumbTitle={product.name}
         breadcrumbItems={[
-          { label: "Products", href: "/products" },
+          { label: t("menu.products"), href: "/products" },
           { label: product.name }
         ]}
       >
