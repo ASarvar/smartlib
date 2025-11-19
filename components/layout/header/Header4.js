@@ -24,6 +24,8 @@ export default function Header4({
   // Phone number with proper formatting
   const phoneNumber = "+77074044744";
   const phoneDisplay = "+7 707 404 47 44";
+  const phoneNumber2 = "+998777510017";
+  const phoneDisplay2 = "+998 77 751 00 17";
 
   useEffect(() => {
     setEmailVisible(true);
@@ -50,6 +52,15 @@ export default function Header4({
                         title={t("header.callUsTitle")}
                       >
                         {phoneDisplay}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={`tel:${phoneNumber2}`}
+                        aria-label={t("header.callUs")}
+                        title={t("header.callUsTitle")}
+                      >
+                        {phoneDisplay2}
                       </Link>
                     </li>
                     <li>

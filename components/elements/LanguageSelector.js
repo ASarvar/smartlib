@@ -11,9 +11,9 @@ const LanguageSelector = () => {
   const dropdownRef = useRef(null);
 
   const languages = [
-    { code: "En", name: "EN", flag: "/assets/img/header/gb.png" },
-    { code: "Ru", name: "РУ", flag: "/assets/img/header/ru.png" },
-    // { code: "Uz", name: "OʻZ", flag: "/assets/img/header/uz.png" },
+    { code: "En", shortname: "EN", name: "English", flag: "/assets/img/header/gb.png" },
+    { code: "Ru", shortname: "Ру", name: "Русский", flag: "/assets/img/header/ru.png" },
+    // { code: "Uz", shortname: "Oʻz", name: "Oʻzbek", flag: "/assets/img/header/uz.png" },
   ];
 
   useEffect(() => {
@@ -57,7 +57,7 @@ const LanguageSelector = () => {
           height={22}
           className="flag-icon"
         />{" "}
-        {languages.find((lang) => lang.code === selectedLanguage)?.name}
+        {languages.find((lang) => lang.code === selectedLanguage)?.shortname}
       </div>
 
       <ul className="lang-dropdown">

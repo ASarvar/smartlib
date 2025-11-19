@@ -16,6 +16,8 @@ export default function Footer1() {
   // Phone number with proper formatting
   const phoneNumber = "+77074044744";
   const phoneDisplay = "+7 707 404 47 44";
+  const phoneNumber2 = "+998777510017";
+  const phoneDisplay2 = "+998 77 751 00 17";
 
   useEffect(() => {
     setEmailVisible(true);
@@ -62,6 +64,15 @@ export default function Footer1() {
                         title={t("footer.callUsTitle")}
                       >
                         {phoneDisplay}
+                      </Link>
+                    </div>
+                    <div className="number-box">
+                      <Link
+                        href={`tel:${phoneNumber2}`}
+                        aria-label={t("footer.callUs")}
+                        title={t("footer.callUsTitle")}
+                      >
+                        {phoneDisplay2}
                       </Link>
                     </div>
                     <div className="footer-social-link">

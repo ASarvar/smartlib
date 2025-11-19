@@ -2,14 +2,16 @@
 import Link from "next/link"
 import { useTranslation } from "react-i18next"
 
-export default function Breadcrumb({ breadcrumbTitle, breadcrumbItems }) {
+export default function Breadcrumb({ breadcrumbTitle, breadcrumbItems, backgroundImage }) {
     const { t, i18n } = useTranslation();
+    const bgImage = backgroundImage || 'assets/img/background/page-header-bg.jpg';
+    
     return (
         <>
             
             {/*Start Page Header */}
             <section className="page-header">
-                <div className="page-header__bg" style={{backgroundImage: 'url(assets/img/background/page-header-bg.jpg)'}}>
+                <div className="page-header__bg" style={{backgroundImage: `url(${bgImage})`}}>
                 </div>
 
                 <div className="container">
