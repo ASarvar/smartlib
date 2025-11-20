@@ -3,21 +3,17 @@ import nodemailer from "nodemailer";
 
 // Email configuration
 const createTransporter = () => {
-  // Use custom SMTP settings for smartlibrary.asia
   return nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: parseInt(process.env.SMTP_PORT),
-    secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
+    secure: process.env.SMTP_SECURE === 'true',
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASSWORD,
     },
-    // Additional settings for better reliability
     tls: {
-      // Do not fail on invalid certs
-      rejectUnauthorized: false
+      rejectUnauthorized: false, // Accept self-signed certificates
     },
-    // Add debugging and connection options
     debug: true,
     logger: true,
     connectionTimeout: 60000,
@@ -62,6 +58,7 @@ const getLocalizedContent = (language = "en") => {
       message: "Message:",
       inquirySource: "Inquiry Source:",
       submissionTime: "Submission Time:",
+      office: "Office",
       leadingProvider:
         "Leading provider of innovative library technology solutions worldwide",
       autoReplySubject: "Thank you for contacting SmartLibrary",
@@ -100,6 +97,7 @@ const getLocalizedContent = (language = "en") => {
       message: "Сообщение:",
       inquirySource: "Источник запроса:",
       submissionTime: "Время отправки:",
+      office: "Офис",
       leadingProvider:
         "Ведущий поставщик инновационных технологических решений для библиотек по всему миру",
       autoReplySubject: "Спасибо за обращение в SmartLibrary",
@@ -139,6 +137,7 @@ const getLocalizedContent = (language = "en") => {
       message: "Xabar:",
       inquirySource: "So'rov manbai:",
       submissionTime: "Yuborilgan vaqt:",
+      office: "Ofis",
       leadingProvider:
         "Butun dunyo bo'ylab innovatsion kutubxona texnologiya yechimlari yetakchi ta'minotchisi",
       autoReplySubject: "SmartLibrary ga murojaat qilganingiz uchun rahmat",
@@ -490,7 +489,7 @@ export async function POST(request) {
 
     // Prepare email options
     const companyMailOptions = {
-      from: `"SmartLibrary Contact Form" <${process.env.SMTP_USER}>`,
+      from: `"${loc.newInquiry}" <${process.env.SMTP_USER}>`,
       to: recipientEmail,
       cc: process.env.ADMIN_EMAIL,
       subject: `🏛️ ${loc.emailSubject} - ${formData.name} (${selectedCountry.toUpperCase()})`,
@@ -499,9 +498,9 @@ export async function POST(request) {
     };
 
     const autoReplyOptions = {
-      from: `"SmartLibrary" <${process.env.SMTP_USER}>`,
+      from: `"SmartLibrary RFID Solutions" <${process.env.SMTP_USER}>`,
       to: formData.email,
-      subject: `${loc.autoReplySubject} - ${selectedCountry === "uzbekistan" ? "Tashkent" : "Almaty"} Office`,
+      subject: `${loc.autoReplySubject} - ${selectedCountry === "uzbekistan" ? "Tashkent" : "Almaty"} ${loc.office}`,
       html: createAutoReplyTemplate(formData, selectedCountry, language),
     };
 

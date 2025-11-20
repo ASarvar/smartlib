@@ -35,7 +35,7 @@ export default function Home() {
   const kazakhstanPhoneNumber = "+77074044744";
   const kazakhstanPhoneDisplay = "+7 707 404 47 44";
   const kazakhstanPhoneNumber2 = "+998777510017";
-  const kazakhstanPhoneDisplay2= "+998 77 751 00 17";
+  const kazakhstanPhoneDisplay2 = "+998 77 751 00 17";
 
   useEffect(() => {
     setEmailVisible(true);

@@ -20,27 +20,22 @@ export default function Products() {
         let data;
         const currentLang = i18n.language;
         
-        console.log('Products page - Current language detected:', currentLang); // Debug log
         
         // Handle different language code formats (En, Ru, Uz, en, ru, uz)
         const normalizedLang = currentLang.toLowerCase();
         
         if (normalizedLang === 'ru' || normalizedLang === 'russian') {
-          console.log('Loading Russian product data...'); // Debug log
           const module = await import('@/data/product-details-ru.json');
           data = module.default;
         } else if (normalizedLang === 'uz' || normalizedLang === 'uzbek') {
-          console.log('Loading Uzbek product data...'); // Debug log
           const module = await import('@/data/product-details-uz.json');
           data = module.default;
         } else {
           // Default to English (handles 'En', 'en', 'English', etc.)
-          console.log('Loading English product data...'); // Debug log
           const module = await import('@/data/product-details.json');
           data = module.default;
         }
         
-        console.log('Loaded product data sample:', Object.keys(data).length, 'products'); // Debug log
         setProductDetailsData(data);
         setLoading(false);
       } catch (error) {

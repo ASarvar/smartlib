@@ -25,33 +25,26 @@ export default function ProductDetails() {
       try {
         let data;
         const currentLang = i18n.language;
-        
-        console.log('Current language detected:', currentLang); // Debug log
-        
+
         // Handle different language code formats (En, Ru, Uz, en, ru, uz)
         const normalizedLang = currentLang.toLowerCase();
-        
-        if (normalizedLang === 'ru' || normalizedLang === 'russian') {
-          console.log('Loading Russian product data...'); // Debug log
-          const module = await import('@/data/product-details-ru.json');
+
+        if (normalizedLang === "ru" || normalizedLang === "russian") {
+          const module = await import("@/data/product-details-ru.json");
           data = module.default;
-        } else if (normalizedLang === 'uz' || normalizedLang === 'uzbek') {
-          console.log('Loading Uzbek product data...'); // Debug log
-          const module = await import('@/data/product-details-uz.json');
+        } else if (normalizedLang === "uz" || normalizedLang === "uzbek") {
+          const module = await import("@/data/product-details-uz.json");
           data = module.default;
         } else {
           // Default to English (handles 'En', 'en', 'English', etc.)
-          console.log('Loading English product data...'); // Debug log
-          const module = await import('@/data/product-details.json');
+          const module = await import("@/data/product-details.json");
           data = module.default;
         }
-        
-        console.log('Loaded product data:', Object.keys(data).length, 'products'); // Debug log
+
         setProductDetailsData(data);
       } catch (error) {
-        console.error('Error loading product data:', error);
         // Fallback to English data
-        const module = await import('@/data/product-details.json');
+        const module = await import("@/data/product-details.json");
         setProductDetailsData(module.default);
       }
     };
@@ -111,7 +104,9 @@ export default function ProductDetails() {
           <div className="text-center">
             <h2>{t("productDetailsPage.productNotFoundMessage")}</h2>
             <Link href="/products" className="thm-btn">
-              <span className="txt">{t("productDetailsPage.backToProducts")}</span>
+              <span className="txt">
+                {t("productDetailsPage.backToProducts")}
+              </span>
             </Link>
           </div>
         </div>
@@ -121,13 +116,13 @@ export default function ProductDetails() {
 
   return (
     <>
-      <Layout 
-        headerStyle={4} 
-        footerStyle={1} 
+      <Layout
+        headerStyle={4}
+        footerStyle={1}
         breadcrumbTitle={product.name}
         breadcrumbItems={[
           { label: t("menu.products"), href: "/products" },
-          { label: product.name }
+          { label: product.name },
         ]}
       >
         <div>
@@ -226,13 +221,23 @@ export default function ProductDetails() {
                       <div className="shop-details__top-content-text3">
                         <div className="btn-box">
                           <div className="btn-one">
-                            <Link className="thm-btn" href="/products">
-                              <span className="txt">{t("productDetailsPage.downloadBrochure")}</span>
-                            </Link>
+                            <a
+                              className="thm-btn"
+                              href={`/assets/files/brochure-${i18n.language.toLowerCase()}.pdf`}
+                              download
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <span className="txt">
+                                {t("productDetailsPage.downloadBrochure")}
+                              </span>
+                            </a>
                           </div>
                           <div className="btn-two">
                             <Link className="thm-btn" href="/contact">
-                              <span className="txt">{t("productDetailsPage.contactUs")}</span>
+                              <span className="txt">
+                                {t("productDetailsPage.contactUs")}
+                              </span>
                             </Link>
                           </div>
                         </div>
@@ -240,10 +245,12 @@ export default function ProductDetails() {
 
                       <div className="shop-details__top-content-text4">
                         <p>
-                          <span>{t("productDetailsPage.category")}:</span> {product.category}
+                          <span>{t("productDetailsPage.category")}:</span>{" "}
+                          {product.category}
                         </p>
                         <p>
-                          <span>{t("productDetailsPage.tags")}:</span> {product.tags}
+                          <span>{t("productDetailsPage.tags")}:</span>{" "}
+                          {product.tags}
                         </p>
                       </div>
 
@@ -254,22 +261,38 @@ export default function ProductDetails() {
                         <div className="social-links">
                           <ul>
                             <li>
-                              <Link href="#">
+                              <Link 
+                                href={`https://t.me/share/url?url=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}&text=${encodeURIComponent(product.name)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
                                 <span className="icon-telegram"></span>
                               </Link>
                             </li>
                             <li>
-                              <Link href="#">
+                              <Link 
+                                href={`https://www.instagram.com/`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
                                 <span className="icon-instagram"></span>
                               </Link>
                             </li>
                             <li>
-                              <Link href="#">
+                              <Link 
+                                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
                                 <span className="icon-facebook"></span>
                               </Link>
                             </li>
                             <li>
-                              <Link href="#">
+                              <Link 
+                                href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}&text=${encodeURIComponent(product.name)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
                                 <span className="icon-twitter"></span>
                               </Link>
                             </li>
@@ -306,18 +329,16 @@ export default function ProductDetails() {
                     <div
                       className="video-one__bg"
                       style={{
-                        backgroundImage:
-                          `url(https://img.youtube.com/vi/${product.videoId}/maxresdefault.jpg)`,
+                        backgroundImage: `url(https://img.youtube.com/vi/${product.videoId}/maxresdefault.jpg)`,
                       }}
                     ></div>
                     <div className="title-box">
                       <h2>
-                        {i18n.language.toLowerCase() === 'ru' 
+                        {i18n.language.toLowerCase() === "ru"
                           ? `Увидеть ${product.name} в действии`
-                          : i18n.language.toLowerCase() === 'uz'
+                          : i18n.language.toLowerCase() === "uz"
                           ? `${product.name} ni amalda ko'ring`
-                          : `See ${product.name} in Action`
-                        }
+                          : `See ${product.name} in Action`}
                       </h2>
                     </div>
                     <div className="video-one__video-btn">
