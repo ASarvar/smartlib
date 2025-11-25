@@ -173,10 +173,11 @@ export default function Home() {
                     <div className="contact-page__top-content">
                       <div className="contact-page__top-content-top">
                         <h2>{t("contact.getInTouch")}</h2>
-                        <p>
-                          {/* Show Kazakhstan description by default */}
-                          {t("contact.kazakhstanDescription")}
-                        </p>
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: t("contact.kazakhstanDescription"),
+                          }}
+                        />
                       </div>
 
                       <div className="contact-page__top-content-bottom">

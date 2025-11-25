@@ -324,34 +324,36 @@ export default function ProductDetails() {
                 )}
 
                 {/* Product Video Section */}
-                <div className="product-video-section">
-                  <div className="video-one__inner text-center">
-                    <div
-                      className="video-one__bg"
-                      style={{
-                        backgroundImage: `url(https://img.youtube.com/vi/${product.videoId}/maxresdefault.jpg)`,
-                      }}
-                    ></div>
-                    <div className="title-box">
-                      <h2>
-                        {i18n.language.toLowerCase() === "ru"
-                          ? `Увидеть ${product.name} в действии`
-                          : i18n.language.toLowerCase() === "uz"
-                          ? `${product.name} ni amalda ko'ring`
-                          : `See ${product.name} in Action`}
-                      </h2>
-                    </div>
-                    <div className="video-one__video-btn">
-                      <a
-                        onClick={() => setVideoOpen(true)}
-                        className="video-one__icon video-popup"
-                        style={{ cursor: "pointer" }}
-                      >
-                        <span className="icon-play-button-1"></span>
-                      </a>
+                {product.videoId && (
+                  <div className="product-video-section">
+                    <div className="video-one__inner text-center">
+                      <div
+                        className="video-one__bg"
+                        style={{
+                          backgroundImage: `url(https://img.youtube.com/vi/${product.videoId}/maxresdefault.jpg)`,
+                        }}
+                      ></div>
+                      <div className="title-box">
+                        <h2>
+                          {i18n.language.toLowerCase() === "ru"
+                            ? `Увидеть ${product.name} в действии`
+                            : i18n.language.toLowerCase() === "uz"
+                            ? `${product.name} ni amalda ko'ring`
+                            : `See ${product.name} in Action`}
+                        </h2>
+                      </div>
+                      <div className="video-one__video-btn">
+                        <a
+                          onClick={() => setVideoOpen(true)}
+                          className="video-one__icon video-popup"
+                          style={{ cursor: "pointer" }}
+                        >
+                          <span className="icon-play-button-1"></span>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </section>
@@ -360,13 +362,15 @@ export default function ProductDetails() {
       </Layout>
 
       {/* Modal Video */}
-      <ModalVideo
-        channel="youtube"
-        autoplay
-        isOpen={isVideoOpen}
-        videoId={product.videoId}
-        onClose={() => setVideoOpen(false)}
-      />
+      {product.videoId && (
+        <ModalVideo
+          channel="youtube"
+          autoplay
+          isOpen={isVideoOpen}
+          videoId={product.videoId}
+          onClose={() => setVideoOpen(false)}
+        />
+      )}
     </>
   );
 }
