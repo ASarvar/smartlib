@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <>
       <Layout
-        headerStyle={4}
+        headerStyle={3}
         footerStyle={1}
         breadcrumbTitle={t("solutionsPage.title")}
         breadcrumbBg="assets/img/solution/solution-page-bg.jpg"

@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import Menu from "../Menu";
+import { useState, useEffect } from "react";
 import MobileMenu from "../MobileMenu";
 import LanguageSelector from "@/components/elements/LanguageSelector";
 import { useTranslation } from "react-i18next";
@@ -14,6 +15,22 @@ export default function Header3({
   handleSidebar,
 }) {
   const { t } = useTranslation();
+  const [emailVisible, setEmailVisible] = useState(false);
+
+  // Obfuscated email parts for anti-spam
+  const emailUser = "info";
+  const emailDomain = "smartlibrary.asia"; // Updated to match footer
+  const email = `${emailUser}@${emailDomain}`;
+
+  // Phone number with proper formatting
+  const phoneNumber = "+77074044744";
+  const phoneDisplay = "+7 707 404 47 44";
+  const phoneNumber2 = "+998777510017";
+  const phoneDisplay2 = "+998 77 751 00 17";
+
+  useEffect(() => {
+    setEmailVisible(true);
+  }, []);
 
   return (
     <>
@@ -26,18 +43,103 @@ export default function Header3({
       >
         <div className={`menu-area ${scroll ? "sticky-menu" : ""}`}>
           {/* header-lower */}
-          <div className="main-header-four__top">
-            <div className="container">
-              <div className="main-header-four__top-inner">
-                {/* Site Under Construction Banner */}
-                <div className="construction-banner">
-                  <span className="construction-text">
-                    {t("header.constructionBanner")}
-                  </span>
+          {!scroll && (
+            <div className="main-header-four__top">
+              <div className="container">
+                <div className="main-header-four__top-inner">
+                  {/* Site Under Construction Banner */}
+                  <div className="header-contact-box">
+                    <ul>
+                      <li>
+                        <Link
+                          href={`tel:${phoneNumber}`}
+                          aria-label={t("header.callUs")}
+                          title={t("header.callUsTitle")}
+                        >
+                          {phoneDisplay}
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href={`tel:${phoneNumber2}`}
+                          aria-label={t("header.callUs")}
+                          title={t("header.callUsTitle")}
+                        >
+                          {phoneDisplay2}
+                        </Link>
+                      </li>
+                      <li>
+                        {emailVisible ? (
+                          <Link
+                            href={`mailto:${email}`}
+                            aria-label={t("header.emailUs")}
+                            title={t("header.emailUsTitle")}
+                            rel="noopener noreferrer"
+                          >
+                            {email}
+                          </Link>
+                        ) : (
+                          <span>{t("header.loading")}</span>
+                        )}
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Site Under Construction Banner */}
+                  <div className="construction-banner">
+                    <span className="construction-text">
+                      {t("header.constructionBanner")}
+                    </span>
+                  </div>
+
+                  <div className="header-social-links">
+                    <ul>
+                      <li>
+                        <Link
+                          href="#"
+                          aria-label={t("header.telegramAria")}
+                          title={t("header.telegramTitle")}
+                          rel="noopener noreferrer"
+                        >
+                          <span className="icon-telegram"></span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="#"
+                          aria-label={t("header.instagramAria")}
+                          title={t("header.instagramTitle")}
+                          rel="noopener noreferrer"
+                        >
+                          <span className="icon-instagram"></span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="#"
+                          aria-label={t("header.facebookAria")}
+                          title={t("header.facebookTitle")}
+                          rel="noopener noreferrer"
+                        >
+                          <span className="icon-facebook"></span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="#"
+                          aria-label={t("header.youtubeAria")}
+                          title={t("header.youtubeTitle")}
+                          rel="noopener noreferrer"
+                        >
+                          <span className="icon-youtube"></span>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          )}
           <div className="auto-container">
             <div className="menu-area__inner">
               <div className="mobile-nav-toggler" onClick={handleMobileMenu}>

@@ -129,7 +129,7 @@ export default function Products() {
 
   return (
     <>
-      <Layout headerStyle={4} footerStyle={1} breadcrumbTitle={t("products.pageTitle")}>
+      <Layout headerStyle={3} footerStyle={1} breadcrumbTitle={t("products.pageTitle")}>
         <div>
           {/*Start Shop Page */}
           <section className="shop-page">

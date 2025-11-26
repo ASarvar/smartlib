@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import LanguageSelector from "../elements/LanguageSelector";
@@ -12,10 +12,26 @@ export default function MobileMenu({
 }) {
   const pathname = usePathname();
   const { t } = useTranslation();
+  const [emailVisible, setEmailVisible] = useState(false);
   const [isActive, setIsActive] = useState({
     status: false,
     key: "",
   });
+
+  // Obfuscated email parts for anti-spam
+  const emailUser = "info";
+  const emailDomain = "smartlibrary.asia";
+  const email = `${emailUser}@${emailDomain}`;
+
+  // Phone numbers with proper formatting
+  const phoneNumber = "+77074044744";
+  const phoneDisplay = "+7 707 404 47 44";
+  const phoneNumber2 = "+998777510017";
+  const phoneDisplay2 = "+998 77 751 00 17";
+
+  useEffect(() => {
+    setEmailVisible(true);
+  }, []);
 
   // Helper function to check if a route is active
   const isActivePath = (path) => {
@@ -127,6 +143,94 @@ export default function MobileMenu({
               <span className="construction-text">
                 {t("header.constructionBanner")}
               </span>
+            </div>
+          </div>
+
+          {/* Mobile Contact Info */}
+          <div className="mobile-contact-info">
+            <div className="header-contact-box">
+              <ul>
+                <li>
+                  <Link
+                    href={`tel:${phoneNumber}`}
+                    aria-label={t("header.callUs")}
+                    title={t("header.callUsTitle")}
+                  >
+                    <span className="icon-phone"></span> {phoneDisplay}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={`tel:${phoneNumber2}`}
+                    aria-label={t("header.callUs")}
+                    title={t("header.callUsTitle")}
+                  >
+                    <span className="icon-phone"></span> {phoneDisplay2}
+                  </Link>
+                </li>
+                <li>
+                  {emailVisible ? (
+                    <Link
+                      href={`mailto:${email}`}
+                      aria-label={t("header.emailUs")}
+                      title={t("header.emailUsTitle")}
+                      rel="noopener noreferrer"
+                    >
+                      <span className="icon-envelope"></span> {email}
+                    </Link>
+                  ) : (
+                    <span>{t("header.loading")}</span>
+                  )}
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Mobile Social Links */}
+          <div className="mobile-social-links">
+            <div className="header-social-links">
+              <ul>
+                <li>
+                  <Link
+                    href="#"
+                    aria-label={t("header.telegramAria")}
+                    title={t("header.telegramTitle")}
+                    rel="noopener noreferrer"
+                  >
+                    <span className="icon-telegram"></span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    aria-label={t("header.instagramAria")}
+                    title={t("header.instagramTitle")}
+                    rel="noopener noreferrer"
+                  >
+                    <span className="icon-instagram"></span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    aria-label={t("header.facebookAria")}
+                    title={t("header.facebookTitle")}
+                    rel="noopener noreferrer"
+                  >
+                    <span className="icon-facebook"></span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    aria-label={t("header.youtubeAria")}
+                    title={t("header.youtubeTitle")}
+                    rel="noopener noreferrer"
+                  >
+                    <span className="icon-youtube"></span>
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
 

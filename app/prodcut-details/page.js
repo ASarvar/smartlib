@@ -117,7 +117,7 @@ export default function ProductDetails() {
   return (
     <>
       <Layout
-        headerStyle={4}
+        headerStyle={3}
         footerStyle={1}
         breadcrumbTitle={product.name}
         breadcrumbItems={[
