@@ -413,9 +413,11 @@
     "rating": 5,
     "reviewsCount": 0,
     "images": [
-      "assets/img/shop/flexamh-1.jpg",
-      "assets/img/shop/flexamh-2.jpg",
-      "assets/img/shop/flexamh-3.jpg"
+      "assets/img/shop/flexAMH-1.jpg",
+      "assets/img/shop/flexAMH-2.jpg",
+      "assets/img/shop/flexAMH-3.jpg",
+      "assets/img/shop/flexAMH-4.jpg",
+      "assets/img/shop/flexAMH-5.jpg"
     ],
     "description": "The flexAMH system is designed to automate book return and information media processing, enabling faster material handling and increased library efficiency.",
     "fullDescription": "The flexAMH system is an advanced solution for automating book returns and information media processing in libraries. The system significantly accelerates material handling, increases library efficiency, and provides 24/7 user service. High performance — up to 2400 sorted items per hour — makes the system ideal for high-traffic libraries. Comes with pre-installed quickConnect AMH software that supports SIP2 and NCIP protocols and is data model independent. flexVisualizer™ provides quick information access and an instant virtual view of the configured AMH system. Complies with CE, FCC, UL, RCM standards, as well as ADA/DDA directives.",

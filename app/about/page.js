@@ -167,7 +167,7 @@ export default function Home() {
               </div>
 
               <TestimonialSlider4 />
-              {/*If we need navigation buttons *
+              // *If we need navigation buttons 
             </div>
           </section> */}
           {/*End Testimonials Two */}
@@ -190,12 +190,6 @@ export default function Home() {
                   data-wow-delay="0.1s"
                 >
                   <div className="why-choose-us-one__img">
-                    <div className="shape1">
-                      <img
-                        src="assets/img/shape/why-choose-us-v1-shape1.png"
-                        alt=""
-                      />
-                    </div>
                     <ul>
                       <li>
                         <div className="img-box">

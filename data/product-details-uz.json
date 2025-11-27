@@ -413,9 +413,11 @@
     "rating": 5,
     "reviewsCount": 0,
     "images": [
-      "assets/img/shop/flexamh-1.jpg",
-      "assets/img/shop/flexamh-2.jpg",
-      "assets/img/shop/flexamh-3.jpg"
+      "assets/img/shop/flexAMH-1.jpg",
+      "assets/img/shop/flexAMH-2.jpg",
+      "assets/img/shop/flexAMH-3.jpg",
+      "assets/img/shop/flexAMH-4.jpg",
+      "assets/img/shop/flexAMH-5.jpg"
     ],
     "description": "flexAMH tizimi kitoblarni qaytarish va axborot tashuvchilarini qayta ishlash jarayonlarini avtomatlashtirishga mo'ljallangan bo'lib, materiallarni qayta ishlashni tezlashtiradi va kutubxona samaradorligini oshiradi.",
     "fullDescription": "flexAMH tizimi kutubxonalarda kitoblarni qaytarish va axborot tashuvchilarini qayta ishlash jarayonlarini avtomatlashtirish uchun ilg'or yechimdir. Tizim materiallarni qayta ishlashni sezilarli darajada tezlashtiradi, kutubxona samaradorligini oshiradi va foydalanuvchilarga 24/7 xizmat ko'rsatishni ta'minlaydi. Yuqori unumdorlik — soatiga 2400 tagacha saralanuvchi element — tizimni ko'p oqimli kutubxonalar uchun ideal qiladi. Oldindan o'rnatilgan quickConnect AMH dasturiy ta'minoti bilan ta'minlanadi, u SIP2 va NCIP protokollarini qo'llab-quvvatlaydi va ma'lumotlar modelidan mustaqildir. flexVisualizer™ tezkor axborotga kirishni va sozlangan AMH tizimining oniy virtual ko'rinishini ta'minlaydi. CE, FCC, UL, RCM standartlariga, shuningdek ADA/DDA direktivalariga mos keladi.",

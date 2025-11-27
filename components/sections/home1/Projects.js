@@ -128,7 +128,7 @@ export default function Projects() {
                     >
                       <span className="icon-search-interface-symbol"></span>
                     </Link>
-                    <Link href="#">
+                    <Link href="https://library-cisc.uz/">
                       <span className="icon-link"></span>
                     </Link>
                   </div>
@@ -136,7 +136,7 @@ export default function Projects() {
                   <div className="overlay-text">
                     <p>{t("projects.tashkent")}</p>
                     <h2>
-                      <Link href="https://library-cisc.uz/">
+                      <Link href="#">
                         {t("projects.cisc")}
                       </Link>
                     </h2>
