@@ -359,5 +359,94 @@
     ],
     "technicalSpecs": "43\" Full HD sensorli displey gorizontal joylashuvda. Intel Core i3, 4GB DDR3 RAM, 128GB, Windows 10. Kutubxonalar uchun ixcham ko'p maqsadli yechim.",
     "reviews": []
+  },
+  "9": {
+    "id": 9,
+    "name": "remoteLocker kitob bron qilish terminali",
+    "price": "Narx uchun murojaat qiling",
+    "sku": "REMOTE-LOCKER-100",
+    "category": "O'z-o'ziga xizmat ko'rsatish terminallari",
+    "tags": "bron qilish, o'z-o'ziga xizmat, avtomatlashtirilgan terminal, kutubxona",
+    "rating": 5,
+    "reviewsCount": 0,
+    "images": [
+      "assets/img/shop/remotelocker-1.jpg",
+      "assets/img/shop/remotelocker-2.jpg",
+      "assets/img/shop/remotelocker-3.jpg"
+    ],
+    "description": "remoteLocker™ — bu bibliotheca tomonidan ishlab chiqilgan kitoblarni bron qilish, olish va qaytarish uchun avtomatlashtirilgan terminal. Asosiy bino tashqarisida kutubxona xizmatlariga kirishni kengaytiradi.",
+    "fullDescription": "remoteLocker™ — bu bibliotheca tomonidan ishlab chiqilgan kitoblarni bron qilish, olish va qaytarish uchun avtomatlashtirilgan terminal. U kutubxonalarga o'z xizmatlariga kirishni asosiy bino tashqarisida kengaytirishga imkon beradi va foydalanuvchilarga qulay vaqt va joyda zaxiralangan materiallarni olish imkoniyatini beradi. Terminal turli xil shtrix-kod, RFID, smart-karta yoki qo'lda kiritish orqali identifikatsiyani qo'llab-quvvatlaydi. Oldindan o'rnatilgan remoteLocker dasturiy ta'minoti SIP2 protokoli orqali kutubxona ILS ga ulanish uchun sozlangan. Ethernet orqali kutubxona tarmog'iga kirish talab qilinadi.",
+    "specifications": {
+      "remoteLocker™ 100 og'irligi": "90kg",
+      "remoteLocker™ 105 og'irligi": "85kg",
+      "remoteLocker™ 110 og'irligi": "85kg",
+      "O'lchamlar": "450mm x 440mm x 1713mm (100/105/110)",
+      "Quvvat ta'minoti": "C13 kirish. 240V o'zgaruvchan tok, 130 vatt, 50Hz (Yevropa o'rnatishlari uchun 240V; Shimoliy Amerika o'rnatishlari uchun 110V)",
+      "Sug'urta": "5 AMP",
+      "Ulanish": "10/100 Ethernet 1x LAN RJ45 (Gigabit)",
+      "OS": "Windows 10 IoT Enterprise 2019 LTSC 64-bit",
+      "Kelib chiqish mamlakati": "EU, European Union"
+    },
+    "features": [
+      "Avtomatlashtirilgan bron qilish va qaytarish",
+      "Kutubxona binosi tashqarisida kirishni kengaytirish",
+      "Qulay vaqtda 24/7 ishlash",
+      "SIP2 protokoli qo'llab-quvvatlash",
+      "Shtrix-kod orqali identifikatsiya (turli xil turlar)",
+      "RFID orqali identifikatsiya",
+      "Smart-karta orqali identifikatsiya",
+      "Qo'lda ma'lumot kiritish",
+      "Oldindan o'rnatilgan remoteLocker dasturiy ta'minoti",
+      "Ethernet orqali kutubxona ILS ga ulanish"
+    ],
+    "technicalSpecs": "remoteLocker™ oldindan o'rnatilgan remoteLocker dasturiy ta'minoti bilan ta'minlanadi. Dasturiy ta'minot SIP2 orqali kutubxona ILS ga ulanish uchun sozlangan. Ethernet orqali kutubxona tarmog'iga kirish talab qilinadi. Qo'llab-quvvatlanadigan identifikatsiya: shtrix-kod (turli xil turlar), RFID, smart-karta yoki qo'lda kiritish.",
+    "reviews": [],
+    "videoId": "eXnn13XtlRE"
+  },
+  "10": {
+    "id": 10,
+    "name": "flexAMH kitoblarni qaytarish tizimi",
+    "price": "So'rov bo'yicha",
+    "sku": "FLEX-AMH-001",
+    "category": "Avtomatlashtirilgan tizimlar",
+    "tags": "avtomatlashtirish, kitob qaytarish, saralash, kutubxona",
+    "rating": 5,
+    "reviewsCount": 0,
+    "images": [
+      "assets/img/shop/flexamh-1.jpg",
+      "assets/img/shop/flexamh-2.jpg",
+      "assets/img/shop/flexamh-3.jpg"
+    ],
+    "description": "flexAMH tizimi kitoblarni qaytarish va axborot tashuvchilarini qayta ishlash jarayonlarini avtomatlashtirishga mo'ljallangan bo'lib, materiallarni qayta ishlashni tezlashtiradi va kutubxona samaradorligini oshiradi.",
+    "fullDescription": "flexAMH tizimi kutubxonalarda kitoblarni qaytarish va axborot tashuvchilarini qayta ishlash jarayonlarini avtomatlashtirish uchun ilg'or yechimdir. Tizim materiallarni qayta ishlashni sezilarli darajada tezlashtiradi, kutubxona samaradorligini oshiradi va foydalanuvchilarga 24/7 xizmat ko'rsatishni ta'minlaydi. Yuqori unumdorlik — soatiga 2400 tagacha saralanuvchi element — tizimni ko'p oqimli kutubxonalar uchun ideal qiladi. Oldindan o'rnatilgan quickConnect AMH dasturiy ta'minoti bilan ta'minlanadi, u SIP2 va NCIP protokollarini qo'llab-quvvatlaydi va ma'lumotlar modelidan mustaqildir. flexVisualizer™ tezkor axborotga kirishni va sozlangan AMH tizimining oniy virtual ko'rinishini ta'minlaydi. CE, FCC, UL, RCM standartlariga, shuningdek ADA/DDA direktivalariga mos keladi.",
+    "specifications": {
+      "O'lchamlar": "h: 945mm / 3'-2\", w: 636mm / 2'-1.5\", 19\" sensorli ekran",
+      "Kirish darajasi balandligi": "950mm / 2'-3.5\" (ichki va tashqi)",
+      "Ish harorati (ichki)": "+5°C - +40°C / 41°F – 104°F",
+      "Ish harorati (tashqi)": "-15°C - +60°C / 5°F – 140°F",
+      "Unumdorlik": "Soatiga 2400 saralanuvchi element, LMS/ILS javob vaqtiga va moslashuvchan AMH konfiguratsiyasiga bog'liq",
+      "Standartlarga muvofiqlik": "CE, FCC, UL, RCM",
+      "Direktivalar": "Mashinalar 2006/42/EC, Radio uskunalar 2014/53/EU, RoHS 2011/65/EU",
+      "ADA/DDA": "Mos keladi",
+      "Hajmi": "510mm x 640mm x 360mm (balandlik sozlanadi)",
+      "Og'irligi": "32kg",
+      "Quvvat ta'minoti": "Quvvat taqsimlash bloki (PDU) 110-230V o'zgaruvchan tok, 24V doimiy tokda ishlaydi",
+      "Ishlab chiqarilgan mamlakat": "EU, Yevropa Ittifoqi"
+    },
+    "features": [
+      "Kitob va materiallarni qaytarishni avtomatlashtirish",
+      "Soatiga 2400 tagacha elementni qayta ishlash",
+      "19\" sensorli ekran interfeysi",
+      "-15°C dan +60°C gacha haroratda ishlash",
+      "SIP2 va NCIP protokollarini qo'llab-quvvatlash",
+      "Oldindan o'rnatilgan quickConnect AMH dasturiy ta'minoti",
+      "Tizimni kuzatish uchun flexVisualizer™",
+      "CE, FCC, UL, RCM standartlariga muvofiq",
+      "O'rnatish balandligini sozlash",
+      "ILS ma'lumotlar modelidan mustaqil",
+      "ADA/DDA talablariga muvofiq"
+    ],
+    "technicalSpecs": "flexAMH tizimi oldindan o'rnatilgan va oldindan sozlangan quickConnect AMH dasturiy ta'minoti bilan ta'minlanadi. LMS/ILS protokollari SIP2 va NCIP ni qo'llab-quvvatlaydi va ma'lumotlar modelidan mustaqildir. flexVisualizer™ tezkor axborot va sozlangan AMH tizimining oniy virtual ko'rinishini ta'minlaydi.",
+    "reviews": []
   }
 }

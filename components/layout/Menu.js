@@ -114,9 +114,9 @@ export default function Menu() {
         <li className={isActive("/about") ? "active" : ""}>
           <Link href="/about">{t("menu.about")}</Link>
         </li>
-        <li className={isActive("/contact") ? "active" : ""}>
+        {/* <li className={isActive("/contact") ? "active" : ""}>
           <Link href="/contact">{t("menu.contact")}</Link>
-        </li>
+        </li> */}
       </ul>
     </>
   );

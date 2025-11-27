@@ -359,5 +359,94 @@
     ],
     "technicalSpecs": "43\" Full HD touchscreen in horizontal orientation. Intel Core i3, 4GB DDR3 RAM, 128GB, Windows 10. Compact multipurpose solution for libraries.",
     "reviews": []
+  },
+  "9": {
+    "id": 9,
+    "name": "remoteLocker Book Reservation Terminal",
+    "price": "Contact for Quote",
+    "sku": "REMOTE-LOCKER-100",
+    "category": "Self-Service Terminals",
+    "tags": "reservation, self-service, automated terminal, library",
+    "rating": 5,
+    "reviewsCount": 0,
+    "images": [
+      "assets/img/shop/remotelocker-1.jpg",
+      "assets/img/shop/remotelocker-2.jpg",
+      "assets/img/shop/remotelocker-3.jpg"
+    ],
+    "description": "remoteLocker™ is an automated terminal for reserving, picking up and returning books, developed by bibliotheca. Extends library service access beyond the main building.",
+    "fullDescription": "remoteLocker™ is an automated terminal for reserving, picking up and returning books, developed by bibliotheca. It allows libraries to extend access to their services beyond the main building, giving users the ability to pick up reserved materials at a time and place convenient for them. The terminal supports identification via various types of barcodes, RFID, smart card or manual entry. Pre-loaded remoteLocker software is configured for connection to the library ILS through SIP2 protocol. Access to the library's network via Ethernet is required.",
+    "specifications": {
+      "Weight remoteLocker™ 100": "90kg",
+      "Weight remoteLocker™ 105": "85kg",
+      "Weight remoteLocker™ 110": "85kg",
+      "Dimensions": "450mm x 440mm x 1713mm (100/105/110)",
+      "Power Supply": "Input C13 connector. 240VAC input, 130 watts, 50Hz (240VAC for European installs; 110VAC for North American installs)",
+      "Fuse": "5 AMP",
+      "Connectivity": "10/100 Ethernet 1x LAN RJ45 (Gigabit)",
+      "OS": "Windows 10 IoT Enterprise 2019 LTSC 64-bit",
+      "Country of Origin": "EU, European Union"
+    },
+    "features": [
+      "Automated reservation and return",
+      "Extended access beyond library building",
+      "24/7 operation at convenient times",
+      "SIP2 protocol support",
+      "Barcode identification (various types)",
+      "RFID identification",
+      "Smart card identification",
+      "Manual data entry",
+      "Pre-loaded remoteLocker software",
+      "Library ILS connection via Ethernet"
+    ],
+    "technicalSpecs": "remoteLocker™ comes pre-loaded with remoteLocker software. The software is configured for connection to the library ILS through SIP2. Access to the library's network via Ethernet is required. Supports identification via: Barcode (various types), RFID, smart card or manual entry.",
+    "reviews": [],
+    "videoId": "eXnn13XtlRE"
+  },
+  "10": {
+    "id": 10,
+    "name": "flexAMH Book Return System",
+    "price": "On Request",
+    "sku": "FLEX-AMH-001",
+    "category": "Automated Systems",
+    "tags": "automation, book return, sorting, library",
+    "rating": 5,
+    "reviewsCount": 0,
+    "images": [
+      "assets/img/shop/flexamh-1.jpg",
+      "assets/img/shop/flexamh-2.jpg",
+      "assets/img/shop/flexamh-3.jpg"
+    ],
+    "description": "The flexAMH system is designed to automate book return and information media processing, enabling faster material handling and increased library efficiency.",
+    "fullDescription": "The flexAMH system is an advanced solution for automating book returns and information media processing in libraries. The system significantly accelerates material handling, increases library efficiency, and provides 24/7 user service. High performance — up to 2400 sorted items per hour — makes the system ideal for high-traffic libraries. Comes with pre-installed quickConnect AMH software that supports SIP2 and NCIP protocols and is data model independent. flexVisualizer™ provides quick information access and an instant virtual view of the configured AMH system. Complies with CE, FCC, UL, RCM standards, as well as ADA/DDA directives.",
+    "specifications": {
+      "Dimensions": "h: 945mm / 3'-2\", w: 636mm / 2'-1.5\", 19\" touchscreen",
+      "Input level height": "950mm / 2'-3.5\" (internal & external)",
+      "Operating temperature (internal)": "+5°C - +40°C / 41°F – 104°F",
+      "Operating temperature (external)": "-15°C - +60°C / 5°F – 140°F",
+      "Performance": "2400 sortable items per hour, depending on LMS/ILS response time and flexible AMH configuration",
+      "Standards compliance": "CE, FCC, UL, RCM",
+      "Directives": "Machinery 2006/42/EC, Radio Equipment 2014/53/EU, RoHS 2011/65/EU",
+      "ADA/DDA": "Compliant",
+      "Size": "510mm x 640mm x 360mm (height adjustable)",
+      "Weight": "32kg",
+      "Power": "Power Distribution Unit (PDU) 110-230V AC, operates on 24V DC",
+      "Country of origin": "EU, European Union"
+    },
+    "features": [
+      "Automated book and material returns",
+      "Performance up to 2400 items per hour",
+      "19\" touchscreen interface",
+      "Operates in temperatures from -15°C to +60°C",
+      "Supports SIP2 and NCIP protocols",
+      "Pre-installed quickConnect AMH software",
+      "flexVisualizer™ for system monitoring",
+      "CE, FCC, UL, RCM compliant",
+      "Adjustable installation height",
+      "ILS data model independent",
+      "ADA/DDA compliant"
+    ],
+    "technicalSpecs": "The flexAMH system comes with pre-installed and pre-configured quickConnect AMH software. Supports LMS/ILS protocols SIP2 and NCIP and is data model independent. flexVisualizer™ provides quick information and an instant virtual view of the configured AMH system.",
+    "reviews": []
   }
 }

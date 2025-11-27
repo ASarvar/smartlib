@@ -27,15 +27,15 @@ export default function Projects() {
             >
               <div className="project-one__single">
                 <div className="project-one__single-img">
-                  <img src="assets/img/project/project-v1-img1.jpg" alt="" />
+                  <img src="assets/img/project/project-1 1.jpg" alt="" />
                   <div className="overlay-btn">
                     <Link
                       className="img-popup"
-                      href="assets/img/project/project-v1-img1.jpg"
+                      href="assets/img/project/project-1 1.jpg"
                     >
                       <span className="icon-search-interface-symbol"></span>
                     </Link>
-                    <Link href="#">
+                    <Link href="https://library-cisc.uz/">
                       <span className="icon-link"></span>
                     </Link>
                   </div>
@@ -43,9 +43,7 @@ export default function Projects() {
                   <div className="overlay-text">
                     <p>{t("projects.tashkent")}</p>
                     <h2>
-                      <Link href="#">
-                        {t("projects.nationalUniversityLibrary")}
-                      </Link>
+                      <Link href="#">{t("projects.cisc")}</Link>
                     </h2>
                   </div>
                 </div>
@@ -60,25 +58,23 @@ export default function Projects() {
             >
               <div className="project-one__single">
                 <div className="project-one__single-img">
-                  <img src="assets/img/project/project-v1-img2.jpg" alt="" />
+                  <img src="assets/img/project/project-1 2.jpg" alt="" />
                   <div className="overlay-btn">
                     <Link
                       className="img-popup"
-                      href="assets/img/project/project-v1-img2.jpg"
+                      href="assets/img/project/project-1 2.jpg"
                     >
                       <span className="icon-search-interface-symbol"></span>
                     </Link>
-                    <Link href="#">
+                    <Link href="https://library-cisc.uz/">
                       <span className="icon-link"></span>
                     </Link>
                   </div>
 
                   <div className="overlay-text">
-                    <p>{t("projects.samarkand")}</p>
+                    <p>{t("projects.tashkent")}</p>
                     <h2>
-                      <Link href="#">
-                        {t("projects.regionalPublicLibrary")}
-                      </Link>
+                      <Link href="#">{t("projects.cisc")}</Link>
                     </h2>
                   </div>
                 </div>
@@ -93,25 +89,23 @@ export default function Projects() {
             >
               <div className="project-one__single">
                 <div className="project-one__single-img">
-                  <img src="assets/img/project/project-v1-img3.jpg" alt="" />
+                  <img src="assets/img/project/project-1 3.jpg" alt="" />
                   <div className="overlay-btn">
                     <Link
                       className="img-popup"
-                      href="assets/img/project/project-v1-img3.jpg"
+                      href="assets/img/project/project-1 3.jpg"
                     >
                       <span className="icon-search-interface-symbol"></span>
                     </Link>
-                    <Link href="#">
+                    <Link href="https://library-cisc.uz/">
                       <span className="icon-link"></span>
                     </Link>
                   </div>
 
                   <div className="overlay-text">
-                    <p>{t("projects.bukhara")}</p>
+                    <p>{t("projects.tashkent")}</p>
                     <h2>
-                      <Link href="#">
-                        {t("projects.educationalInstituteLibrary")}
-                      </Link>
+                      <Link href="#">{t("projects.cisc")}</Link>
                     </h2>
                   </div>
                 </div>
@@ -126,11 +120,11 @@ export default function Projects() {
             >
               <div className="project-one__single">
                 <div className="project-one__single-img">
-                  <img src="assets/img/project/project-v1-img4.jpg" alt="" />
+                  <img src="assets/img/project/project-1 4.jpg" alt="" />
                   <div className="overlay-btn">
                     <Link
                       className="img-popup"
-                      href="assets/img/project/project-v1-img4.jpg"
+                      href="assets/img/project/project-1 4.jpg"
                     >
                       <span className="icon-search-interface-symbol"></span>
                     </Link>
@@ -140,9 +134,11 @@ export default function Projects() {
                   </div>
 
                   <div className="overlay-text">
-                    <p>{t("projects.nukus")}</p>
+                    <p>{t("projects.tashkent")}</p>
                     <h2>
-                      <Link href="#">{t("projects.digitalArchiveCenter")}</Link>
+                      <Link href="https://library-cisc.uz/">
+                        {t("projects.cisc")}
+                      </Link>
                     </h2>
                   </div>
                 </div>

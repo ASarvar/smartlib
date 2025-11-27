@@ -21,7 +21,7 @@ export default function FeautureTwo() {
                   className="feauture-two__single-img"
                   style={{
                     backgroundImage:
-                      "url(assets/img/resource/feauture-v2-img1.jpg)",
+                      "url(assets/img/resource/feature-1.jpg)",
                   }}
                 >
                   <div className="icon-box">
@@ -49,7 +49,7 @@ export default function FeautureTwo() {
                   className="feauture-two__single-img"
                   style={{
                     backgroundImage:
-                      "url(assets/img/resource/feauture-v2-img2.jpg)",
+                      "url(assets/img/resource/feature-2.jpg)",
                   }}
                 >
                   <div className="icon-box">
