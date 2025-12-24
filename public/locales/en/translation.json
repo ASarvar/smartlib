@@ -155,7 +155,6 @@
     "heading": "Latest Library Implementations",
     "subHeading": "Check Our Success Stories",
     "tashkent": "Tashkent",
-    "cisc":"Center of Islamic Civilization in Uzbekistan",
     "nationalUniversityLibrary": "National University Library",
     "samarkand": "Samarkand",
     "regionalPublicLibrary": "Regional Public Library",
@@ -269,5 +268,99 @@
     "needAnyService": "Need Any RFID Solutions or Services?",
     "findSolution": "FIND SOLUTION",
     "callAnytime": "You can call anytime"
+  },
+
+  "news": {
+    "pageTitle": "NEWS & UPDATES",
+    "readMore": "READ MORE",
+    "article1": {
+      "category": "Events",
+      "date": "August 18-22, 2025",
+      "title": "Bibliotheca at IFLA WLIC 2025 in Astana, Kazakhstan"
+    },
+    "article2": {
+      "category": "Innovation",
+      "date": "December 10, 2024",
+      "title": "Smart Self-Service Solutions for Library Efficiency"
+    },
+    "article3": {
+      "category": "Case Study",
+      "date": "December 5, 2024",
+      "title": "Success Story: Digital Transformation in Central Asia"
+    },
+    "article4": {
+      "category": "Products",
+      "date": "November 28, 2024",
+      "title": "New flexAMH Book Return System Launched"
+    },
+    "article5": {
+      "category": "Security",
+      "date": "November 20, 2024",
+      "title": "Advanced Security Gates Protect Library Collections"
+    },
+    "article6": {
+      "category": "Partnership",
+      "date": "November 15, 2024",
+      "title": "Bibliotheca Partnership Expands Regional Coverage"
+    }
+  },
+  "newsDetails": {
+    "pageTitle": "NEWS DETAILS",
+    "mainTitle": "SmartLibrary at IFLA WLIC 2025: Showcasing Innovation as Bibliotheca's Official Partner in Central Asia",
+    "metadata": "Kazakhstan – August 28, 2025",
+    "paragraph1": "The IFLA World Library and Information Congress (WLIC) 2025 took place from August 18-22 in Astana, Kazakhstan, bringing together over 1,600 delegates from more than 110 countries. As SmartLibrary, the official partner of Bibliotheca in Central Asia, we were proud to participate in this year's congress that highlighted the transformative power of libraries in an era of rapid technological and social change. IFLA WLIC 2025 was an exceptional opportunity for us to connect with global library leaders, showcase Bibliotheca's latest innovations alongside our regional expertise, reinforce strategic partnerships, and demonstrate the strength of our collaborative ecosystem.",
+    "section2Title": "A Global Conversation in a Unique Setting",
+    "paragraph2": "The congress offered a rich academic agenda covering pressing topics such as digital inclusion, accessibility standards, and the role of libraries in fostering resilient communities. Beyond the sessions, the cultural backdrop of Astana—with its blend of modern architecture, vibrant traditions, and welcoming hospitality—created a unique stage for dialogue and exchange.",
+    "paragraph2-1": "Against this inspiring context, SmartLibrary was proud to present how Bibliotheca's solutions align with the evolving needs of libraries and their patrons across Central Asia and worldwide, bringing our regional insights and local expertise to the global stage.",
+    "section3Title": "Showcasing Innovation",
+    "paragraph3": "Throughout the event, our shared booth with Bibliotheca featured live demonstrations of their newest solutions: selfCheck 3000 and 2500 (sleek kiosks delivering user-friendly self-service experiences), flexAMH (next-generation automated materials handling system), and cloudCheck tablet (flexible mobile borrowing option). As SmartLibrary, we provided local context and demonstrated how these solutions are specifically adapted to meet the needs of libraries in our region. Visitors consistently praised the modern design, accessibility features, and ability of these solutions to streamline operations while enhancing patron engagement.",
+    "section4Title": "Strong Partnerships, Stronger Solutions",
+    "paragraph4": "One of the most powerful aspects of our participation at IFLA WLIC 2025 was the visible collaboration with Bibliotheca and regional partners. As SmartLibrary, the official partner of Bibliotheca in Central Asia, we shared the exhibition space with Telelift and Hublet, highlighting the strength of an integrated ecosystem. Telelift demonstrated intelligent transport systems improving library logistics and workflows. Hublet showcased secure tablet lending solutions for digital inclusion. SmartLibrary brought invaluable local expertise and connections, amplifying the impact of Bibliotheca's presence in Central Asia. Together, this collaborative presence demonstrated that by working as one team, we provide comprehensive, future-ready solutions that support libraries throughout the region.",
+    "quote": "As SmartLibrary, serving as Bibliotheca's official partner in Central Asia, IFLA WLIC 2025 represented a proud moment of showcasing innovative library solutions and strengthening regional partnerships. Together with Bibliotheca, Telelift, and Hublet, we demonstrated how collaboration delivers comprehensive solutions that empower libraries across our region.",
+    "quoteAuthor": "SmartLibrary Team",
+    "postedIn": "Posted in:",
+    "tag1": "IFLA 2025",
+    "tag2": "Library Innovation",
+    "tag3": "SmartLibrary Partnership",
+    "commentsTitle": "Comments (2)",
+    "comment1Author": "Alexandra Petrova",
+    "comment1Text": "Excellent article about RFID implementation. We're considering this technology for our library and this information is very helpful.",
+    "comment1Date": "December 16, 2024",
+    "comment2Author": "Jamshid Karimov",
+    "comment2Text": "We implemented RFID last year and it has been transformative. Highly recommend SmartLibrary solutions for anyone considering this upgrade.",
+    "comment2Date": "December 17, 2024",
+    "reply": "Reply",
+    "formTitle": "Leave a Comment",
+    "formSubtitle": "Your email address will not be published. Required fields are marked *",
+    "namePlaceholder": "Your Name*",
+    "emailPlaceholder": "Your Email*",
+    "websitePlaceholder": "Website",
+    "messagePlaceholder": "Write Your Comment*",
+    "sendMessage": "Send Comment",
+    "pleaseWait": "Please wait...",
+    "search": "Search",
+    "searchPlaceholder": "Search articles...",
+    "categories": "Categories",
+    "category1": "RFID Technology",
+    "category2": "Self-Service Solutions",
+    "category3": "Security Systems",
+    "category4": "Library Automation",
+    "category5": "Product Updates",
+    "category6": "Case Studies",
+    "recentPost": "Recent Posts",
+    "recentPost1": "Smart Self-Service Kiosks Transform Library Experience",
+    "recentPost1Date": "December 12, 2024",
+    "recentPost2": "Security Gate Installation Best Practices",
+    "recentPost2Date": "December 10, 2024",
+    "recentPost3": "Automated Book Return Systems: flexAMH Review",
+    "recentPost3Date": "December 8, 2024",
+    "tags": "Tags",
+    "sidebarTag1": "RFID",
+    "sidebarTag2": "Library Tech",
+    "sidebarTag3": "Automation",
+    "sidebarTag4": "Self-Service",
+    "sidebarTag5": "Security",
+    "sidebarTag6": "Innovation",
+    "sidebarTag7": "Smart Library"
   }
 }

@@ -156,7 +156,6 @@
     "subHeading": "Muvaffaqiyat hikoyalarimizni ko'ring",
     "tashkent": "Toshkent",
     "nationalUniversityLibrary": "Milliy universitet kutubxonasi",
-    "cisc":"O'zbekiston Islom sivilizatsiyasi markazi",
     "samarkand": "Samarqand",
     "regionalPublicLibrary": "Viloyat jamoat kutubxonasi",
     "bukhara": "Buxoro",
@@ -269,5 +268,99 @@
     "needAnyService": "RFID yechimlari yoki xizmatlari kerakmi?",
     "findSolution": "YECHIM TOPISH",
     "callAnytime": "Istalgan vaqtda qo'ng'iroq qilishingiz mumkin"
+  },
+  "news": {
+    "pageTitle": "YANGILIKLAR VA YANGILANISHLAR",
+    "readMore": "BATAFSIL O'QISH",
+    "article1": {
+      "category": "Tadbirlar",
+      "date": "18-22 avgust, 2025",
+      "title": "Bibliotheca IFLA WLIC 2025 da Astana, Qozog'istonda"
+    },
+    "article2": {
+      "category": "Innovatsiya",
+      "date": "10-dekabr, 2024",
+      "title": "Kutubxona samaradorligi uchun aqlli o'z-o'ziga xizmat ko'rsatish yechimlari"
+    },
+    "article3": {
+      "category": "Tajriba",
+      "date": "5-dekabr, 2024",
+      "title": "Muvaffaqiyat hikoyasi: Markaziy Osiyoda raqamli transformatsiya"
+    },
+    "article4": {
+      "category": "Mahsulotlar",
+      "date": "28-noyabr, 2024",
+      "title": "Yangi flexAMH kitoblarni qaytarish tizimi ishga tushirildi"
+    },
+    "article5": {
+      "category": "Xavfsizlik",
+      "date": "20-noyabr, 2024",
+      "title": "Ilg'or xavfsizlik darvozalari kutubxona fondlarini himoya qiladi"
+    },
+    "article6": {
+      "category": "Hamkorlik",
+      "date": "15-noyabr, 2024",
+      "title": "Bibliotheca bilan hamkorlik mintaqaviy qamrovni kengaytiradi"
+    }
+  },
+
+  "newsDetails": {
+    "pageTitle": "YANGILIK TAFSILOTLARI",
+    "mainTitle": "SmartLibrary IFLA WLIC 2025 da: Markaziy Osiyodagi Bibliotheca ning rasmiy hamkori sifatida innovatsiyalarni namoyish etish",
+    "metadata": "Qozog'iston — 28 avgust, 2025",
+    "paragraph1": "IFLA Jahon kutubxona va axborot kongressi (WLIC) 2025 18-22 avgust kunlari Astana, Qozog'istonda bo'lib o'tdi va 110 dan ortiq mamlakatdan 1 600 dan ortiq delegatlar ishtirok etdi. Markaziy Osiyodagi Bibliotheca ning rasmiy hamkori SmartLibrary sifatida biz tez texnologik va ijtimoiy o'zgarishlar davridagi kutubxonalarning transformatsion kuchini ta'kidlagan bu yilgi kongressda ishtirok etganimizdan faxrlanamiz. IFLA WLIC 2025 biz uchun global kutubxona rahbarlari bilan uchrashish, mintaqaviy tajribamiz bilan birga Bibliotheca ning eng so'nggi innovatsiyalarini namoyish etish, strategik hamkorliklarni mustahkamlash va birgalikdagi ekotizimimiz kuchini ko'rsatish uchun ajoyib imkoniyat bo'ldi.",
+    "section2Title": "Noyob muhitda global munozara",
+    "paragraph2": "Kongress raqamli inklyuziya, kirish imkoniyatlari standartlari va kutubxonalarning barqaror jamiyatlarni mustahkamlashdagi roli kabi dolzarb mavzularni qamrab olgan boy ilmiy dastur taklif etdi. Sessiyalardan tashqarida Astana madaniy muhit — zamonaviy arxitektura, jonli an'analar va iliq mehmondo'stlikning uyg'unligi — muloqot va fikr almashish uchun noyob maydon yaratdi.",
+    "paragraph2-1": "Ushbu ilhomlantiruvchi kontekstda SmartLibrary Bibliotheca yechimlarining Markaziy Osiyo va butun dunyo bo'ylab kutubxonalar va ularning foydalanuvchilarining o'zgarib borayotgan ehtiyojlariga qanday javob berishini global sahnaga mintaqaviy tushunchalarimiz va mahalliy tajribamizni olib kelib iftixor bilan namoyish etdi.",
+    "section3Title": "Innovatsiyalarni namoyish etish",
+    "paragraph3": "Tadbir davomida Bibliotheca bilan birgalikdagi stendimizda ularning eng yangi yechimlari jonli namoyish etildi: selfCheck 3000 va 2500 (foydalanuvchilarga qulay o'z-o'ziga xizmat kiosklari), flexAMH (navbatdagi avlod zamonaviy avtomatlashtirilgan materiallarni qayta ishlash tizimi) va cloudCheck tablet (moslashuvchan mobil qarz berish varianti). SmartLibrary sifatida biz mahalliy kontekstni taqdim etdik va bu yechimlar mintaqamizdagi kutubxonalar ehtiyojlarini qondirish uchun qanday maxsus moslashtirilganini ko'rsatdik. Tashrifchilar doimiy ravishda zamonaviy dizayn, kirish imkoniyatlari va ushbu yechimlarning jarayonlarni optimallashtirish hamda foydalanuvchilarni jalb qilish qobiliyatini ta'kidlashdi.",
+    "section4Title": "Kuchli hamkorliklar, ishonchli yechimlar",
+    "paragraph4": "IFLA WLIC 2025 da ishtirokimizning eng muhim jihatlaridan biri Bibliotheca va mintaqaviy hamkorlar bilan ko'rinadigan hamkorlik edi. Markaziy Osiyodagi Bibliotheca ning rasmiy hamkori sifatida SmartLibrary, biz ko'rgazma maydonini Telelift va Hublet bilan bo'lishib, integratsiyalashgan ekotizimning kuchini ta'kidladik. Telelift kutubxona logistikasi va ish jarayonlarini yaxshilaydigan aqlli transport tizimlarini namoyish etdi. Hublet raqamli inklyuziya uchun xavfsiz planshet ijarasi yechimlarini taqdim etdi. SmartLibrary bebaho mahalliy tajriba va aloqalarni olib keldi, Bibliotheca ning Markaziy Osiyodagi ta'sirini kuchaytirdi. Birgalikda, bu hamkorlik maydoni bir jamoa sifatida ishlash orqali mintaqa bo'ylab kutubxonalarni qo'llab-quvvatlaydigan keng qamrovli, kelajakka qaratilgan yechimlarni taqdim etishimizni ko'rsatdi.",
+    "quote": "SmartLibrary sifatida, Markaziy Osiyodagi Bibliotheca ning rasmiy hamkori sifatida, IFLA WLIC 2025 biz uchun innovatsion kutubxona yechimlarini namoyish etish va mintaqaviy hamkorliklarni mustahkamlashning faxrli lahzasi bo'ldi. Bibliotheca, Telelift va Hublet bilan birgalikda biz hamkorlik mintaqamizdagi kutubxonalarni qo'llab-quvvatlovchi keng qamrovli yechimlarni taqdim etishini ko'rsatdik.",
+    "quoteAuthor": "SmartLibrary jamoasi",
+    "postedIn": "Quyida joylashtirilgan:",
+    "tag1": "IFLA 2025",
+    "tag2": "Kutubxona innovatsiyalari",
+    "tag3": "SmartLibrary hamkorligi",
+    "commentsTitle": "Izohlar (2)",
+    "comment1Author": "Alexandra Petrova",
+    "comment1Text": "RFID joriy etish haqida ajoyib maqola. Biz bu texnologiyani kutubxonamiz uchun ko'rib chiqmoqdamiz va bu ma'lumot juda foydali.",
+    "comment1Date": "16-dekabr, 2024",
+    "comment2Author": "Jamshid Karimov",
+    "comment2Text": "Biz o'tgan yili RFIDni joriy qildik va bu o'zgartirildi. Bu yangilanishni ko'rib chiqayotgan har kimga SmartLibrary yechimlarini tavsiya qilaman.",
+    "comment2Date": "17-dekabr, 2024",
+    "reply": "Javob berish",
+    "formTitle": "Izoh qoldiring",
+    "formSubtitle": "Sizning elektron pochta manzilingiz e'lon qilinmaydi. Majburiy maydonlar * bilan belgilangan",
+    "namePlaceholder": "Ismingiz*",
+    "emailPlaceholder": "Emailingiz*",
+    "websitePlaceholder": "Veb-sayt",
+    "messagePlaceholder": "Izohingizni yozing*",
+    "sendMessage": "Izoh yuborish",
+    "pleaseWait": "Iltimos kuting...",
+    "search": "Qidirish",
+    "searchPlaceholder": "Maqolalarni qidirish...",
+    "categories": "Turkumlar",
+    "category1": "RFID texnologiyasi",
+    "category2": "O'z-o'ziga xizmat ko'rsatish yechimlari",
+    "category3": "Xavfsizlik tizimlari",
+    "category4": "Kutubxona avtomatlashtiruvi",
+    "category5": "Mahsulot yangilanishlari",
+    "category6": "Tajriba",
+    "recentPost": "So'nggi maqolalar",
+    "recentPost1": "Aqlli o'z-o'ziga xizmat ko'rsatish kiosklari kutubxona tajribasini o'zgartiradi",
+    "recentPost1Date": "12-dekabr, 2024",
+    "recentPost2": "Xavfsizlik darvozalarini o'rnatishning eng yaxshi amaliyotlari",
+    "recentPost2Date": "10-dekabr, 2024",
+    "recentPost3": "Avtomatlashtirilgan kitoblarni qaytarish tizimlari: flexAMH sharhi",
+    "recentPost3Date": "8-dekabr, 2024",
+    "tags": "Teglar",
+    "sidebarTag1": "RFID",
+    "sidebarTag2": "Kutubxona texnologiyalari",
+    "sidebarTag3": "Avtomatlashtirish",
+    "sidebarTag4": "O'z-o'ziga xizmat",
+    "sidebarTag5": "Xavfsizlik",
+    "sidebarTag6": "Innovatsiya",
+    "sidebarTag7": "Aqlli kutubxona"
   }
 }

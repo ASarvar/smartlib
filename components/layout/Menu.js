@@ -93,7 +93,7 @@ export default function Menu() {
         </li>
         <li
           className={`menu-item-has-children ${
-            hasActiveSubmenu(["/blog", "/blog-sidebar", "/blog-details"])
+            hasActiveSubmenu(["/news", "/news-sidebar", "/news-details"])
               ? "active"
               : ""
           }`}
@@ -101,7 +101,7 @@ export default function Menu() {
           <Link href="#">{t("menu.resources")}</Link>
           <ul className="sub-menu">
             <li>
-              <Link href="">{t("menu.news")}</Link>
+              <Link href="/news">{t("menu.news")}</Link>
             </li>
             <li>
               <Link href="">{t("menu.brochures")}</Link>

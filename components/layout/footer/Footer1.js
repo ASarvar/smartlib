@@ -54,8 +54,8 @@ export default function Footer1() {
                   </div>
 
                   <div className="footer-widget__about-inner">
-                    <div className="text-box">
-                      <p>{t("footer.officialPartner")}</p>
+                    <div className="official-partner">
+                      <Link href="https://www.bibliotheca.com">{t("footer.officialPartner")}</Link>
                     </div>
                     <div className="number-box">
                       <Link

@@ -974,6 +974,11 @@
 
 .blog-details__content-img2-single img {
     width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.blog-details__content-img2-single:hover img {
+    transform: scale(1.1);
 }
 
 
@@ -1030,6 +1035,10 @@
 }
 
 .blog-details__content-text3 .text-box p {
+    font-weight: 600;
+}
+.author {
+    padding-top: 20px;
     color: var(--thm-primary);
     font-weight: 600;
 }

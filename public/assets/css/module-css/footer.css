@@ -87,9 +87,12 @@
     position: relative;
     display: block;
 }
+.contact-item a{
+    color:var(--thm-gray)
+}
 
 .footer-widget__about-inner .number-box a {
-    color: var(--thm-primary);
+    color: #abafb5;
     font-weight: 500;
 }
 
