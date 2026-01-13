@@ -22,7 +22,7 @@ export default function Video() {
             <div
               className="video-one__bg"
               style={{
-                backgroundImage: "url(assets/img/background/video-v1-bg.jpg)",
+                backgroundImage: `url(https://img.youtube.com/vi/QKhImJkfrJk/maxresdefault.jpg)`,
               }}
             ></div>
             <div className="title-box">
@@ -46,7 +46,7 @@ export default function Video() {
         channel="youtube"
         autoplay
         isOpen={isOpen}
-        videoId="vfhzo499OeA"
+        videoId="QKhImJkfrJk"
         onClose={() => setOpen(false)}
       />
     </>
