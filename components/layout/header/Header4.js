@@ -17,7 +17,7 @@ export default function Header4({
   const [emailVisible, setEmailVisible] = useState(false);
 
   // Obfuscated email parts for anti-spam
-  const emailUser = "info";
+  const emailUser = "contact";
   const emailDomain = "smartlibrary.asia"; // Updated to match footer
   const email = `${emailUser}@${emailDomain}`;
 

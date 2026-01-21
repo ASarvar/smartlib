@@ -20,12 +20,12 @@ export default function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Anti-spam email obfuscation - Kazakhstan (Default)
-  const emailUser = "info";
+  const emailUser = "contact";
   const emailDomain = "smartlibrary.asia";
   const email = `${emailUser}@${emailDomain}`;
 
   // Kazakhstan contact info (Default)
-  const kazakhstanEmailUser = "info";
+  const kazakhstanEmailUser = "contact";
   const kazakhstanEmailDomain = "smartlibrary.asia";
   const kazakhstanEmail = `${kazakhstanEmailUser}@${kazakhstanEmailDomain}`;
 

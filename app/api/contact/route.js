@@ -480,8 +480,8 @@ export async function POST(request) {
 
     // Determine recipient email
     const recipientEmail = selectedCountry === "uzbekistan"
-      ? process.env.CONTACT_EMAIL_UZ || "info@smartlibrary.uz"
-      : process.env.CONTACT_EMAIL_KZ || "info@smartlibrary.kz";
+      ? process.env.CONTACT_EMAIL_UZ || "contact@smartlibrary.uz"
+      : process.env.CONTACT_EMAIL_KZ || "contact@smartlibrary.uz";
 
     console.log("Recipient email:", recipientEmail);
 
