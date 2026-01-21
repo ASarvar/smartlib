@@ -93,8 +93,7 @@
         "comment": "These tags are fantastic! Very easy to apply and they stay put. We've tagged over 10,000 books with no issues.",
         "image": "assets/img/testimonial/testimonials-v1-img3.jpg"
       }
-    ],
-    "videoId": "ErRg4fRO6K8"
+    ]
   },
   "3": {
     "id": 3,
@@ -175,7 +174,8 @@
       "staffConnect™ circ software"
     ],
     "technicalSpecs": "Product ID TAG000112-000. Includes staffConnect™ circ software. Shielded workstation for tagging, inventory, and library collection management.",
-    "reviews": []
+    "reviews": [],
+    "videoId": "Nqsw7X0DLdY"
   },
   "5": {
     "id": 5,
@@ -219,7 +219,8 @@
       "staffConnect™ inventory software"
     ],
     "technicalSpecs": "Product ID HND000020-000. Includes staffConnect™ inventory software (license required). Mobile station for inventory and search of library materials.",
-    "reviews": []
+    "reviews": [],
+    "videoId": "Xbn_U18IAts"
   },
   "6": {
     "id": 6,
@@ -449,6 +450,7 @@
       "ADA/DDA compliant"
     ],
     "technicalSpecs": "The flexAMH system comes with pre-installed and pre-configured quickConnect AMH software. Supports LMS/ILS protocols SIP2 and NCIP and is data model independent. flexVisualizer™ provides quick information and an instant virtual view of the configured AMH system.",
-    "reviews": []
+    "reviews": [],
+    "videoId": "LX-7ei-_Qpw"
   }
 }

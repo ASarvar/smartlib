@@ -2844,7 +2844,7 @@ Call To Action One
   left: 30px;
   bottom: 30px;
   right: 30px;
-  background: rgba(var(--thm-white-rgb), 0.1);
+  background: rgba(var(--thm-black-rgb), 0.5);
   content: "";
 }
 

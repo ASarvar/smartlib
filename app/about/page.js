@@ -15,6 +15,7 @@ export default function Home() {
         headerStyle={3}
         footerStyle={1}
         breadcrumbTitle={t("about.pageTitle")}
+        breadcrumbBg="assets/img/about/about-page-bg.jpg"
       >
         <div>
           {/*Start About One */}

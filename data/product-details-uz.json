@@ -93,8 +93,7 @@
         "comment": "Bu teglar ajoyib! Juda oson qo'llaniladi va o'z joyida qoladi. Biz 10,000 dan ortiq kitobni hech qanday muammosiz belgiladik.",
         "image": "assets/img/testimonial/testimonials-v1-img3.jpg"
       }
-    ],
-    "videoId": "ErRg4fRO6K8"
+    ]
   },
   "3": {
     "id": 3,
@@ -175,7 +174,8 @@
       "staffConnect™ circ dasturiy ta'minoti"
     ],
     "technicalSpecs": "Mahsulot ID TAG000112-000. staffConnect™ circ dasturiy ta'minotini o'z ichiga oladi. Belgilash, inventarizatsiya va kutubxona fondi boshqaruvi uchun ekranlangan ish stantsiyasi.",
-    "reviews": []
+    "reviews": [],
+    "videoId": "Nqsw7X0DLdY"
   },
   "5": {
     "id": 5,
@@ -219,7 +219,8 @@
       "staffConnect™ inventory dasturiy ta'minoti"
     ],
     "technicalSpecs": "Mahsulot ID HND000020-000. staffConnect™ inventory dasturiy ta'minotini o'z ichiga oladi (litsenziya talab qilinadi). Kutubxona materiallarini inventarizatsiya qilish va qidirish uchun mobil stantsiya.",
-    "reviews": []
+    "reviews": [],
+    "videoId": "Xbn_U18IAts"
   },
   "6": {
     "id": 6,
@@ -449,6 +450,7 @@
       "ADA/DDA talablariga muvofiq"
     ],
     "technicalSpecs": "flexAMH tizimi oldindan o'rnatilgan va oldindan sozlangan quickConnect AMH dasturiy ta'minoti bilan ta'minlanadi. LMS/ILS protokollari SIP2 va NCIP ni qo'llab-quvvatlaydi va ma'lumotlar modelidan mustaqildir. flexVisualizer™ tezkor axborot va sozlangan AMH tizimining oniy virtual ko'rinishini ta'minlaydi.",
-    "reviews": []
+    "reviews": [],
+    "videoId": "LX-7ei-_Qpw"
   }
 }
