@@ -451,6 +451,40 @@
     ],
     "technicalSpecs": "The flexAMH system comes with pre-installed and pre-configured quickConnect AMH software. Supports LMS/ILS protocols SIP2 and NCIP and is data model independent. flexVisualizer™ provides quick information and an instant virtual view of the configured AMH system.",
     "reviews": [],
-    "videoId": "LX-7ei-_Qpw"
-  }
+    "videoId": "LX-7ei-_Qpw"  },
+  "11": {
+    "id": 11,
+    "name": "Hublet",
+    "price": "Contact for pricing",
+    "sku": "HUBLET-001",
+    "category": "Software",
+    "tags": "content management, tablets, digital devices, library",
+    "rating": 5,
+    "reviewsCount": 0,
+    "images": [
+      "assets/img/shop/hublet-1.jpg",
+      "assets/img/shop/hublet-2.jpg",
+      "assets/img/shop/hublet-3.jpg"
+    ],
+    "description": "Software for managing digital content and smart devices. Hublet is an innovative technology company from Finland, specializing in advanced solutions for tablet lending management.",
+    "fullDescription": "Hublet is an innovative technology company from Finland, specializing in advanced solutions for tablet lending management. The company's services are used in 27 countries, supporting over 400 organizations across sectors such as libraries, healthcare, education, and hospitality. The company's vision is to make digital access simple, accessible, and secure for all users. Hublet's mission is to provide organizations with innovative tools that enable them to offer users a simple, secure, and efficient way to access digital educational content.",
+    "specifications": {
+      "Solution Type": "Cloud-based software",
+      "Supported Devices": "iOS and Android tablets",
+      "Countries": "27 countries",
+      "Customers": "Over 400 organizations",
+      "Industries": "Libraries, healthcare, education, hospitality",
+      "Country of Origin": "Finland"
+    },
+    "features": [
+      "Tablet lending management",
+      "Secure digital content access",
+      "Cloud-based management platform",
+      "iOS and Android device support",
+      "Multi-industry application",
+      "User-friendly interface",
+      "Scalable solution"
+    ],
+    "technicalSpecs": "Cloud-based software for managing digital content and tablets. Used in 27 countries by over 400 organizations in libraries, healthcare, education, and hospitality sectors.",
+    "reviews": []  }
 }

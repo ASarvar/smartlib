@@ -47,7 +47,7 @@
     "officialPartner": "Official Partner of Bibliotheca",
     "address": "Tashkent, Uzbekistan, Mirzo Ulugbek District, 100125",
     "workingHours": "Mon - Fri: 9:00 AM - 6:00 PM",
-    "copyright": "Copyright © 2025 Smartlibrary. All Rights Reserved",
+    "copyright": "Copyright © 2026 Smartlibrary. All Rights Reserved",
     "home": "Home",
     "products": "Products",
     "services": "Services",
@@ -161,7 +161,8 @@
     "bukhara": "Bukhara",
     "educationalInstituteLibrary": "Educational Institute Library",
     "nukus": "Nukus",
-    "digitalArchiveCenter": "Digital Archive Center"
+    "digitalArchiveCenter": "Digital Archive Center",
+    "cisc": "Islamic Civilization Study Center Library"
   },
   "faq": {
     "title": "FAQ",

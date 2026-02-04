@@ -452,5 +452,41 @@
     "technicalSpecs": "flexAMH tizimi oldindan o'rnatilgan va oldindan sozlangan quickConnect AMH dasturiy ta'minoti bilan ta'minlanadi. LMS/ILS protokollari SIP2 va NCIP ni qo'llab-quvvatlaydi va ma'lumotlar modelidan mustaqildir. flexVisualizer™ tezkor axborot va sozlangan AMH tizimining oniy virtual ko'rinishini ta'minlaydi.",
     "reviews": [],
     "videoId": "LX-7ei-_Qpw"
+  },
+  "11": {
+    "id": 11,
+    "name": "Hublet",
+    "price": "Narx bo'yicha murojaat qiling",
+    "sku": "HUBLET-001",
+    "category": "Dasturiy ta'minot",
+    "tags": "kontent boshqaruvi, planshetlar, raqamli qurilmalar, kutubxona",
+    "rating": 5,
+    "reviewsCount": 0,
+    "images": [
+      "assets/img/shop/hublet-1.jpg",
+      "assets/img/shop/hublet-2.jpg",
+      "assets/img/shop/hublet-3.jpg"
+    ],
+    "description": "Raqamli kontent va smart qurilmalarni boshqarish uchun dasturiy ta'minot. Hublet — bu Finlandiyadan innovatsion texnologiya kompaniyasi bo'lib, planshetlarni ijaraga berish boshqaruvining ilg'or yechimlari bo'yicha ixtisoslashgan.",
+    "fullDescription": "Hublet — bu Finlandiyadan innovatsion texnologiya kompaniyasi bo'lib, planshetlarni ijaraga berish boshqaruvining ilg'or yechimlari bo'yicha ixtisoslashgan. Kompaniya xizmatlari 27 mamlakatda qo'llaniladi va kutubxonalar, sog'liqni saqlash, ta'lim va mehmondo'stlik kabi sohalarda 400 dan ortiq tashkilotlarni qo'llab-quvvatlaydi. Kompaniyaning ko'rish-nishoni — barcha foydalanuvchilar uchun raqamli kirishni oddiy, qulay va xavfsiz qilish. Hublet ning missiyasi — tashkilotlarga foydalanuvchilarga raqamli ta'lim kontentiga oddiy, xavfsiz va samarali kirish imkonini beradigan innovatsion vositalarni taqdim etish.",
+    "specifications": {
+      "Yechim turi": "Bulutli dasturiy ta'minot",
+      "Qo'llab-quvvatlanadigan qurilmalar": "iOS va Android planshetlar",
+      "Mamlakatlar": "27 mamlakat",
+      "Mijozlar": "400 dan ortiq tashkilot",
+      "Sohalar": "Kutubxonalar, sog'liqni saqlash, ta'lim, mehmondo'stlik",
+      "Kelib chiqish mamlakati": "Finlandiya"
+    },
+    "features": [
+      "Planshetlarni ijaraga berish boshqaruvi",
+      "Xavfsiz raqamli kontentga kirish",
+      "Bulutli boshqaruv platformasi",
+      "iOS va Android qurilmalarini qo'llab-quvvatlash",
+      "Ko'p sohalarda qo'llash",
+      "Foydalanish uchun qulay",
+      "Kengaytirilishi mumkin bo'lgan yechim"
+    ],
+    "technicalSpecs": "Raqamli kontent va planshetlarni boshqarish uchun bulutli dasturiy ta'minot. 27 mamlakatda kutubxonalar, sog'liqni saqlash, ta'lim va mehmondo'stlik sohalarida 400 dan ortiq tashkilot tomonidan foydalaniladi.",
+    "reviews": []
   }
 }

@@ -47,7 +47,7 @@
     "officialPartner": "Официальный партнер Bibliotheca",
     "address": "Ташкент, Узбекистан, район Мирзо Улугбек, 100125",
     "workingHours": "Пн - Пт: 9:00 - 18:00",
-    "copyright": "Авторские права © 2025 Smartlibrary. Все права защищены",
+    "copyright": "Авторские права © 2026 Smartlibrary. Все права защищены",
     "home": "Главная",
     "products": "Продукты",
     "services": "Услуги",
@@ -161,7 +161,8 @@
     "bukhara": "Бухара",
     "educationalInstituteLibrary": "Библиотека образовательного института",
     "nukus": "Нукус",
-    "digitalArchiveCenter": "Центр цифрового архива"
+    "digitalArchiveCenter": "Центр цифрового архива",
+    "cisc": "Библиотека Исламского центра изучения цивилизаций"
   },
   "faq": {
     "title": "FAQ",
