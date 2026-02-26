@@ -457,7 +457,7 @@
     "name": "Hublet",
     "price": "Contact for pricing",
     "sku": "HUBLET-001",
-    "category": "Software",
+    "category": "Self-Service Terminals",
     "tags": "content management, tablets, digital devices, library",
     "rating": 5,
     "reviewsCount": 0,
@@ -486,5 +486,54 @@
       "Scalable solution"
     ],
     "technicalSpecs": "Cloud-based software for managing digital content and tablets. Used in 27 countries by over 400 organizations in libraries, healthcare, education, and hospitality sectors.",
-    "reviews": []  }
+    "reviews": []
+  },
+  "12": {
+    "id": 12,
+    "name": "Standalone bookDrop",
+    "price": "Contact for Quote",
+    "sku": "BOOKDROP-SA-001",
+    "category": "Self-Service Terminals",
+    "tags": "book drop, self-service, return, RFID, library",
+    "rating": 5,
+    "reviewsCount": 0,
+    "images": [
+      "assets/img/shop/bookdrop-1.jpg",
+      "assets/img/shop/bookdrop-2.jpg",
+      "assets/img/shop/bookdrop-3.jpg"
+    ],
+    "description": "Convenient, flexible drop-and-go book return terminal with instant account updates. RFID-powered, touchscreen-equipped, and ILS-integrated for 24/7 streamlined patron returns in any library space.",
+    "fullDescription": "The Standalone bookDrop offers a cost-effective, space-efficient way to streamline patron returns day and night. With drop-and-go returns and instant account updates, it redefines the library return experience. The compact design allows for installation in small spaces, while RFID technology, a 21.5\" Full HD capacitive touchscreen, and seamless integration with your ILS via quickConnect software ensure automatic account updates and security settings. The intelligent input door opens only to allow library materials, preventing misuse. A customizable multilingual interface supporting Korean, Chinese, Japanese, English, and Vietnamese — plus printed receipt capability — makes it accessible to all patrons. The Standalone bookDrop reduces manual return and security tasks for librarians, freeing staff to focus on high-value activities. Its customizable configuration and small footprint make it adaptable to diverse library setups and budgets.",
+    "specifications": {
+      "Dimensions (W x D x H)": "570 x 810 x 1,565 mm",
+      "Weight (Unit)": "160 kg",
+      "Weight (Bin)": "43 kg",
+      "Material": "Steel & Acrylic; Black & White, Spray Coating",
+      "Monitor": "21.5\" Full HD (1920x1080) Capacitive Touch Screen",
+      "Power": "85 ~ 264 VAC / 47 ~ 63 Hz",
+      "RFID Frequency": "13.56 MHz (HF Mid Range)",
+      "RFID Specification": "Inside & Outside 2 Antenna System",
+      "Connectivity": "USB Type-A 1 Port / RJ45 1 Port",
+      "Alarm": "Multi-color LED lights (red, blue, green)",
+      "Software": "quickConnect",
+      "Receipt Printer": "203 dpi, 200mm/s, 80mm paper width, Mono Thermal dot line printing",
+      "Working Temperature": "-10°C ~ 34°C"
+    },
+    "features": [
+      "Drop-and-go returns with instant account updates",
+      "Automatic security configuration",
+      "Intelligent input door — opens only for library materials",
+      "Multilingual support (Korean, Chinese, Japanese, English, Vietnamese)",
+      "Customizable user-friendly interface",
+      "Printed receipt capability",
+      "Flexible unlocking options",
+      "Compact, space-efficient design",
+      "24/7 operation",
+      "RFID HF 13.56 MHz technology",
+      "ILS integration via quickConnect software",
+      "Reduces manual return tasks for librarians"
+    ],
+    "technicalSpecs": "RFID frequency 13.56 MHz HF Mid Range with inside & outside 2-antenna system. 21.5\" Full HD (1920x1080) capacitive touchscreen. quickConnect software for ILS integration. Built-in thermal receipt printer: 203 dpi, 200mm/s, 80mm paper. Power: 85–264 VAC / 47–63 Hz. Working temperature: -10°C to 34°C. Dimensions: 570 x 810 x 1,565 mm.",
+    "reviews": []
+  }
 }

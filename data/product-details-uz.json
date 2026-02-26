@@ -458,7 +458,7 @@
     "name": "Hublet",
     "price": "Narx bo'yicha murojaat qiling",
     "sku": "HUBLET-001",
-    "category": "Dasturiy ta'minot",
+    "category": "O'z-o'ziga xizmat ko'rsatish terminallari",
     "tags": "kontent boshqaruvi, planshetlar, raqamli qurilmalar, kutubxona",
     "rating": 5,
     "reviewsCount": 0,
@@ -487,6 +487,54 @@
       "Kengaytirilishi mumkin bo'lgan yechim"
     ],
     "technicalSpecs": "Raqamli kontent va planshetlarni boshqarish uchun bulutli dasturiy ta'minot. 27 mamlakatda kutubxonalar, sog'liqni saqlash, ta'lim va mehmondo'stlik sohalarida 400 dan ortiq tashkilot tomonidan foydalaniladi.",
+    "reviews": []
+  },
+  "12": {
+    "id": 12,
+    "name": "Mustaqil bookDrop",
+    "price": "Narx bo'yicha murojaat qiling",
+    "sku": "BOOKDROP-SA-001",
+    "category": "O'z-o'ziga xizmat ko'rsatish terminallari",
+    "tags": "kitob qaytarish, o'z-o'ziga xizmat, RFID, kutubxona",
+    "rating": 5,
+    "reviewsCount": 0,
+    "images": [
+      "assets/img/shop/bookdrop-1.jpg",
+      "assets/img/shop/bookdrop-2.jpg",
+      "assets/img/shop/bookdrop-3.jpg"
+    ],
+    "description": "Qulay va moslashuvchan kitob qaytarish terminali — tashlang va keting rejimida ishlaydi, hisob darhol yangilanadi. RFID texnologiyasi, sensorli ekran va kutubxona tizimi bilan integratsiya orqali 24/7 xizmat ko'rsatadi.",
+    "fullDescription": "Mustaqil bookDrop kutubxonada kitoblarni qaytarishni avtomatlashtirish uchun iqtisodiy va kompakt yechimdir. Tashlang-va-keting rejimi hamda hisob qaydnomasining darhol yangilanishi o'quvchilarga xizmat ko'rsatishni tubdan o'zgartiradi. Kompakt dizayn qurilmani cheklangan maydonda o'rnatish imkonini beradi. 21,5\" Full HD sig'imli sensorli ekran, RFID texnologiyasi va quickConnect dasturi orqali kutubxona tizimi bilan integratsiya avtomatik hisob yangilanishi va xavfsizlik sozlamalarini ta'minlaydi. Intellektual kirish eshigi faqat kutubxona materiallari uchun ochiladi, begona narsalarning kiritilishini oldini oladi. Koreyscha, xitoycha, yaponcha, inglizcha va vyetnamcha tillarni qo'llab-quvvatlovchi moslashtirilgan ko'p tilli interfeys va chek chop etish imkoniyati terminaldan foydalanishni har bir o'quvchi uchun qulay qiladi. bookDrop xodimlarning qo'lda bajaradigan qaytarish va xavfsizlik vazifalarini kamaytiradi, ularni muhim ishlarga yo'naltiradi.",
+    "specifications": {
+      "O'lchamlar (En x Ch x B)": "570 x 810 x 1 565 mm",
+      "Og'irligi (qurilma)": "160 kg",
+      "Og'irligi (bin)": "43 kg",
+      "Material": "Po'lat va akril; qora va oq rang, purkash qoplama",
+      "Monitor": "21,5\" Full HD (1920x1080) sig'imli sensorli ekran",
+      "Quvvat": "85 ~ 264 VAC / 47 ~ 63 Hz",
+      "RFID chastotasi": "13,56 MGts (HF Mid Range)",
+      "RFID spetsifikatsiyasi": "Ichki va tashqi 2 ta antenna tizimi",
+      "Ulanish": "USB Type-A 1 port / RJ45 1 port",
+      "Signal": "Ko'p rangli LED chiroqlar (qizil, ko'k, yashil)",
+      "Dasturiy ta'minot": "quickConnect",
+      "Chek printer": "203 dpi, 200mm/s, 80mm qog'oz eni, monoxrom termal chop etish",
+      "Ish harorati": "-10°C ~ 34°C"
+    },
+    "features": [
+      "Hisob darhol yangilanadigan tashlang-va-keting qaytarish",
+      "Avtomatik xavfsizlik sozlamasi",
+      "Intellektual kirish eshigi — faqat kutubxona materiallari uchun ochiladi",
+      "Ko'p tilli qo'llab-quvvatlash (Koreys, Xitoy, Yapon, Ingliz, Vyetnam)",
+      "Moslashtirilgan foydalanuvchi interfeysi",
+      "Chek chop etish imkoniyati",
+      "Moslashuvchan qulfdan chiqarish variantlari",
+      "Kichik joylarda o'rnatish uchun kompakt dizayn",
+      "24/7 ishlash rejimi",
+      "RFID HF 13,56 MGts texnologiyasi",
+      "quickConnect dasturi orqali kutubxona tizimi bilan integratsiya",
+      "Xodimlarning qo'lda bajaradigan vazifalarini kamaytiradi"
+    ],
+    "technicalSpecs": "RFID chastotasi 13,56 MGts HF Mid Range, ichki va tashqi 2 ta antenna tizimi. 21,5\" Full HD (1920x1080) sig'imli sensorli ekran. quickConnect dasturi orqali kutubxona tizimi bilan integratsiya. O'rnatilgan termal chek printer: 203 dpi, 200mm/s, 80mm qog'oz eni. Quvvat: 85–264 VAC / 47–63 Hz. Ish harorati: -10°C dan 34°C gacha. O'lchamlar: 570 x 810 x 1 565 mm.",
     "reviews": []
   }
 }
