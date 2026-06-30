@@ -17,32 +17,27 @@ export default function Products() {
   useEffect(() => {
     const loadProductData = async () => {
       try {
-        let data;
         const currentLang = i18n.language;
         
         
         // Handle different language code formats (En, Ru, Uz, en, ru, uz)
         const normalizedLang = currentLang.toLowerCase();
         
-        if (normalizedLang === 'ru' || normalizedLang === 'russian') {
-          const module = await import('@/data/product-details-ru.json');
-          data = module.default;
-        } else if (normalizedLang === 'uz' || normalizedLang === 'uzbek') {
-          const module = await import('@/data/product-details-uz.json');
-          data = module.default;
-        } else {
-          // Default to English (handles 'En', 'en', 'English', etc.)
-          const module = await import('@/data/product-details.json');
-          data = module.default;
-        }
-        
+        const lang =
+          normalizedLang === 'ru' || normalizedLang === 'russian'
+            ? 'ru'
+            : normalizedLang === 'uz' || normalizedLang === 'uzbek'
+            ? 'uz'
+            : 'en';
+
+        const response = await fetch(`/api/products?lang=${lang}`, { cache: 'no-store' });
+        const data = await response.json();
+
         setProductDetailsData(data);
         setLoading(false);
       } catch (error) {
         console.error('Error loading product data:', error);
-        // Fallback to English data
-        const module = await import('@/data/product-details.json');
-        setProductDetailsData(module.default);
+        setProductDetailsData({});
         setLoading(false);
       }
     };

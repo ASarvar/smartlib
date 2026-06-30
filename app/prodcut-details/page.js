@@ -17,54 +17,53 @@ export default function ProductDetails() {
   const [loading, setLoading] = useState(true);
   const [isAutoSliding, setIsAutoSliding] = useState(true);
   const [isVideoOpen, setVideoOpen] = useState(false);
-  const [productDetailsData, setProductDetailsData] = useState({});
+  const [resolvedLang, setResolvedLang] = useState("en");
 
-  // Load appropriate product data based on language
+  // Resolve language code once and keep it normalized
   useEffect(() => {
-    const loadProductData = async () => {
-      try {
-        let data;
-        const currentLang = i18n.language;
+    const normalizedLang = (i18n.language || "en").toLowerCase();
+    const lang =
+      normalizedLang === "ru" || normalizedLang === "russian"
+        ? "ru"
+        : normalizedLang === "uz" || normalizedLang === "uzbek"
+        ? "uz"
+        : "en";
 
-        // Handle different language code formats (En, Ru, Uz, en, ru, uz)
-        const normalizedLang = currentLang.toLowerCase();
-
-        if (normalizedLang === "ru" || normalizedLang === "russian") {
-          const module = await import("@/data/product-details-ru.json");
-          data = module.default;
-        } else if (normalizedLang === "uz" || normalizedLang === "uzbek") {
-          const module = await import("@/data/product-details-uz.json");
-          data = module.default;
-        } else {
-          // Default to English (handles 'En', 'en', 'English', etc.)
-          const module = await import("@/data/product-details.json");
-          data = module.default;
-        }
-
-        setProductDetailsData(data);
-      } catch (error) {
-        // Fallback to English data
-        const module = await import("@/data/product-details.json");
-        setProductDetailsData(module.default);
-      }
-    };
-
-    loadProductData();
+    setResolvedLang(lang);
   }, [i18n.language]);
 
-  // Load product based on ID and language data
+  // Load product based on ID and language from API
   useEffect(() => {
-    if (Object.keys(productDetailsData).length > 0) {
-      const productId = searchParams.get("id") || "1";
-      const productData = productDetailsData[productId];
+    const loadProduct = async () => {
+      setLoading(true);
 
-      if (productData) {
+      try {
+        const productId = searchParams.get("id") || "1";
+        const response = await fetch(
+          `/api/products/${productId}?lang=${resolvedLang}`,
+          { cache: "no-store" }
+        );
+
+        if (!response.ok) {
+          setProduct(null);
+          setLoading(false);
+          return;
+        }
+
+        const productData = await response.json();
         setProduct(productData);
         setSelectedImage(0);
+      } catch {
+        setProduct(null);
       }
+
       setLoading(false);
+    };
+
+    if (resolvedLang) {
+      loadProduct();
     }
-  }, [searchParams, productDetailsData]);
+  }, [searchParams, resolvedLang]);
 
   // Auto-slide effect
   useEffect(() => {

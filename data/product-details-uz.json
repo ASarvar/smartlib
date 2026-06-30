@@ -536,5 +536,25 @@
     ],
     "technicalSpecs": "RFID chastotasi 13,56 MGts HF Mid Range, ichki va tashqi 2 ta antenna tizimi. 21,5\" Full HD (1920x1080) sig'imli sensorli ekran. quickConnect dasturi orqali kutubxona tizimi bilan integratsiya. O'rnatilgan termal chek printer: 203 dpi, 200mm/s, 80mm qog'oz eni. Quvvat: 85–264 VAC / 47–63 Hz. Ish harorati: -10°C dan 34°C gacha. O'lchamlar: 570 x 810 x 1 565 mm.",
     "reviews": []
+  },
+  "13": {
+    "name": "",
+    "price": "",
+    "sku": "test",
+    "category": "",
+    "tags": "",
+    "rating": 5,
+    "reviewsCount": 0,
+    "images": [
+      "assets/img/shop/hublet-1.jpg"
+    ],
+    "description": "",
+    "fullDescription": "",
+    "specifications": {},
+    "features": [],
+    "technicalSpecs": "",
+    "videoId": "",
+    "reviews": [],
+    "id": 13
   }
 }

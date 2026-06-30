@@ -12,6 +12,7 @@ import News from "@/components/sections/home1/News";
 import Video from "@/components/sections/home1/Video";
 import Brand from "@/components/sections/home1/Brand";
 import Testimonial from "@/components/sections/home1/Testimonial";
+
 export default function Home() {
   return (
     <>

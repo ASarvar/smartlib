@@ -451,7 +451,8 @@
     ],
     "technicalSpecs": "The flexAMH system comes with pre-installed and pre-configured quickConnect AMH software. Supports LMS/ILS protocols SIP2 and NCIP and is data model independent. flexVisualizer™ provides quick information and an instant virtual view of the configured AMH system.",
     "reviews": [],
-    "videoId": "LX-7ei-_Qpw"  },
+    "videoId": "LX-7ei-_Qpw"
+  },
   "11": {
     "id": 11,
     "name": "Hublet",
@@ -535,5 +536,28 @@
     ],
     "technicalSpecs": "RFID frequency 13.56 MHz HF Mid Range with inside & outside 2-antenna system. 21.5\" Full HD (1920x1080) capacitive touchscreen. quickConnect software for ILS integration. Built-in thermal receipt printer: 203 dpi, 200mm/s, 80mm paper. Power: 85–264 VAC / 47–63 Hz. Working temperature: -10°C to 34°C. Dimensions: 570 x 810 x 1,565 mm.",
     "reviews": []
+  },
+  "13": {
+    "name": "test",
+    "price": "123",
+    "sku": "test",
+    "category": "test",
+    "tags": "test, test2",
+    "rating": 5,
+    "reviewsCount": 0,
+    "images": [
+      "assets/img/shop/hublet-1.jpg"
+    ],
+    "description": "asdasdd",
+    "fullDescription": "asdada",
+    "specifications": {},
+    "features": [
+      "asda",
+      "asdas"
+    ],
+    "technicalSpecs": "asda",
+    "videoId": "",
+    "reviews": [],
+    "id": 13
   }
 }

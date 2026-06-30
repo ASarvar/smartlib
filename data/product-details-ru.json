@@ -134,8 +134,7 @@
     ],
     "technicalSpecs": "Соответствует ISO 15693 и ISO 18000-3 A/B, включает программное обеспечение quickConnect™ (требуется лицензия), идентификация через RFID, штрих-код, смарт-карту или ручной ввод",
     "videoId": "8d06gSBhkI0"
-  }
-  ,
+  },
   "4": {
     "id": 4,
     "name": "RFID рабочая станция (shielded EU)",
@@ -537,5 +536,25 @@
     ],
     "technicalSpecs": "RFID-частота 13,56 МГц HF Mid Range, система из 2 антенн (внутри и снаружи). Сенсорный экран 21,5\" Full HD (1920x1080) ёмкостного типа. ПО quickConnect для интеграции с ИБ. Встроенный термопринтер чеков: 203 dpi, 200 мм/с, ширина бумаги 80 мм. Питание: 85–264 В переменного тока / 47–63 Гц. Рабочая температура: -10°C до 34°C. Размеры: 570 x 810 x 1 565 мм.",
     "reviews": []
+  },
+  "13": {
+    "name": "",
+    "price": "",
+    "sku": "test",
+    "category": "",
+    "tags": "",
+    "rating": 5,
+    "reviewsCount": 0,
+    "images": [
+      "assets/img/shop/hublet-1.jpg"
+    ],
+    "description": "",
+    "fullDescription": "",
+    "specifications": {},
+    "features": [],
+    "technicalSpecs": "",
+    "videoId": "",
+    "reviews": [],
+    "id": 13
   }
 }
