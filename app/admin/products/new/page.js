@@ -73,7 +73,7 @@ export default function NewProductPage() {
 
         <div style={s.card}>
           {error && <p style={s.error}>{error}</p>}
-          <ProductForm onSubmit={handleSubmit} saving={saving} submitLabel="Create Product" />
+          <ProductForm onSubmit={handleSubmit} saving={saving} submitLabel="Create Product" token={token} />
         </div>
       </main>
     </div>

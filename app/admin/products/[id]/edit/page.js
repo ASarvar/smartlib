@@ -103,7 +103,7 @@ export default function EditProductPage() {
           {notFound && <p style={s.error}>Product #{id} not found.</p>}
           {error && <p style={s.error}>{error}</p>}
           {!loading && !notFound && initial && (
-            <ProductForm initial={initial} onSubmit={handleSubmit} saving={saving} submitLabel="Save Changes" />
+            <ProductForm initial={initial} onSubmit={handleSubmit} saving={saving} submitLabel="Save Changes" token={token} />
           )}
         </div>
       </main>

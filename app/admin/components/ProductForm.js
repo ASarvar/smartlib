@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
 
 // Blank template for a single language version of a product
 export const blankProduct = {
@@ -18,6 +18,166 @@ export const blankProduct = {
   technicalSpecs: "",
   videoId: "",
 };
+
+// ---- Image Uploader with drag-and-drop + preview ----
+function ImageUploader({ images, onChange, token }) {
+  const [uploading, setUploading] = useState(false);
+  const [uploadError, setUploadError] = useState("");
+  const [dragging, setDragging] = useState(false);
+  const fileInputRef = useRef(null);
+
+  const uploadFiles = useCallback(
+    async (files) => {
+      setUploadError("");
+      const results = [];
+      setUploading(true);
+
+      for (const file of Array.from(files)) {
+        const fd = new FormData();
+        fd.append("file", file);
+        try {
+          const res = await fetch("/api/admin/upload", {
+            method: "POST",
+            headers: { "x-admin-token": token },
+            body: fd,
+          });
+          const data = await res.json();
+          if (res.ok) {
+            results.push(data.path);
+          } else {
+            setUploadError(data.error || "Upload failed.");
+          }
+        } catch {
+          setUploadError("Upload failed. Check your connection.");
+        }
+      }
+
+      setUploading(false);
+      if (results.length > 0) {
+        const existing = (images || []).filter((p) => p.trim() !== "");
+        onChange([...existing, ...results]);
+      }
+    },
+    [images, onChange, token]
+  );
+
+  const handleFileChange = (e) => uploadFiles(e.target.files);
+
+  const handleDrop = (e) => {
+    e.preventDefault();
+    setDragging(false);
+    if (e.dataTransfer.files.length) uploadFiles(e.dataTransfer.files);
+  };
+
+  const removeImage = (idx) => {
+    onChange((images || []).filter((_, i) => i !== idx));
+  };
+
+  const moveImage = (from, to) => {
+    const next = [...(images || [])];
+    const [item] = next.splice(from, 1);
+    next.splice(to, 0, item);
+    onChange(next);
+  };
+
+  const updatePath = (idx, val) => {
+    const next = [...(images || [])];
+    next[idx] = val;
+    onChange(next);
+  };
+
+  const addManual = () => onChange([...(images || []), ""]);
+
+  return (
+    <div>
+      {/* Drag-and-drop zone */}
+      <div
+        onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
+        onDragLeave={() => setDragging(false)}
+        onDrop={handleDrop}
+        onClick={() => fileInputRef.current?.click()}
+        style={{
+          ...iu.dropzone,
+          ...(dragging ? iu.dropzoneActive : {}),
+          ...(uploading ? iu.dropzoneUploading : {}),
+        }}
+      >
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept="image/jpeg,image/png,image/webp"
+          multiple
+          style={{ display: "none" }}
+          onChange={handleFileChange}
+        />
+        {uploading ? (
+          <span style={iu.dropText}>⏳ Uploading...</span>
+        ) : (
+          <>
+            <span style={iu.dropIcon}>🖼️</span>
+            <span style={iu.dropText}>Drag & drop images here, or click to select</span>
+            <span style={iu.dropHint}>JPG, PNG, WebP — max 5MB each</span>
+          </>
+        )}
+      </div>
+
+      {uploadError && <p style={iu.uploadError}>{uploadError}</p>}
+
+      {/* Image previews */}
+      {(images || []).length > 0 && (
+        <div style={iu.grid}>
+          {(images || []).map((imgPath, idx) => (
+            <div key={idx} style={iu.card}>
+              {imgPath.trim() ? (
+                <img
+                  src={imgPath.startsWith("api/") ? `/${imgPath}` : `/${imgPath}`}
+                  alt={`Image ${idx + 1}`}
+                  style={iu.preview}
+                  onError={(e) => { e.target.style.display = "none"; }}
+                />
+              ) : (
+                <div style={iu.noPreview}>No preview</div>
+              )}
+              <div style={iu.cardBody}>
+                <input
+                  value={imgPath}
+                  onChange={(e) => updatePath(idx, e.target.value)}
+                  placeholder="assets/img/shop/..."
+                  style={iu.pathInput}
+                />
+                <div style={iu.cardActions}>
+                  <button
+                    type="button"
+                    onClick={() => idx > 0 && moveImage(idx, idx - 1)}
+                    disabled={idx === 0}
+                    title="Move left"
+                    style={iu.iconBtn}
+                  >◀</button>
+                  <span style={iu.imgIdx}>#{idx + 1}</span>
+                  <button
+                    type="button"
+                    onClick={() => idx < images.length - 1 && moveImage(idx, idx + 1)}
+                    disabled={idx === images.length - 1}
+                    title="Move right"
+                    style={iu.iconBtn}
+                  >▶</button>
+                  <button
+                    type="button"
+                    onClick={() => removeImage(idx)}
+                    title="Remove"
+                    style={iu.removeBtn}
+                  >✕</button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <button type="button" onClick={addManual} style={fs.btnAdd}>+ Add path manually</button>
+    </div>
+  );
+}
 
 // ---- Dynamic key-value editor (for specifications) ----
 function KVEditor({ value, onChange }) {
@@ -95,7 +255,7 @@ function ListEditor({ value, onChange, placeholder }) {
 }
 
 // ---- Language Tab ----
-function LangTab({ data, onChange, lang, label }) {
+function LangTab({ data, onChange, lang, label, token }) {
   const set = (field, value) => onChange({ ...data, [field]: value });
 
   return (
@@ -165,8 +325,8 @@ function LangTab({ data, onChange, lang, label }) {
       {lang === "en" && (
         <>
           <div style={fs.field}>
-            <label style={fs.label}>Images (paths relative to /public)</label>
-            <ListEditor value={data.images} onChange={(v) => set("images", v)} placeholder="assets/img/shop/product.jpg" />
+            <label style={fs.label}>Product Images</label>
+            <ImageUploader images={data.images} onChange={(v) => set("images", v)} token={token} />
           </div>
           <div style={fs.field}>
             <label style={fs.label}>YouTube Video ID</label>
@@ -179,7 +339,7 @@ function LangTab({ data, onChange, lang, label }) {
 }
 
 // ---- Main Form ----
-export default function ProductForm({ initial, onSubmit, submitLabel = "Save Product", saving }) {
+export default function ProductForm({ initial, onSubmit, submitLabel = "Save Product", saving, token = "" }) {
   const makeBlank = () => ({ ...blankProduct, specifications: {}, features: [""], images: [""] });
 
   const [en, setEn] = useState(initial?.en || makeBlank());
@@ -245,9 +405,9 @@ export default function ProductForm({ initial, onSubmit, submitLabel = "Save Pro
       </div>
 
       <div style={fs.tabContent}>
-        {activeTab === "en" && <LangTab lang="en" label="English" data={en} onChange={handleEnChange} />}
-        {activeTab === "ru" && <LangTab lang="ru" label="Russian" data={ru} onChange={setRu} />}
-        {activeTab === "uz" && <LangTab lang="uz" label="Uzbek" data={uz} onChange={setUz} />}
+        {activeTab === "en" && <LangTab lang="en" label="English" data={en} onChange={handleEnChange} token={token} />}
+        {activeTab === "ru" && <LangTab lang="ru" label="Russian" data={ru} onChange={setRu} token={token} />}
+        {activeTab === "uz" && <LangTab lang="uz" label="Uzbek" data={uz} onChange={setUz} token={token} />}
       </div>
 
       {error && <p style={fs.error}>{error}</p>}
@@ -263,6 +423,26 @@ export default function ProductForm({ initial, onSubmit, submitLabel = "Save Pro
     </form>
   );
 }
+
+const iu = {
+  dropzone: { border: "2px dashed #cbd5e1", borderRadius: "10px", padding: "28px 16px", textAlign: "center", cursor: "pointer", background: "#f8fafc", marginBottom: "16px", transition: "all 0.2s" },
+  dropzoneActive: { borderColor: "#2563eb", background: "#eff6ff" },
+  dropzoneUploading: { borderColor: "#f59e0b", background: "#fffbeb", cursor: "wait" },
+  dropIcon: { display: "block", fontSize: "28px", marginBottom: "6px" },
+  dropText: { display: "block", fontSize: "14px", fontWeight: "600", color: "#374151", marginBottom: "4px" },
+  dropHint: { display: "block", fontSize: "12px", color: "#94a3b8" },
+  uploadError: { color: "#ef4444", fontSize: "13px", background: "#fef2f2", border: "1px solid #fecaca", borderRadius: "6px", padding: "8px 12px", marginBottom: "12px" },
+  grid: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))", gap: "12px", marginBottom: "12px" },
+  card: { border: "1.5px solid #e2e8f0", borderRadius: "8px", overflow: "hidden", background: "#fff" },
+  preview: { width: "100%", height: "120px", objectFit: "cover", display: "block" },
+  noPreview: { width: "100%", height: "120px", background: "#f1f5f9", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", color: "#94a3b8" },
+  cardBody: { padding: "8px" },
+  pathInput: { width: "100%", fontSize: "11px", padding: "4px 6px", border: "1px solid #e2e8f0", borderRadius: "4px", boxSizing: "border-box", color: "#475569", marginBottom: "6px" },
+  cardActions: { display: "flex", alignItems: "center", gap: "4px" },
+  iconBtn: { padding: "2px 6px", background: "#f1f5f9", border: "1px solid #e2e8f0", borderRadius: "4px", cursor: "pointer", fontSize: "11px", color: "#475569" },
+  imgIdx: { flex: 1, textAlign: "center", fontSize: "11px", color: "#94a3b8" },
+  removeBtn: { padding: "2px 6px", background: "#fef2f2", border: "1px solid #fecaca", borderRadius: "4px", cursor: "pointer", fontSize: "11px", color: "#dc2626" },
+};
 
 const fs = {
   tabs: { display: "flex", gap: "4px", borderBottom: "2px solid #e2e8f0", marginBottom: "28px" },
